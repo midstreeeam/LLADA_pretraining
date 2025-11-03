@@ -1,0 +1,83 @@
+wandb:
+  entity: null
+  resume: 'auto'
+
+experiment:
+    project: "llada-tiny-test"
+    name: "llada-tiny-test"
+    output_dir: "outputs/tiny_test"
+    save_every: 1000
+    eval_every: 100
+    generate_every: 500
+    log_every: 25
+    log_grad_norm_every: 100
+    checkpoints_total_limit: 3
+
+model:
+    # Using a tiny GPT-2 as base tokenizer only, model initialized from scratch
+    pretrained_model_path: "gpt2"
+
+    # LLaDA specific configuration for tiny model (<100M params)
+    llada_config:
+        gradient_checkpointing: false
+        # Tiny model architecture
+        d_model: 384          # Hidden size
+        n_heads: 6            # Attention heads
+        n_layers: 6           # Number of transformer layers
+        n_kv_heads: 6         # Key-value heads
+        mlp_ratio: 4
+        max_sequence_length: 512
+        vocab_size: 50257
+        new_vocab_size: 50304  # Padded to multiple of 64 for efficiency
+        rope: true
+        rope_theta: 10000.0
+        flash_attention: false
+        attention_dropout: 0.0     # Disable dropout initially
+        residual_dropout: 0.0      # Disable dropout initially
+        embedding_dropout: 0.0     # Disable dropout initially
+        layer_norm_type: "rms"
+        activation_type: "swiglu"
+        init_fn: "normal"          # Normal initialization
+        init_std: 0.02             # Standard deviation for init
+        weight_tying: true         # Tie input/output embeddings
+        include_bias: false        # No bias terms
+
+dataset:
+    params:
+        # TinyStories dataset will be downloaded automatically
+        train_shards_path_or_url: "data/tinystories_train.jsonl"
+
+        shuffle_buffer_size: 500
+        num_workers: 2
+        pin_memory: true
+        persistent_workers: false
+
+    preprocessing:
+        max_seq_length: 512
+
+optimizer:
+    name: adamw
+    params:
+        learning_rate: 1e-4        # Lower LR for stability
+        scale_lr: false
+        beta1: 0.9
+        beta2: 0.95                # Lower beta2 for better stability
+        weight_decay: 0.01         # Lower weight decay
+        epsilon: 1e-8
+
+lr_scheduler:
+    scheduler: "cosine"
+    params:
+        learning_rate: ${optimizer.params.learning_rate}
+        warmup_steps: 100
+        min_lr_scale: 0.1
+
+training:
+    gradient_accumulation_steps: 4  # Effective batch size = 2 * 4 = 8
+    batch_size: 2  # Small batch size for 8GB GPU
+    mixed_precision: "bf16"
+    enable_tf32: true
+    seed: 42
+    max_train_steps: 2000  # Quick test run
+    max_grad_norm: 1.0
+    lm_coeff: 1.0
