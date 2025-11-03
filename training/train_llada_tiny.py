@@ -69,6 +69,7 @@ def main():
         torch.backends.cudnn.benchmark = True
         torch.backends.cudnn.deterministic = False
 
+    experiment_cfg = config.experiment
     config.experiment.logging_dir = str(Path(config.experiment.output_dir) / "logs")
 
     accelerator = Accelerator(
@@ -153,6 +154,9 @@ def main():
     # MODELS and TOKENIZER  #
     #########################
     logger.info("Loading tokenizer and model")
+    resume_checkpoint = experiment_cfg.get("resume_from_checkpoint", None)
+    resume_checkpoint = Path(resume_checkpoint) if resume_checkpoint else None
+    resume_global_step = 0
 
     # Use GPT-2 tokenizer
     tokenizer = AutoTokenizer.from_pretrained(config.model.pretrained_model_path, padding_side="left")
@@ -181,6 +185,21 @@ def main():
     model.resize_token_embeddings(len(uni_prompting.text_tokenizer))
     model.config.embedding_size = model.config.new_vocab_size
     model.config.mask_token_id = mask_token_id
+
+    if resume_checkpoint:
+        model_state_path = resume_checkpoint / "unwrapped_model" / "pytorch_model.bin"
+        if model_state_path.exists():
+            logger.info(f"Loading model weights from {model_state_path}")
+            state_dict = torch.load(model_state_path, map_location="cpu")
+            model.load_state_dict(state_dict)
+        metadata_path = resume_checkpoint / "metadata.json"
+        if metadata_path.exists():
+            try:
+                resume_metadata = json.load(metadata_path.open())
+                resume_global_step = int(resume_metadata.get("global_step", 0))
+                logger.info(f"Resuming from global step {resume_global_step}")
+            except Exception as exc:
+                logger.warning(f"Failed to read metadata.json from checkpoint: {exc}")
 
     # Convert to bfloat16 and move to device
     model = model.to(dtype=torch.bfloat16, device=accelerator.device)
@@ -274,7 +293,7 @@ def main():
     ##################################
     #       MODEL RESUME          #
     ##################################
-    global_step = 0
+    global_step = resume_global_step
     first_epoch = 0
 
 
@@ -283,6 +302,16 @@ def main():
     ##################################
     logger.info("Preparing model, optimizer and dataloaders")
     model, optimizer, lr_scheduler = accelerator.prepare(model, optimizer, lr_scheduler)
+
+    if resume_checkpoint:
+        optimizer_state = resume_checkpoint / "optimizer.pt"
+        if optimizer_state.exists():
+            logger.info(f"Loading optimizer state from {optimizer_state}")
+            optimizer.load_state_dict(torch.load(optimizer_state, map_location="cpu"))
+        scheduler_state = resume_checkpoint / "lr_scheduler.pt"
+        if scheduler_state.exists():
+            logger.info(f"Loading lr scheduler state from {scheduler_state}")
+            lr_scheduler.load_state_dict(torch.load(scheduler_state, map_location="cpu"))
 
     ##################################
     #             Training          #
@@ -416,7 +445,7 @@ def main():
 
                 # Save model checkpoint
                 if (global_step + 1) % config.experiment.save_every == 0:
-                    save_checkpoint(model, config, accelerator, global_step + 1)
+                    save_checkpoint(model, config, accelerator, global_step + 1, optimizer, lr_scheduler)
 
                 # Optional: Generate text samples for validation
                 if ((global_step + 1) % config.experiment.generate_every == 0 or global_step == 0) and accelerator.is_main_process:
@@ -439,7 +468,7 @@ def main():
     accelerator.wait_for_everyone()
 
     # Evaluate and save checkpoint at the end of training
-    save_checkpoint(model, config, accelerator, global_step)
+    save_checkpoint(model, config, accelerator, global_step, optimizer, lr_scheduler)
 
     # Save the final trained checkpoint
     if accelerator.is_main_process:
@@ -460,7 +489,7 @@ def main():
     accelerator.end_training()
 
 
-def save_checkpoint(model, config, accelerator, global_step):
+def save_checkpoint(model, config, accelerator, global_step, optimizer, lr_scheduler):
     output_dir = config.experiment.output_dir
     checkpoints_total_limit = config.experiment.get("checkpoints_total_limit", None)
 
@@ -508,6 +537,9 @@ def save_checkpoint(model, config, accelerator, global_step):
 
         # Save config
         config.save_pretrained(model_save_dir)
+
+        torch.save(optimizer.state_dict(), save_path / "optimizer.pt")
+        torch.save(lr_scheduler.state_dict(), save_path / "lr_scheduler.pt")
 
         json.dump({"global_step": global_step}, (save_path / "metadata.json").open("w+"))
         logger.info(f"Saved state to {save_path}")

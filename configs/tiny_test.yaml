@@ -6,12 +6,13 @@ experiment:
     project: "llada-tiny-test"
     name: "llada-tiny-test"
     output_dir: "outputs/tiny_test"
-    save_every: 50000
+    save_every: 2500
     eval_every: 100
     generate_every: 500
     log_every: 25
     log_grad_norm_every: 100
     checkpoints_total_limit: 3
+    resume_from_checkpoint: "outputs/tiny_test/checkpoint-200"
 
 model:
     # Using a tiny GPT-2 as base tokenizer only, model initialized from scratch

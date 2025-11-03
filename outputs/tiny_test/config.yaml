@@ -1,17 +1,18 @@
 wandb:
   entity: null
   resume: auto
-  run_id: 2thtvy6u
+  run_id: vbwt9rv9
 experiment:
   project: llada-tiny-test
   name: llada-tiny-test
   output_dir: outputs/tiny_test
-  save_every: 50000
+  save_every: 2500
   eval_every: 100
   generate_every: 500
   log_every: 25
   log_grad_norm_every: 100
   checkpoints_total_limit: 3
+  resume_from_checkpoint: outputs/tiny_test/checkpoint-200
   logging_dir: outputs/tiny_test/logs
 model:
   pretrained_model_path: gpt2

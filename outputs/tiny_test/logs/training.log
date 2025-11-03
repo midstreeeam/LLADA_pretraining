@@ -349,3 +349,265 @@ Mixed precision type: bf16
 11/03/2025 17:35:54 - WARNING - __main__ - Falling back to raw model for generation because unwrap_model failed: CUDA_HOME does not exist, unable to compile CUDA op(s)
 11/03/2025 17:36:11 - INFO - __main__ - Step: 25 Loss_lm: 209.6996 Data (t): 0.0000, 23.70/s/gpu Batch (t): 0.6751 LR: 0.000025
 11/03/2025 17:36:28 - INFO - __main__ - Step: 50 Loss_lm: 23.9095 Data (t): 0.0000, 23.71/s/gpu Batch (t): 0.6747 LR: 0.000050
+11/03/2025 17:36:45 - INFO - __main__ - Step: 75 Loss_lm: 13.9523 Data (t): 0.0000, 23.34/s/gpu Batch (t): 0.6856 LR: 0.000075
+11/03/2025 17:37:02 - INFO - __main__ - Step: 100 Loss_lm: 10.2521 Data (t): 0.0000, 21.05/s/gpu Batch (t): 0.7601 LR: 0.000100
+11/03/2025 17:37:19 - INFO - __main__ - Step: 125 Loss_lm: 11.7527 Data (t): 0.0000, 23.86/s/gpu Batch (t): 0.6706 LR: 0.000100
+11/03/2025 17:37:36 - INFO - __main__ - Step: 150 Loss_lm: 8.0254 Data (t): 0.0000, 23.82/s/gpu Batch (t): 0.6717 LR: 0.000100
+11/03/2025 17:37:52 - INFO - __main__ - Step: 175 Loss_lm: 7.7662 Data (t): 0.0000, 23.53/s/gpu Batch (t): 0.6799 LR: 0.000100
+11/03/2025 17:38:09 - INFO - __main__ - Step: 200 Loss_lm: 8.5879 Data (t): 0.0000, 21.09/s/gpu Batch (t): 0.7587 LR: 0.000100
+11/03/2025 17:38:26 - INFO - __main__ - Step: 225 Loss_lm: 6.6191 Data (t): 0.0000, 24.02/s/gpu Batch (t): 0.6660 LR: 0.000100
+11/03/2025 17:38:43 - INFO - __main__ - Step: 250 Loss_lm: 7.9147 Data (t): 0.0000, 23.17/s/gpu Batch (t): 0.6904 LR: 0.000100
+11/03/2025 17:39:00 - INFO - __main__ - Step: 275 Loss_lm: 7.4385 Data (t): 0.0000, 23.83/s/gpu Batch (t): 0.6715 LR: 0.000100
+11/03/2025 17:39:17 - INFO - __main__ - Step: 300 Loss_lm: 7.6728 Data (t): 0.0000, 21.28/s/gpu Batch (t): 0.7518 LR: 0.000100
+11/03/2025 17:39:34 - INFO - __main__ - Step: 325 Loss_lm: 8.7461 Data (t): 0.0000, 23.72/s/gpu Batch (t): 0.6746 LR: 0.000100
+11/03/2025 17:39:50 - INFO - __main__ - Step: 350 Loss_lm: 7.6096 Data (t): 0.0000, 23.81/s/gpu Batch (t): 0.6721 LR: 0.000100
+11/03/2025 17:40:07 - INFO - __main__ - Step: 375 Loss_lm: 8.3758 Data (t): 0.0000, 23.91/s/gpu Batch (t): 0.6692 LR: 0.000100
+11/03/2025 17:40:24 - INFO - __main__ - Step: 400 Loss_lm: 7.1667 Data (t): 0.0000, 21.67/s/gpu Batch (t): 0.7383 LR: 0.000100
+11/03/2025 17:40:41 - INFO - __main__ - Step: 425 Loss_lm: 5.1024 Data (t): 0.0000, 23.24/s/gpu Batch (t): 0.6885 LR: 0.000100
+11/03/2025 17:40:58 - INFO - __main__ - Step: 450 Loss_lm: 5.9649 Data (t): 0.0000, 23.20/s/gpu Batch (t): 0.6895 LR: 0.000100
+11/03/2025 17:41:15 - INFO - __main__ - Step: 475 Loss_lm: 6.5336 Data (t): 0.0000, 23.96/s/gpu Batch (t): 0.6678 LR: 0.000100
+11/03/2025 17:41:32 - INFO - __main__ - Step: 500 Loss_lm: 6.1062 Data (t): 0.0000, 21.78/s/gpu Batch (t): 0.7345 LR: 0.000100
+11/03/2025 17:41:32 - INFO - __main__ - Generating text samples...
+11/03/2025 17:41:32 - INFO - root - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -fPIC -fPIC -c /tmp/tmp2mh1ak_x/test.c -o /tmp/tmp2mh1ak_x/test.o
+11/03/2025 17:41:32 - INFO - root - cc -pthread /tmp/tmp2mh1ak_x/test.o -laio -o /tmp/tmp2mh1ak_x/a.out
+11/03/2025 17:41:32 - WARNING - __main__ - Falling back to raw model for generation because unwrap_model failed: CUDA_HOME does not exist, unable to compile CUDA op(s)
+11/03/2025 17:41:49 - INFO - __main__ - Step: 525 Loss_lm: 7.1090 Data (t): 0.0000, 23.89/s/gpu Batch (t): 0.6698 LR: 0.000100
+11/03/2025 17:42:06 - INFO - __main__ - Step: 550 Loss_lm: 6.5988 Data (t): 0.0000, 24.43/s/gpu Batch (t): 0.6548 LR: 0.000100
+11/03/2025 17:42:22 - INFO - __main__ - Step: 575 Loss_lm: 7.5794 Data (t): 0.0000, 24.13/s/gpu Batch (t): 0.6630 LR: 0.000100
+11/03/2025 17:42:39 - INFO - __main__ - Step: 600 Loss_lm: 8.0897 Data (t): 0.0000, 20.61/s/gpu Batch (t): 0.7763 LR: 0.000100
+11/03/2025 17:42:57 - INFO - __main__ - Step: 625 Loss_lm: 7.7585 Data (t): 0.0000, 22.95/s/gpu Batch (t): 0.6972 LR: 0.000100
+11/03/2025 17:43:14 - INFO - __main__ - Step: 650 Loss_lm: 6.2357 Data (t): 0.0000, 23.49/s/gpu Batch (t): 0.6811 LR: 0.000100
+11/03/2025 17:43:31 - INFO - __main__ - Step: 675 Loss_lm: 6.2127 Data (t): 0.0000, 23.82/s/gpu Batch (t): 0.6717 LR: 0.000100
+11/03/2025 17:43:48 - INFO - __main__ - Step: 700 Loss_lm: 7.4036 Data (t): 0.0000, 20.98/s/gpu Batch (t): 0.7626 LR: 0.000100
+11/03/2025 17:44:04 - INFO - __main__ - Step: 725 Loss_lm: 6.9194 Data (t): 0.0000, 24.36/s/gpu Batch (t): 0.6568 LR: 0.000100
+11/03/2025 17:44:21 - INFO - __main__ - Step: 750 Loss_lm: 6.0885 Data (t): 0.0000, 24.00/s/gpu Batch (t): 0.6666 LR: 0.000100
+11/03/2025 17:44:38 - INFO - __main__ - Step: 775 Loss_lm: 4.8342 Data (t): 0.0000, 23.47/s/gpu Batch (t): 0.6817 LR: 0.000100
+11/03/2025 17:44:55 - INFO - __main__ - Step: 800 Loss_lm: 6.2294 Data (t): 0.0000, 21.30/s/gpu Batch (t): 0.7511 LR: 0.000100
+11/03/2025 17:45:12 - INFO - __main__ - Step: 825 Loss_lm: 6.8567 Data (t): 0.0000, 23.74/s/gpu Batch (t): 0.6741 LR: 0.000100
+11/03/2025 17:45:29 - INFO - __main__ - Step: 850 Loss_lm: 6.2250 Data (t): 0.0000, 24.22/s/gpu Batch (t): 0.6606 LR: 0.000100
+11/03/2025 17:45:46 - INFO - __main__ - Step: 875 Loss_lm: 7.8042 Data (t): 0.0000, 23.52/s/gpu Batch (t): 0.6804 LR: 0.000100
+11/03/2025 17:46:03 - INFO - __main__ - Step: 900 Loss_lm: 5.5670 Data (t): 0.0000, 20.94/s/gpu Batch (t): 0.7640 LR: 0.000100
+11/03/2025 17:46:20 - INFO - __main__ - Step: 925 Loss_lm: 5.8609 Data (t): 0.0000, 24.10/s/gpu Batch (t): 0.6638 LR: 0.000100
+11/03/2025 17:46:36 - INFO - __main__ - Step: 950 Loss_lm: 3.1632 Data (t): 0.0000, 23.95/s/gpu Batch (t): 0.6681 LR: 0.000100
+11/03/2025 17:46:54 - INFO - __main__ - Step: 975 Loss_lm: 7.0427 Data (t): 0.0000, 23.08/s/gpu Batch (t): 0.6934 LR: 0.000100
+11/03/2025 17:47:11 - INFO - __main__ - Step: 1000 Loss_lm: 5.9083 Data (t): 0.0000, 20.90/s/gpu Batch (t): 0.7655 LR: 0.000100
+11/03/2025 17:47:11 - INFO - __main__ - Generating text samples...
+11/03/2025 17:47:11 - INFO - root - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -fPIC -fPIC -c /tmp/tmplo93gl2c/test.c -o /tmp/tmplo93gl2c/test.o
+11/03/2025 17:47:11 - INFO - root - cc -pthread /tmp/tmplo93gl2c/test.o -laio -o /tmp/tmplo93gl2c/a.out
+11/03/2025 17:47:11 - WARNING - __main__ - Falling back to raw model for generation because unwrap_model failed: CUDA_HOME does not exist, unable to compile CUDA op(s)
+11/03/2025 17:47:29 - INFO - __main__ - Step: 1025 Loss_lm: 5.5345 Data (t): 0.0000, 23.68/s/gpu Batch (t): 0.6758 LR: 0.000100
+11/03/2025 17:47:46 - INFO - __main__ - Step: 1050 Loss_lm: 9.1239 Data (t): 0.0000, 24.17/s/gpu Batch (t): 0.6620 LR: 0.000100
+11/03/2025 17:48:02 - INFO - __main__ - Step: 1075 Loss_lm: 7.1983 Data (t): 0.0000, 24.10/s/gpu Batch (t): 0.6640 LR: 0.000100
+11/03/2025 17:48:20 - INFO - __main__ - Step: 1100 Loss_lm: 6.5850 Data (t): 0.0000, 21.60/s/gpu Batch (t): 0.7407 LR: 0.000100
+11/03/2025 17:48:36 - INFO - __main__ - Step: 1125 Loss_lm: 6.4558 Data (t): 0.0000, 23.80/s/gpu Batch (t): 0.6721 LR: 0.000100
+11/03/2025 17:48:53 - INFO - __main__ - Step: 1150 Loss_lm: 6.4127 Data (t): 0.0000, 24.13/s/gpu Batch (t): 0.6631 LR: 0.000100
+11/03/2025 17:49:11 - INFO - __main__ - Step: 1175 Loss_lm: 5.5713 Data (t): 0.0000, 23.59/s/gpu Batch (t): 0.6781 LR: 0.000100
+11/03/2025 17:49:27 - INFO - __main__ - Step: 1200 Loss_lm: 5.2391 Data (t): 0.0000, 21.19/s/gpu Batch (t): 0.7552 LR: 0.000100
+11/03/2025 17:49:44 - INFO - __main__ - Step: 1225 Loss_lm: 7.0743 Data (t): 0.0000, 23.84/s/gpu Batch (t): 0.6712 LR: 0.000100
+11/03/2025 17:50:01 - INFO - __main__ - Step: 1250 Loss_lm: 7.6667 Data (t): 0.0000, 23.70/s/gpu Batch (t): 0.6751 LR: 0.000100
+11/03/2025 17:50:18 - INFO - __main__ - Step: 1275 Loss_lm: 6.2405 Data (t): 0.0000, 23.60/s/gpu Batch (t): 0.6780 LR: 0.000100
+11/03/2025 17:50:35 - INFO - __main__ - Step: 1300 Loss_lm: 6.9039 Data (t): 0.0000, 21.34/s/gpu Batch (t): 0.7497 LR: 0.000100
+11/03/2025 17:50:52 - INFO - __main__ - Step: 1325 Loss_lm: 6.0876 Data (t): 0.0000, 23.10/s/gpu Batch (t): 0.6926 LR: 0.000100
+11/03/2025 17:51:10 - INFO - __main__ - Step: 1350 Loss_lm: 5.6458 Data (t): 0.0000, 23.73/s/gpu Batch (t): 0.6743 LR: 0.000100
+11/03/2025 17:51:26 - INFO - __main__ - Step: 1375 Loss_lm: 6.3194 Data (t): 0.0000, 23.96/s/gpu Batch (t): 0.6678 LR: 0.000100
+11/03/2025 17:51:43 - INFO - __main__ - Step: 1400 Loss_lm: 8.0267 Data (t): 0.0000, 21.42/s/gpu Batch (t): 0.7469 LR: 0.000100
+11/03/2025 17:52:00 - INFO - __main__ - Step: 1425 Loss_lm: 5.7495 Data (t): 0.0000, 23.62/s/gpu Batch (t): 0.6775 LR: 0.000100
+11/03/2025 17:52:17 - INFO - __main__ - Step: 1450 Loss_lm: 6.1128 Data (t): 0.0000, 23.70/s/gpu Batch (t): 0.6751 LR: 0.000100
+11/03/2025 17:52:34 - INFO - __main__ - Step: 1475 Loss_lm: 5.3010 Data (t): 0.0000, 23.69/s/gpu Batch (t): 0.6754 LR: 0.000100
+11/03/2025 17:52:51 - INFO - __main__ - Step: 1500 Loss_lm: 5.1897 Data (t): 0.0000, 21.34/s/gpu Batch (t): 0.7497 LR: 0.000100
+11/03/2025 17:52:51 - INFO - __main__ - Generating text samples...
+11/03/2025 17:52:51 - INFO - root - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -fPIC -fPIC -c /tmp/tmp12pgpx7s/test.c -o /tmp/tmp12pgpx7s/test.o
+11/03/2025 17:52:51 - INFO - root - cc -pthread /tmp/tmp12pgpx7s/test.o -laio -o /tmp/tmp12pgpx7s/a.out
+11/03/2025 17:52:51 - WARNING - __main__ - Falling back to raw model for generation because unwrap_model failed: CUDA_HOME does not exist, unable to compile CUDA op(s)
+11/03/2025 17:53:08 - INFO - __main__ - Step: 1525 Loss_lm: 3.8529 Data (t): 0.0000, 23.56/s/gpu Batch (t): 0.6790 LR: 0.000100
+11/03/2025 17:53:25 - INFO - __main__ - Step: 1550 Loss_lm: 5.7118 Data (t): 0.0000, 23.56/s/gpu Batch (t): 0.6793 LR: 0.000100
+11/03/2025 17:53:42 - INFO - __main__ - Step: 1575 Loss_lm: 7.0164 Data (t): 0.0000, 23.45/s/gpu Batch (t): 0.6822 LR: 0.000100
+11/03/2025 17:53:59 - INFO - __main__ - Step: 1600 Loss_lm: 3.4213 Data (t): 0.0000, 21.34/s/gpu Batch (t): 0.7499 LR: 0.000100
+11/03/2025 17:54:16 - INFO - __main__ - Step: 1625 Loss_lm: 6.6435 Data (t): 0.0000, 23.58/s/gpu Batch (t): 0.6786 LR: 0.000100
+11/03/2025 17:54:33 - INFO - __main__ - Step: 1650 Loss_lm: 5.2795 Data (t): 0.0000, 23.76/s/gpu Batch (t): 0.6733 LR: 0.000100
+11/03/2025 17:54:50 - INFO - __main__ - Step: 1675 Loss_lm: 5.1137 Data (t): 0.0000, 23.35/s/gpu Batch (t): 0.6853 LR: 0.000100
+11/03/2025 17:55:07 - INFO - __main__ - Step: 1700 Loss_lm: 5.6075 Data (t): 0.0000, 21.13/s/gpu Batch (t): 0.7574 LR: 0.000100
+11/03/2025 17:55:24 - INFO - __main__ - Step: 1725 Loss_lm: 4.0316 Data (t): 0.0000, 24.25/s/gpu Batch (t): 0.6599 LR: 0.000100
+11/03/2025 17:55:41 - INFO - __main__ - Step: 1750 Loss_lm: 5.2752 Data (t): 0.0000, 23.54/s/gpu Batch (t): 0.6797 LR: 0.000100
+11/03/2025 17:55:58 - INFO - __main__ - Step: 1775 Loss_lm: 6.0337 Data (t): 0.0000, 23.40/s/gpu Batch (t): 0.6838 LR: 0.000100
+11/03/2025 17:56:15 - INFO - __main__ - Step: 1800 Loss_lm: 2.9657 Data (t): 0.0000, 21.37/s/gpu Batch (t): 0.7488 LR: 0.000100
+11/03/2025 17:56:32 - INFO - __main__ - Step: 1825 Loss_lm: 5.4953 Data (t): 0.0000, 23.61/s/gpu Batch (t): 0.6777 LR: 0.000100
+11/03/2025 17:56:49 - INFO - __main__ - Step: 1850 Loss_lm: 5.8328 Data (t): 0.0000, 23.22/s/gpu Batch (t): 0.6892 LR: 0.000100
+11/03/2025 17:57:06 - INFO - __main__ - Step: 1875 Loss_lm: 5.5649 Data (t): 0.0000, 23.66/s/gpu Batch (t): 0.6762 LR: 0.000100
+11/03/2025 17:57:23 - INFO - __main__ - Step: 1900 Loss_lm: 4.6480 Data (t): 0.0000, 21.57/s/gpu Batch (t): 0.7418 LR: 0.000100
+11/03/2025 17:57:40 - INFO - __main__ - Step: 1925 Loss_lm: 4.7238 Data (t): 0.0000, 23.59/s/gpu Batch (t): 0.6784 LR: 0.000100
+11/03/2025 17:57:57 - INFO - __main__ - Step: 1950 Loss_lm: 6.0586 Data (t): 0.0000, 23.27/s/gpu Batch (t): 0.6877 LR: 0.000100
+11/03/2025 17:58:14 - INFO - __main__ - Step: 1975 Loss_lm: 5.4778 Data (t): 0.0000, 23.87/s/gpu Batch (t): 0.6702 LR: 0.000100
+11/03/2025 17:58:30 - INFO - __main__ - Step: 2000 Loss_lm: 4.8463 Data (t): 0.0000, 21.78/s/gpu Batch (t): 0.7346 LR: 0.000100
+11/03/2025 17:58:30 - INFO - __main__ - Generating text samples...
+11/03/2025 17:58:30 - INFO - root - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -fPIC -fPIC -c /tmp/tmpkakpfk51/test.c -o /tmp/tmpkakpfk51/test.o
+11/03/2025 17:58:30 - INFO - root - cc -pthread /tmp/tmpkakpfk51/test.o -laio -o /tmp/tmpkakpfk51/a.out
+11/03/2025 17:58:30 - WARNING - __main__ - Falling back to raw model for generation because unwrap_model failed: CUDA_HOME does not exist, unable to compile CUDA op(s)
+11/03/2025 17:58:48 - INFO - __main__ - Step: 2025 Loss_lm: 13.9253 Data (t): 0.0000, 23.54/s/gpu Batch (t): 0.6796 LR: 0.000100
+11/03/2025 17:59:05 - INFO - __main__ - Step: 2050 Loss_lm: 5.7786 Data (t): 0.0000, 23.78/s/gpu Batch (t): 0.6729 LR: 0.000100
+11/03/2025 17:59:22 - INFO - __main__ - Step: 2075 Loss_lm: 4.1416 Data (t): 0.0000, 23.71/s/gpu Batch (t): 0.6749 LR: 0.000100
+11/03/2025 17:59:39 - INFO - __main__ - Step: 2100 Loss_lm: 5.5102 Data (t): 0.0000, 21.40/s/gpu Batch (t): 0.7475 LR: 0.000100
+11/03/2025 17:59:56 - INFO - __main__ - Step: 2125 Loss_lm: 3.1472 Data (t): 0.0000, 23.77/s/gpu Batch (t): 0.6731 LR: 0.000100
+11/03/2025 18:00:13 - INFO - __main__ - Step: 2150 Loss_lm: 5.9750 Data (t): 0.0000, 23.41/s/gpu Batch (t): 0.6834 LR: 0.000100
+11/03/2025 18:00:40 - INFO - __main__ - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: bf16
+
+11/03/2025 18:00:41 - INFO - root - Saving config to outputs/tiny_test/config.yaml
+11/03/2025 18:00:41 - INFO - __main__ - Loading tokenizer and model
+11/03/2025 18:00:41 - INFO - __main__ - Initializing model from scratch with custom tiny architecture
+11/03/2025 18:00:42 - INFO - __main__ - Model initialized from scratch
+11/03/2025 18:00:42 - INFO - __main__ - Total parameters: 109,396,992 (109.40M)
+11/03/2025 18:00:42 - INFO - __main__ - Trainable parameters: 109,396,992 (109.40M)
+11/03/2025 18:00:42 - INFO - __main__ - Creating dataloaders and lr_scheduler
+11/03/2025 18:00:42 - INFO - __main__ - Preparing model, optimizer and dataloaders
+11/03/2025 18:00:42 - INFO - __main__ - ***** Running LLaDA pretraining *****
+11/03/2025 18:00:42 - INFO - __main__ -   Num training steps = 200000
+11/03/2025 18:00:42 - INFO - __main__ -   Instantaneous batch size per device = 2
+11/03/2025 18:00:42 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 16
+11/03/2025 18:00:42 - INFO - __main__ -   Gradient Accumulation steps = 8
+11/03/2025 18:00:42 - INFO - __main__ -   Num Steps = 200000
+11/03/2025 18:00:42 - INFO - __main__ -   Num Epochs = 32
+11/03/2025 18:00:42 - INFO - __main__ - Input ids: tensor([[50257, 50257, 50257,  ..., 50257, 50257, 50257],
+        [50257, 50257, 50257,  ..., 50257, 50257, 50257]], device='cuda:0')
+11/03/2025 18:00:42 - INFO - __main__ - Labels: tensor([[50256,    83,  1701,  ..., 50256, 50256, 50256],
+        [50256,    67, 33041,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Input ids: tensor([[50256, 50257, 50257,  ..., 50257, 50257, 50256],
+        [50257, 18865,    11,  ..., 50256, 50256, 50257]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Labels: tensor([[50256,    11,   612,  ..., 50256, 50256, 50256],
+        [50256, 18865,    11,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Input ids: tensor([[50256, 50257, 50257,  ..., 50256, 50257, 50256],
+        [50257, 13893, 50257,  ..., 50257, 50256, 50257]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Labels: tensor([[50256,   292,   257,  ..., 50256, 50256, 50256],
+        [50256, 13893,   339,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Input ids: tensor([[50256, 49123,   257,  ..., 50256, 50256, 50256],
+        [50257,  2402,   257,  ..., 50257, 50256, 50257]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Labels: tensor([[50256, 49123,   257,  ..., 50256, 50256, 50256],
+        [50256,  2402,   257,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Input ids: tensor([[50256, 50257,  9653,  ..., 50256, 50256, 50257],
+        [50256, 50257, 50257,  ..., 50257, 50256, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Labels: tensor([[50256,    68,  9653,  ..., 50256, 50256, 50256],
+        [50256,  9776,   257,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Input ids: tensor([[50256, 15452,   290,  ..., 50256, 50256, 50256],
+        [50257, 50257, 50257,  ..., 50257, 50257, 50257]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Labels: tensor([[50256, 15452,   290,  ..., 50256, 50256, 50256],
+        [50256,   257,   845,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Input ids: tensor([[50257, 50257, 50257,  ..., 50257, 50257, 50256],
+        [50257,    70, 50257,  ..., 50256, 50257, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Labels: tensor([[50256,   276,  4252,  ..., 50256, 50256, 50256],
+        [50256,    70,    13,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Input ids: tensor([[50257, 50257,   465,  ..., 50256, 50256, 50257],
+        [50256,    83,   373,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Labels: tensor([[50256,   286,   465,  ..., 50256, 50256, 50256],
+        [50256,    83,   373,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:00:43 - INFO - __main__ - Generating text samples...
+11/03/2025 18:00:43 - INFO - root - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -fPIC -fPIC -c /tmp/tmpe7b5yib1/test.c -o /tmp/tmpe7b5yib1/test.o
+11/03/2025 18:00:43 - INFO - root - cc -pthread /tmp/tmpe7b5yib1/test.o -laio -o /tmp/tmpe7b5yib1/a.out
+11/03/2025 18:00:44 - WARNING - __main__ - Falling back to raw model for generation because unwrap_model failed: CUDA_HOME does not exist, unable to compile CUDA op(s)
+11/03/2025 18:01:01 - INFO - __main__ - Step: 25 Loss_lm: 209.6996 Data (t): 0.0000, 22.74/s/gpu Batch (t): 0.7036 LR: 0.000025
+11/03/2025 18:01:18 - INFO - __main__ - Step: 50 Loss_lm: 23.9095 Data (t): 0.0000, 24.01/s/gpu Batch (t): 0.6663 LR: 0.000050
+11/03/2025 18:01:18 - INFO - __main__ - Saved state to outputs/tiny_test/checkpoint-50
+11/03/2025 18:01:35 - INFO - __main__ - Step: 75 Loss_lm: 13.9523 Data (t): 0.0000, 23.62/s/gpu Batch (t): 0.6773 LR: 0.000075
+11/03/2025 18:01:52 - INFO - __main__ - Step: 100 Loss_lm: 10.2521 Data (t): 0.0000, 21.01/s/gpu Batch (t): 0.7615 LR: 0.000100
+11/03/2025 18:01:52 - INFO - __main__ - Saved state to outputs/tiny_test/checkpoint-100
+11/03/2025 18:02:09 - INFO - __main__ - Step: 125 Loss_lm: 11.7527 Data (t): 0.0000, 23.11/s/gpu Batch (t): 0.6924 LR: 0.000100
+11/03/2025 18:02:26 - INFO - __main__ - Step: 150 Loss_lm: 8.0254 Data (t): 0.0000, 23.81/s/gpu Batch (t): 0.6719 LR: 0.000100
+11/03/2025 18:02:27 - INFO - __main__ - Saved state to outputs/tiny_test/checkpoint-150
+11/03/2025 18:02:44 - INFO - __main__ - Step: 175 Loss_lm: 7.7662 Data (t): 0.0000, 22.89/s/gpu Batch (t): 0.6990 LR: 0.000100
+11/03/2025 18:03:01 - INFO - __main__ - Step: 200 Loss_lm: 8.5879 Data (t): 0.0000, 21.00/s/gpu Batch (t): 0.7621 LR: 0.000100
+11/03/2025 18:03:01 - INFO - __main__ - 3 checkpoints already exist, removing 1 checkpoints
+11/03/2025 18:03:01 - INFO - __main__ - removing checkpoints: checkpoint-50
+11/03/2025 18:03:01 - INFO - __main__ - Saved state to outputs/tiny_test/checkpoint-200
+11/03/2025 18:03:18 - INFO - __main__ - Step: 225 Loss_lm: 6.6191 Data (t): 0.0000, 24.06/s/gpu Batch (t): 0.6649 LR: 0.000100
+11/03/2025 18:04:39 - INFO - __main__ - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: bf16
+
+11/03/2025 18:04:39 - INFO - root - Saving config to outputs/tiny_test/config.yaml
+11/03/2025 18:04:39 - INFO - __main__ - Loading tokenizer and model
+11/03/2025 18:04:40 - INFO - __main__ - Initializing model from scratch with custom tiny architecture
+11/03/2025 18:04:41 - INFO - __main__ - Model initialized from scratch
+11/03/2025 18:04:41 - INFO - __main__ - Total parameters: 109,396,992 (109.40M)
+11/03/2025 18:04:41 - INFO - __main__ - Trainable parameters: 109,396,992 (109.40M)
+11/03/2025 18:04:41 - INFO - __main__ - Creating dataloaders and lr_scheduler
+11/03/2025 18:04:41 - INFO - __main__ - Preparing model, optimizer and dataloaders
+11/03/2025 18:04:41 - INFO - __main__ - ***** Running LLaDA pretraining *****
+11/03/2025 18:04:41 - INFO - __main__ -   Num training steps = 200000
+11/03/2025 18:04:41 - INFO - __main__ -   Instantaneous batch size per device = 2
+11/03/2025 18:04:41 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 16
+11/03/2025 18:04:41 - INFO - __main__ -   Gradient Accumulation steps = 8
+11/03/2025 18:04:41 - INFO - __main__ -   Num Steps = 200000
+11/03/2025 18:04:41 - INFO - __main__ -   Num Epochs = 32
+11/03/2025 18:04:41 - INFO - __main__ - Input ids: tensor([[50257, 50257, 50257,  ..., 50257, 50257, 50257],
+        [50257, 50257, 50257,  ..., 50257, 50257, 50257]], device='cuda:0')
+11/03/2025 18:04:41 - INFO - __main__ - Labels: tensor([[50256,    83,  1701,  ..., 50256, 50256, 50256],
+        [50256,    67, 33041,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:04:41 - INFO - __main__ - Input ids: tensor([[50256, 50257, 50257,  ..., 50257, 50257, 50256],
+        [50257, 18865,    11,  ..., 50256, 50256, 50257]], device='cuda:0')
+11/03/2025 18:04:41 - INFO - __main__ - Labels: tensor([[50256,    11,   612,  ..., 50256, 50256, 50256],
+        [50256, 18865,    11,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:04:41 - INFO - __main__ - Input ids: tensor([[50256, 50257, 50257,  ..., 50256, 50257, 50256],
+        [50257, 13893, 50257,  ..., 50257, 50256, 50257]], device='cuda:0')
+11/03/2025 18:04:41 - INFO - __main__ - Labels: tensor([[50256,   292,   257,  ..., 50256, 50256, 50256],
+        [50256, 13893,   339,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:04:41 - INFO - __main__ - Input ids: tensor([[50256, 49123,   257,  ..., 50256, 50256, 50256],
+        [50257,  2402,   257,  ..., 50257, 50256, 50257]], device='cuda:0')
+11/03/2025 18:04:41 - INFO - __main__ - Labels: tensor([[50256, 49123,   257,  ..., 50256, 50256, 50256],
+        [50256,  2402,   257,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:04:42 - INFO - __main__ - Input ids: tensor([[50256, 50257,  9653,  ..., 50256, 50256, 50257],
+        [50256, 50257, 50257,  ..., 50257, 50256, 50256]], device='cuda:0')
+11/03/2025 18:04:42 - INFO - __main__ - Labels: tensor([[50256,    68,  9653,  ..., 50256, 50256, 50256],
+        [50256,  9776,   257,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:04:42 - INFO - __main__ - Input ids: tensor([[50256, 15452,   290,  ..., 50256, 50256, 50256],
+        [50257, 50257, 50257,  ..., 50257, 50257, 50257]], device='cuda:0')
+11/03/2025 18:04:42 - INFO - __main__ - Labels: tensor([[50256, 15452,   290,  ..., 50256, 50256, 50256],
+        [50256,   257,   845,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:04:42 - INFO - __main__ - Input ids: tensor([[50257, 50257, 50257,  ..., 50257, 50257, 50256],
+        [50257,    70, 50257,  ..., 50256, 50257, 50256]], device='cuda:0')
+11/03/2025 18:04:42 - INFO - __main__ - Labels: tensor([[50256,   276,  4252,  ..., 50256, 50256, 50256],
+        [50256,    70,    13,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:04:42 - INFO - __main__ - Input ids: tensor([[50257, 50257,   465,  ..., 50256, 50256, 50257],
+        [50256,    83,   373,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:04:42 - INFO - __main__ - Labels: tensor([[50256,   286,   465,  ..., 50256, 50256, 50256],
+        [50256,    83,   373,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/03/2025 18:04:42 - INFO - __main__ - Generating text samples...
+11/03/2025 18:04:42 - INFO - root - cc -pthread -fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -fPIC -fPIC -c /tmp/tmpe8lfw9yh/test.c -o /tmp/tmpe8lfw9yh/test.o
+11/03/2025 18:04:42 - INFO - root - cc -pthread /tmp/tmpe8lfw9yh/test.o -laio -o /tmp/tmpe8lfw9yh/a.out
+11/03/2025 18:04:42 - WARNING - __main__ - Falling back to raw model for generation because unwrap_model failed: CUDA_HOME does not exist, unable to compile CUDA op(s)
+11/03/2025 18:04:59 - INFO - __main__ - Step: 25 Loss_lm: 209.6996 Data (t): 0.0000, 23.28/s/gpu Batch (t): 0.6874 LR: 0.000025
+11/03/2025 18:07:14 - INFO - __main__ - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: bf16
+
+11/03/2025 18:07:14 - INFO - root - Saving config to outputs/tiny_test/config.yaml
+11/03/2025 18:07:14 - INFO - __main__ - Loading tokenizer and model
+11/03/2025 18:07:14 - INFO - __main__ - Initializing model from scratch with custom tiny architecture
+11/03/2025 18:07:15 - INFO - __main__ - Loading model weights from outputs/tiny_test/checkpoint-200/unwrapped_model/pytorch_model.bin
+11/03/2025 18:07:15 - INFO - __main__ - Resuming from global step 200
+11/03/2025 18:07:15 - INFO - __main__ - Model initialized from scratch
+11/03/2025 18:07:15 - INFO - __main__ - Total parameters: 109,396,992 (109.40M)
+11/03/2025 18:07:15 - INFO - __main__ - Trainable parameters: 109,396,992 (109.40M)
+11/03/2025 18:07:15 - INFO - __main__ - Creating dataloaders and lr_scheduler
+11/03/2025 18:07:15 - INFO - __main__ - Preparing model, optimizer and dataloaders
+11/03/2025 18:07:15 - INFO - __main__ - ***** Running LLaDA pretraining *****
+11/03/2025 18:07:15 - INFO - __main__ -   Num training steps = 200000
+11/03/2025 18:07:15 - INFO - __main__ -   Instantaneous batch size per device = 2
+11/03/2025 18:07:15 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 16
+11/03/2025 18:07:15 - INFO - __main__ -   Gradient Accumulation steps = 8
+11/03/2025 18:07:15 - INFO - __main__ -   Num Steps = 200000
+11/03/2025 18:07:15 - INFO - __main__ -   Num Epochs = 32
+11/03/2025 18:07:33 - INFO - __main__ - Step: 225 Loss_lm: 6.7103 Data (t): 0.0000, 23.32/s/gpu Batch (t): 0.6862 LR: 0.000025
+11/03/2025 18:07:50 - INFO - __main__ - Step: 250 Loss_lm: 7.1439 Data (t): 0.0000, 23.79/s/gpu Batch (t): 0.6725 LR: 0.000050
+11/03/2025 18:08:07 - INFO - __main__ - Step: 275 Loss_lm: 6.2670 Data (t): 0.0000, 23.28/s/gpu Batch (t): 0.6873 LR: 0.000075
