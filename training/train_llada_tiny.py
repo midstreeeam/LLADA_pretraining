@@ -95,10 +95,18 @@ def main():
     #####################################
     # SETUP LOGGING, SEED and CONFIG    #
     #####################################
+    os.makedirs(config.experiment.logging_dir, exist_ok=True)
+    log_file = Path(config.experiment.logging_dir) / "training.log"
+
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
         datefmt="%m/%d/%Y %H:%M:%S",
         level=logging.INFO,
+        handlers=[
+            logging.StreamHandler(sys.stdout),
+            logging.FileHandler(log_file, mode="a", encoding="utf-8"),
+        ],
+        force=True,
     )
     logger.info(accelerator.state, main_process_only=False)
     if accelerator.is_local_main_process:
@@ -149,6 +157,11 @@ def main():
     # Use GPT-2 tokenizer
     tokenizer = AutoTokenizer.from_pretrained(config.model.pretrained_model_path, padding_side="left")
 
+    mask_token = "<|mask|>"
+    if mask_token not in tokenizer.get_vocab():
+        tokenizer.add_special_tokens({"additional_special_tokens": [mask_token]})
+    mask_token_id = tokenizer.convert_tokens_to_ids(mask_token)
+
     uni_prompting = UniversalPrompting(tokenizer, max_text_len=config.dataset.preprocessing.max_seq_length,
                                        special_tokens=(),
                                        ignore_id=-100, cond_dropout_prob=0, use_reserved_token=False)
@@ -159,6 +172,7 @@ def main():
     logger.info("Initializing model from scratch with custom tiny architecture")
     llada_config_dict = {k: v for k, v in config.model.llada_config.items()} if hasattr(config.model, 'llada_config') else {}
     llada_config = LLaDAConfig(**llada_config_dict)
+    llada_config.mask_token_id = mask_token_id
 
     # Create model from scratch (not from pretrained)
     model = LLaDAModelLM(config=llada_config)
@@ -166,6 +180,7 @@ def main():
     # Resize token embeddings to match tokenizer
     model.resize_token_embeddings(len(uni_prompting.text_tokenizer))
     model.config.embedding_size = model.config.new_vocab_size
+    model.config.mask_token_id = mask_token_id
 
     # Convert to bfloat16 and move to device
     model = model.to(dtype=torch.bfloat16, device=accelerator.device)
@@ -529,12 +544,15 @@ def generate_text_samples(model, tokenizer, accelerator, config, global_step):
     else:
         weight_dtype = torch.float32
 
+    unwrapped_model = model
     if hasattr(accelerator, "unwrap_model"):
-        unwrapped_model = accelerator.unwrap_model(model)
+        try:
+            unwrapped_model = accelerator.unwrap_model(model)
+        except Exception as exc:
+            logger.warning(f"Falling back to raw model for generation because unwrap_model failed: {exc}")
+            unwrapped_model = model
     elif hasattr(model, "module"):
         unwrapped_model = model.module
-    else:
-        unwrapped_model = model
 
     generation_cfg = config.generation if hasattr(config, "generation") else None
 
