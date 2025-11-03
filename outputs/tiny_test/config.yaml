@@ -1,7 +1,7 @@
 wandb:
   entity: null
   resume: auto
-  run_id: xtcgxjgb
+  run_id: 2thtvy6u
 experiment:
   project: llada-tiny-test
   name: llada-tiny-test
@@ -17,10 +17,10 @@ model:
   pretrained_model_path: gpt2
   llada_config:
     gradient_checkpointing: false
-    d_model: 384
-    n_heads: 6
-    n_layers: 6
-    n_kv_heads: 6
+    d_model: 768
+    n_heads: 12
+    n_layers: 12
+    n_kv_heads: 12
     mlp_ratio: 4
     max_sequence_length: 512
     vocab_size: 50257

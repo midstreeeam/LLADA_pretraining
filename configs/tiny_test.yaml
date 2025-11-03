@@ -21,10 +21,10 @@ model:
     llada_config:
         gradient_checkpointing: false
         # Tiny model architecture
-        d_model: 384          # Hidden size
-        n_heads: 6            # Attention heads
-        n_layers: 6           # Number of transformer layers
-        n_kv_heads: 6         # Key-value heads
+        d_model: 768           # Hidden size
+        n_heads: 12            # Attention heads
+        n_layers: 12           # Number of transformer layers
+        n_kv_heads: 12         # Key-value heads
         mlp_ratio: 4
         max_sequence_length: 512
         vocab_size: 50257

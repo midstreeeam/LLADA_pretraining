@@ -18,7 +18,7 @@ def diffusion_generate_text(
     device: Optional[torch.device] = None,
     max_seq_length: int,
     max_new_tokens: int = 80,
-    num_steps: int = 12,
+    num_steps: int = 40,
     temperature: float = 0.8,
     top_k: int = 0,
     top_p: float = 0.9,
