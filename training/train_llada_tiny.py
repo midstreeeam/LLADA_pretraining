@@ -557,7 +557,7 @@ def log_grad_norm(model, accelerator, global_step):
 def generate_text_samples(model, tokenizer, accelerator, config, global_step):
     """Generate text samples for validation during training"""
     logger.info("Generating text samples...")
-    print(f"[gen] enter generate_text_samples: step={global_step}, rank={accelerator.process_index}")
+    logger.info(f"[gen] enter generate_text_samples: step={global_step}, rank={accelerator.process_index}")
     model.eval()
 
     # Sample prompts for TinyStories - simple and child-friendly
@@ -604,7 +604,7 @@ def generate_text_samples(model, tokenizer, accelerator, config, global_step):
 
     with torch.autocast("cuda", dtype=weight_dtype, enabled=accelerator.mixed_precision != "no"):
         t0 = time.time()
-        generated_texts = diffusion_generate_text(
+        generation_output = diffusion_generate_text(
             unwrapped_model,
             tokenizer,
             validation_prompts,
@@ -617,12 +617,21 @@ def generate_text_samples(model, tokenizer, accelerator, config, global_step):
             top_p=top_p,
             schedule=mask_schedule,
             seed=seed,
+            return_debug=True,
         )
+        if isinstance(generation_output, tuple):
+            generated_texts, debug_annotations = generation_output
+        else:
+            generated_texts = generation_output
+            debug_annotations = None
         dt = time.time() - t0
-        print(f"[gen] diffusion sampling done in {dt:.2f}s for {len(validation_prompts)} prompts")
+        logger.info(f"[gen] diffusion sampling done in {dt:.2f}s for {len(validation_prompts)} prompts")
 
     for i, generated in enumerate(generated_texts):
-        print(f"[gen] prompt[{i}] Generated: {generated}")
+        logger.info(f"[gen] prompt[{i}] Generated: {generated}")
+        if debug_annotations is not None:
+            debug_line = " ".join(debug_annotations[i])
+            logger.info(f"[gen] prompt[{i}] tokens: {debug_line}")
 
     # Log generated texts
     for i, (prompt, generated) in enumerate(zip(validation_prompts, generated_texts)):
@@ -630,7 +639,7 @@ def generate_text_samples(model, tokenizer, accelerator, config, global_step):
             f"generated_text_{i}": wandb.Html(f"<b>Prompt:</b> {prompt}<br><b>Generated:</b> {generated}")
         }, step=global_step)
 
-    print(f"[gen] exit generate_text_samples: step={global_step}")
+    logger.info(f"[gen] exit generate_text_samples: step={global_step}")
     model.train()
 
 

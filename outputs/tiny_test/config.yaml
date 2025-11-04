@@ -1,7 +1,7 @@
 wandb:
   entity: null
   resume: auto
-  run_id: 5qtqwctf
+  run_id: 8r0uvus2
 experiment:
   project: llada-tiny-test
   name: llada-tiny-test
@@ -12,7 +12,7 @@ experiment:
   log_every: 25
   log_grad_norm_every: 100
   checkpoints_total_limit: 3
-  resume_from_checkpoint: outputs/tiny_test/checkpoint-20000
+  resume_from_checkpoint: outputs/tiny_test/checkpoint-45000
   logging_dir: outputs/tiny_test/logs
 model:
   pretrained_model_path: gpt2
@@ -46,7 +46,7 @@ dataset:
     pin_memory: true
     persistent_workers: false
   preprocessing:
-    max_seq_length: 256
+    max_seq_length: 128
 optimizer:
   name: adamw
   params:
@@ -71,4 +71,6 @@ training:
   max_train_steps: 200000
   max_grad_norm: 1.0
   lm_coeff: 1.0
+generation:
+  num_steps: 20
 config: configs/tiny_test.yaml

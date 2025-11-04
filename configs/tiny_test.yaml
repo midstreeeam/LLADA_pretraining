@@ -12,7 +12,7 @@ experiment:
     log_every: 25
     log_grad_norm_every: 100
     checkpoints_total_limit: 3
-    resume_from_checkpoint: "outputs/tiny_test/checkpoint-20000"
+    resume_from_checkpoint: "outputs/tiny_test/checkpoint-45000"
 
 model:
     # Using a tiny GPT-2 as base tokenizer only, model initialized from scratch
@@ -54,7 +54,7 @@ dataset:
         persistent_workers: false
 
     preprocessing:
-        max_seq_length: 256
+        max_seq_length: 128
 
 optimizer:
     name: adamw
@@ -82,3 +82,10 @@ training:
     max_train_steps: 200000 # less than one epoch
     max_grad_norm: 1.0
     lm_coeff: 1.0
+
+generation:
+    num_steps: 20
+    # # optional tweaks:
+    # max_new_tokens: 80
+    # temperature: 0.6
+    # top_p: 0.9

@@ -24,6 +24,7 @@ def diffusion_generate_text(
     top_p: float = 0.9,
     schedule: str = "cosine",
     seed: Optional[int] = None,
+    return_debug: bool = False,
 ) -> List[str]:
     """
     Generate text with LLaDA using the iterative masking procedure that matches the
@@ -81,6 +82,7 @@ def diffusion_generate_text(
         (batch_size, seq_len), fill_value=mask_token_id, dtype=torch.long, device=device
     )
     fixed_mask = torch.zeros((batch_size, seq_len), dtype=torch.bool, device=device)
+    token_steps = torch.full((batch_size, seq_len), fill_value=-2, dtype=torch.int32, device=device)
 
     for idx, tokens in enumerate(prompt_token_lists):
         # Reserve the last token for EOS so the diffusion model keeps the same framing as training.
@@ -93,6 +95,8 @@ def diffusion_generate_text(
         prompt_template[idx, seq_len - 1] = eos_token_id
         fixed_mask[idx, seq_len - 1] = True
         prompt_token_lists[idx] = tokens[:usable_prompt_len]
+        token_steps[idx, :usable_prompt_len] = -1
+        token_steps[idx, seq_len - 1] = -1
 
     input_ids = prompt_template.clone()
     input_ids[~fixed_mask] = mask_token_id
@@ -148,11 +152,13 @@ def diffusion_generate_text(
 
         input_ids = torch.where(remain_mask, sampled, input_ids)
         input_ids = torch.where(fixed_mask, prompt_template, input_ids)
+        token_steps = torch.where(fixed_mask, torch.full_like(token_steps, -1), token_steps)
 
         confidences = probs.gather(-1, input_ids.unsqueeze(-1)).squeeze(-1)
         confidences = torch.where(fixed_mask, torch.ones_like(confidences), confidences)
 
         if step == num_steps - 1:
+            token_steps = torch.where(remain_mask, torch.full_like(token_steps, step + 1), token_steps)
             remain_mask.zero_()
             break
 
@@ -181,12 +187,17 @@ def diffusion_generate_text(
             selected = candidates[:k]
             new_remain_mask[idx, selected] = True
 
+        newly_filled = remain_mask & ~new_remain_mask
+        if newly_filled.any():
+            fill_steps = torch.full_like(token_steps, step + 1)
+            token_steps = torch.where(newly_filled, fill_steps, token_steps)
         remain_mask = new_remain_mask
 
     if was_training:
         model.train()
 
     generated_texts: List[str] = []
+    debug_annotations: Optional[List[List[str]]] = [] if return_debug else None
     for idx in range(batch_size):
         tokens = input_ids[idx].tolist()
         # Remove the leading BOS token (if present) to avoid duplicated <|endoftext|>.
@@ -207,4 +218,21 @@ def diffusion_generate_text(
         text = tokenizer.decode(tokens, skip_special_tokens=True)
         generated_texts.append(text.strip())
 
+        if return_debug:
+            full_tokens = input_ids[idx].tolist()
+            steps = token_steps[idx].tolist()
+            token_strs = tokenizer.convert_ids_to_tokens(full_tokens)
+            annotated = []
+            for tok, step_idx in zip(token_strs, steps):
+                if step_idx == -1:
+                    tag = "P"
+                elif step_idx == -2:
+                    tag = "?"
+                else:
+                    tag = str(step_idx)
+                annotated.append(f"{tok}[{tag}]")
+            debug_annotations.append(annotated)
+
+    if return_debug:
+        return generated_texts, debug_annotations  # type: ignore[return-value]
     return generated_texts
