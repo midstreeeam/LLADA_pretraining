@@ -12,6 +12,8 @@ experiment:
   log_every: 200
   log_grad_norm_every: 200
   checkpoints_total_limit: 3
+  resume_from_checkpoint: "autodl-tmp/LLADA_pretraining/outputs/tiny_test_autodl/checkpoint-30000"
+  # reset_optimizer: false
 
 model:
   pretrained_model_path: "gpt2"

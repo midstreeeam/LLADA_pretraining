@@ -1,4 +1,4 @@
 *.pyc
 wandb/*
 data
-outputs/
+outputs/*/checkpoint-*
