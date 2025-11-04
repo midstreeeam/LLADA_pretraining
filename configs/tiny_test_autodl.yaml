@@ -6,10 +6,10 @@ experiment:
   project: "llada-tiny-autodl"
   name: "llada-tiny-autodl"
   output_dir: "outputs/tiny_test_autodl"
-  save_every: 2000
-  eval_every: 1000
-  generate_every: 1000
-  log_every: 25
+  save_every: 10000
+  eval_every: 2000
+  generate_every: 2000
+  log_every: 200
   log_grad_norm_every: 200
   checkpoints_total_limit: 3
 
@@ -67,11 +67,11 @@ lr_scheduler:
 
 training:
   gradient_accumulation_steps: 2
-  batch_size: 32
+  batch_size: 64
   mixed_precision: "bf16"
   enable_tf32: true
   seed: 42
-  max_train_steps: 200000
+  max_train_steps: 300000
   max_grad_norm: 1.0
   lm_coeff: 1.0
   ignore_eos_in_masking: true
