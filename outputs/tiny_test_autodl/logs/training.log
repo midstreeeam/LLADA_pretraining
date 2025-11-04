@@ -1,0 +1,2317 @@
+11/05/2025 01:57:00 - INFO - __main__ - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: bf16
+
+11/05/2025 01:57:00 - INFO - root - Saving config to outputs/tiny_test_autodl/config.yaml
+11/05/2025 01:57:00 - INFO - __main__ - Loading tokenizer and model
+11/05/2025 01:57:00 - INFO - __main__ - Initializing model from scratch with custom tiny architecture
+11/05/2025 01:57:01 - INFO - __main__ - Model initialized from scratch
+11/05/2025 01:57:01 - INFO - __main__ - Total parameters: 109,396,992 (109.40M)
+11/05/2025 01:57:01 - INFO - __main__ - Trainable parameters: 109,396,992 (109.40M)
+11/05/2025 01:57:01 - INFO - __main__ - Creating dataloaders and lr_scheduler
+11/05/2025 01:57:01 - INFO - __main__ - Preparing model, optimizer and dataloaders
+11/05/2025 01:57:01 - INFO - __main__ - ***** Running LLaDA pretraining *****
+11/05/2025 01:57:01 - INFO - __main__ -   Num training steps = 200000
+11/05/2025 01:57:01 - INFO - __main__ -   Instantaneous batch size per device = 32
+11/05/2025 01:57:01 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 64
+11/05/2025 01:57:01 - INFO - __main__ -   Gradient Accumulation steps = 2
+11/05/2025 01:57:01 - INFO - __main__ -   Num Steps = 200000
+11/05/2025 01:57:01 - INFO - __main__ -   Num Epochs = 128
+11/05/2025 01:57:02 - INFO - __main__ - Input ids: tensor([[50256, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50256, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50256,    81,  1030,  ..., 50256, 50256, 50256],
+        ...,
+        [50256,   392,  5203,  ..., 50256, 50256, 50256],
+        [50256,   258,  6473,  ..., 50256, 50256, 50256],
+        [50256, 50257, 50257,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/05/2025 01:57:02 - INFO - __main__ - Labels: tensor([[50256,   283,    13,  ...,  -100,  -100,  -100],
+        [50256, 12810,   257,  ...,  -100,  -100,  -100],
+        [50256,    81,  1030,  ...,  -100,  -100,  -100],
+        ...,
+        [50256,   392,  5203,  ...,  -100,  -100,  -100],
+        [50256,   258,  6473,  ...,  -100,  -100,  -100],
+        [50256,   358,  1464,  ...,  -100,  -100,  -100]], device='cuda:0')
+11/05/2025 01:57:02 - INFO - __main__ - Input ids: tensor([[50256, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50256,  2460,    13,  ..., 50256, 50256, 50256],
+        [50256,   198,   464,  ..., 50256, 50256, 50256],
+        ...,
+        [50256,  1416, 50257,  ..., 50256, 50256, 50256],
+        [50256, 14967,  1816,  ..., 50256, 50256, 50256],
+        [50256, 50257,  2817,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/05/2025 01:57:02 - INFO - __main__ - Labels: tensor([[50256,   276,   284,  ...,  -100,  -100,  -100],
+        [50256,  2460,    13,  ...,  -100,  -100,  -100],
+        [50256,   198,   464,  ...,  -100,  -100,  -100],
+        ...,
+        [50256,  1416,  1144,  ...,  -100,  -100,  -100],
+        [50256, 14967,  1816,  ...,  -100,  -100,  -100],
+        [50256,    81,  2817,  ...,  -100,  -100,  -100]], device='cuda:0')
+11/05/2025 01:57:02 - INFO - __main__ - Generating text samples...
+11/05/2025 01:57:02 - INFO - __main__ - [gen] enter generate_text_samples: step=1, rank=0
+11/05/2025 01:57:02 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmp4izm0lkh/test.c -o /tmp/tmp4izm0lkh/test.o
+11/05/2025 01:57:02 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmp4izm0lkh/test.o -laio -o /tmp/tmp4izm0lkh/a.out
+11/05/2025 01:57:03 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmpq0r5id31/test.c -o /tmp/tmpq0r5id31/test.o
+11/05/2025 01:57:03 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmpq0r5id31/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpq0r5id31/a.out
+11/05/2025 01:57:04 - INFO - __main__ - [gen] diffusion sampling done in 0.28s for 5 prompts
+11/05/2025 01:57:04 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little
+11/05/2025 01:57:04 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[3] <|mask|>[3] <|mask|>[3] <|mask|>[2] <|mask|>[2] <|mask|>[1] <|endoftext|>[P]
+11/05/2025 01:57:04 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named
+11/05/2025 01:57:04 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[3] <|mask|>[3] <|mask|>[3] <|mask|>[2] <|mask|>[2] <|mask|>[1] <|endoftext|>[P]
+11/05/2025 01:57:04 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived
+11/05/2025 01:57:04 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[3] <|mask|>[3] <|mask|>[3] <|mask|>[2] <|mask|>[2] <|mask|>[1] <|endoftext|>[P]
+11/05/2025 01:57:04 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and
+11/05/2025 01:57:04 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[3] <|mask|>[3] <|mask|>[3] <|mask|>[2] <|mask|>[2] <|mask|>[1] <|endoftext|>[P]
+11/05/2025 01:57:04 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to
+11/05/2025 01:57:04 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[3] <|mask|>[3] <|mask|>[3] <|mask|>[2] <|mask|>[2] <|mask|>[1] <|endoftext|>[P]
+11/05/2025 01:57:04 - INFO - __main__ - [gen] exit generate_text_samples: step=1
+11/05/2025 01:57:06 - INFO - __main__ - Step: 25 Loss_lm: 21.3711 Data (t): 0.0000, 489.23/s/gpu Batch (t): 0.1308 LR: 0.000125
+11/05/2025 01:57:10 - INFO - __main__ - Step: 50 Loss_lm: 17.8928 Data (t): 0.0000, 398.12/s/gpu Batch (t): 0.1608 LR: 0.000250
+11/05/2025 01:57:14 - INFO - __main__ - Step: 75 Loss_lm: 16.1073 Data (t): 0.0000, 414.44/s/gpu Batch (t): 0.1544 LR: 0.000375
+11/05/2025 01:57:18 - INFO - __main__ - Step: 100 Loss_lm: 13.3775 Data (t): 0.0000, 422.73/s/gpu Batch (t): 0.1514 LR: 0.000500
+11/05/2025 01:57:22 - INFO - __main__ - Step: 125 Loss_lm: 13.5766 Data (t): 0.0000, 424.92/s/gpu Batch (t): 0.1506 LR: 0.000500
+11/05/2025 01:57:25 - INFO - __main__ - Step: 150 Loss_lm: 9.6380 Data (t): 0.0000, 400.90/s/gpu Batch (t): 0.1596 LR: 0.000500
+11/05/2025 01:59:21 - INFO - __main__ - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: bf16
+
+11/05/2025 01:59:21 - INFO - root - Saving config to outputs/tiny_test_autodl/config.yaml
+11/05/2025 01:59:21 - INFO - __main__ - Loading tokenizer and model
+11/05/2025 01:59:22 - INFO - __main__ - Initializing model from scratch with custom tiny architecture
+11/05/2025 01:59:23 - INFO - __main__ - Model initialized from scratch
+11/05/2025 01:59:23 - INFO - __main__ - Total parameters: 109,396,992 (109.40M)
+11/05/2025 01:59:23 - INFO - __main__ - Trainable parameters: 109,396,992 (109.40M)
+11/05/2025 01:59:23 - INFO - __main__ - Creating dataloaders and lr_scheduler
+11/05/2025 01:59:23 - INFO - __main__ - Preparing model, optimizer and dataloaders
+11/05/2025 01:59:23 - INFO - __main__ - ***** Running LLaDA pretraining *****
+11/05/2025 01:59:23 - INFO - __main__ -   Num training steps = 300000
+11/05/2025 01:59:23 - INFO - __main__ -   Instantaneous batch size per device = 64
+11/05/2025 01:59:23 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 128
+11/05/2025 01:59:23 - INFO - __main__ -   Gradient Accumulation steps = 2
+11/05/2025 01:59:23 - INFO - __main__ -   Num Steps = 300000
+11/05/2025 01:59:23 - INFO - __main__ -   Num Epochs = 384
+11/05/2025 01:59:23 - INFO - __main__ - Input ids: tensor([[50256, 50257,    13,  ..., 50256, 50256, 50256],
+        [50256, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50256, 50257,  1030,  ..., 50256, 50256, 50256],
+        ...,
+        [50256,    13,   198,  ..., 50256, 50256, 50256],
+        [50256, 50257,  1365,  ..., 50256, 50256, 50256],
+        [50256, 50257, 50257,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/05/2025 01:59:23 - INFO - __main__ - Labels: tensor([[50256,   283,    13,  ...,  -100,  -100,  -100],
+        [50256, 12810,   257,  ...,  -100,  -100,  -100],
+        [50256,    81,  1030,  ...,  -100,  -100,  -100],
+        ...,
+        [50256,    13,   198,  ...,  -100,  -100,  -100],
+        [50256, 36410,  1365,  ...,  -100,  -100,  -100],
+        [50256,    43,   813,  ...,  -100,  -100,  -100]], device='cuda:0')
+11/05/2025 01:59:24 - INFO - __main__ - Input ids: tensor([[50256,   276,   284,  ..., 50256, 50256, 50256],
+        [50256,  2460,    13,  ..., 50256, 50256, 50256],
+        [50256,   198,   464,  ..., 50256, 50256, 50256],
+        ...,
+        [50256,    83, 19417,  ..., 50256, 50256, 50256],
+        [50256,   258,   561,  ..., 50256, 50256, 50256],
+        [50256, 50257,   262,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/05/2025 01:59:24 - INFO - __main__ - Labels: tensor([[50256,   276,   284,  ...,  -100,  -100,  -100],
+        [50256,  2460,    13,  ...,  -100,  -100,  -100],
+        [50256,   198,   464,  ...,  -100,  -100,  -100],
+        ...,
+        [50256,    83, 19417,  ...,  -100,  -100,  -100],
+        [50256,   258,   561,  ...,  -100,  -100,  -100],
+        [50256,    78,   262,  ...,  -100,  -100,  -100]], device='cuda:0')
+11/05/2025 01:59:24 - INFO - __main__ - Generating text samples...
+11/05/2025 01:59:24 - INFO - __main__ - [gen] enter generate_text_samples: step=1, rank=0
+11/05/2025 01:59:24 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmpw_40e2nd/test.c -o /tmp/tmpw_40e2nd/test.o
+11/05/2025 01:59:24 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmpw_40e2nd/test.o -laio -o /tmp/tmpw_40e2nd/a.out
+11/05/2025 01:59:24 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmpw0wp6z2c/test.c -o /tmp/tmpw0wp6z2c/test.o
+11/05/2025 01:59:24 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmpw0wp6z2c/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpw0wp6z2c/a.out
+11/05/2025 01:59:25 - INFO - __main__ - [gen] diffusion sampling done in 0.25s for 5 prompts
+11/05/2025 01:59:25 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little
+11/05/2025 01:59:25 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[3] <|mask|>[3] <|mask|>[3] <|mask|>[2] <|mask|>[2] <|mask|>[1] <|endoftext|>[P]
+11/05/2025 01:59:25 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named
+11/05/2025 01:59:25 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[3] <|mask|>[3] <|mask|>[3] <|mask|>[2] <|mask|>[2] <|mask|>[1] <|endoftext|>[P]
+11/05/2025 01:59:25 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived
+11/05/2025 01:59:25 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[3] <|mask|>[3] <|mask|>[3] <|mask|>[2] <|mask|>[2] <|mask|>[1] <|endoftext|>[P]
+11/05/2025 01:59:25 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and
+11/05/2025 01:59:25 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[3] <|mask|>[3] <|mask|>[3] <|mask|>[2] <|mask|>[2] <|mask|>[1] <|endoftext|>[P]
+11/05/2025 01:59:25 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to
+11/05/2025 01:59:25 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[12] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[11] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[10] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[9] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[8] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[7] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[6] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[5] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[4] <|mask|>[3] <|mask|>[3] <|mask|>[3] <|mask|>[2] <|mask|>[2] <|mask|>[1] <|endoftext|>[P]
+11/05/2025 01:59:25 - INFO - __main__ - [gen] exit generate_text_samples: step=1
+11/05/2025 01:59:58 - INFO - __main__ - Step: 200 Loss_lm: 8.6748 Data (t): 0.0000, 627.62/s/gpu Batch (t): 0.2039 LR: 0.000500
+11/05/2025 02:00:31 - INFO - __main__ - Step: 400 Loss_lm: 8.0210 Data (t): 0.0000, 613.79/s/gpu Batch (t): 0.2085 LR: 0.000500
+11/05/2025 02:01:04 - INFO - __main__ - Step: 600 Loss_lm: 4.8974 Data (t): 0.0000, 625.04/s/gpu Batch (t): 0.2048 LR: 0.000500
+11/05/2025 02:01:38 - INFO - __main__ - Step: 800 Loss_lm: 6.5717 Data (t): 0.0000, 623.67/s/gpu Batch (t): 0.2052 LR: 0.000500
+11/05/2025 02:02:11 - INFO - __main__ - Step: 1000 Loss_lm: 4.7870 Data (t): 0.0000, 621.39/s/gpu Batch (t): 0.2060 LR: 0.000500
+11/05/2025 02:02:44 - INFO - __main__ - Step: 1200 Loss_lm: 5.0278 Data (t): 0.0000, 610.73/s/gpu Batch (t): 0.2096 LR: 0.000500
+11/05/2025 02:03:16 - INFO - __main__ - Step: 1400 Loss_lm: 3.7963 Data (t): 0.0000, 629.02/s/gpu Batch (t): 0.2035 LR: 0.000500
+11/05/2025 02:03:49 - INFO - __main__ - Step: 1600 Loss_lm: 7.5438 Data (t): 0.0000, 621.31/s/gpu Batch (t): 0.2060 LR: 0.000500
+11/05/2025 02:04:22 - INFO - __main__ - Step: 1800 Loss_lm: 3.5399 Data (t): 0.0000, 587.48/s/gpu Batch (t): 0.2179 LR: 0.000500
+11/05/2025 02:04:56 - INFO - __main__ - Step: 2000 Loss_lm: 3.6676 Data (t): 0.0000, 626.88/s/gpu Batch (t): 0.2042 LR: 0.000500
+11/05/2025 02:04:56 - INFO - __main__ - Generating text samples...
+11/05/2025 02:04:56 - INFO - __main__ - [gen] enter generate_text_samples: step=2000, rank=0
+11/05/2025 02:04:56 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 02:04:56 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a littleorldâ.
+
+
+Momââ€â€â€â€
+âMomâ€€
+ââ€ downâ€€�ââ€€â
+Momââ€âââ€â
+
+â
+
+â€€ �Jane finds€ €
+
+â€â€€
+  Momâ€â€ officers Manit
+11/05/2025 02:04:56 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] orld[11] Ã¢[11] .[5] Ċ[5] Ċ[5] Ċ[10] Mom[10] Ã¢[12] Ã¢[12] âĤ¬[11] Ã¢[11] âĤ¬[10] Ã¢[12] âĤ¬[9] Ã¢[11] âĤ¬[8] Ċ[8] Ã¢[12] Mom[8] Ã¢[11] âĤ¬[10] âĤ¬[10] Ċ[9] Ã¢[12] Ã¢[11] âĤ¬[12] Ġdown[11] Ã¢[11] âĤ¬[10] âĤ¬[11] Å[11] Ã¢[12] Ã¢[12] âĤ¬[11] âĤ¬[12] Ã¢[11] Ċ[4] Mom[7] Ã¢[11] Ã¢[12] âĤ¬[11] Ã¢[10] Ã¢[11] Ã¢[11] âĤ¬[10] Ã¢[11] Ċ[7] Ċ[7] Ã¢[10] Ċ[9] Ċ[9] Ã¢[11] âĤ¬[10] âĤ¬[11] ĠÃ[9] Jane[11] Ġfinds[8] âĤ¬[10] Ġ[9] âĤ¬[10] Ċ[5] Ċ[6] Ã¢[10] âĤ¬[10] Ã¢[10] âĤ¬[10] âĤ¬[10] Ċ[10] Ġ[9] Ġ[9] Mom[10] Ã¢[10] âĤ¬[7] Ã¢[9] âĤ¬[10] Ġofficers[9] ĠManit[9] <|endoftext|>[9] Ċ[9] Ċ[7] <|endoftext|>[P]
+11/05/2025 02:04:56 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named?" Manit?"âMom
+Mom officers€ officersââ �â€â€ yesterday.â€â heard heard heard heard?"â€â
+âââ€
+.
+
+Momâ WeKids � heard officersâ.â€€
+Momâ.€. heard€Janeivo 
+â€ officers€.. asked spoil heard€€ officers officersâ special officersJane girlâ
+11/05/2025 02:04:56 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] ?"[11] ĠManit[12] ?"[12] Ã¢[11] Mom[12] Ċ[7] Mom[10] Ġofficers[10] âĤ¬[12] Ġofficers[11] Ã¢[12] Ã¢[11] ĠÃ[12] Ã¢[11] âĤ¬[10] Ã¢[11] âĤ¬[10] Ġyesterday[11] .[5] Ã¢[12] âĤ¬[11] Ã¢[12] Ġheard[11] Ġheard[11] Ġheard[12] Ġheard[11] ?"[12] Ã¢[12] âĤ¬[11] Ã¢[10] Ċ[9] Ã¢[11] Ã¢[10] Ã¢[11] âĤ¬[10] Ċ[7] .[4] Ċ[6] Ċ[7] Mom[7] Ã¢[11] ĠWe[10] Kids[10] ĠÃ[10] Ġheard[9] Ġofficers[11] Ã¢[11] .[7] Ã¢[10] âĤ¬[11] âĤ¬[8] Ċ[9] Mom[11] Ã¢[11] .[4] âĤ¬[9] .[4] Ġheard[9] âĤ¬[7] Jane[9] ivo[10] Ġ[11] Ċ[7] Ã¢[10] âĤ¬[9] Ġofficers[9] âĤ¬[9] .[3] .[3] Ġasked[10] Ġspoil[10] Ġheard[9] âĤ¬[9] âĤ¬[8] Ġofficers[10] Ġofficers[9] Ã¢[9] Ġspecial[10] Ġofficers[9] Jane[10] Ġgirl[10] Ã¢[10] <|endoftext|>[P]
+11/05/2025 02:04:56 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there livedââ€
+
+
+€€€€ââ€â€â
+âââ€
+Momâ€?"?"â€€â€€âââ€â€
+âââ€ ?"
+ââââ€€
+â€â€ €
+€
+€â€€€€  
+â€â€€€
+
+€€
+11/05/2025 02:04:56 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] Ã¢[11] Ã¢[11] âĤ¬[10] Ċ[5] Ċ[5] Ċ[5] âĤ¬[9] âĤ¬[10] âĤ¬[12] âĤ¬[12] Ã¢[12] Ã¢[11] âĤ¬[12] Ã¢[12] âĤ¬[9] Ã¢[11] Ċ[5] Ã¢[11] Ã¢[11] Ã¢[11] âĤ¬[10] Ċ[5] Mom[10] Ã¢[11] âĤ¬[12] ?"[12] ?"[12] Ã¢[11] âĤ¬[10] âĤ¬[9] Ã¢[11] âĤ¬[12] âĤ¬[11] Ã¢[12] Ã¢[12] Ã¢[10] âĤ¬[11] Ã¢[11] âĤ¬[10] Ċ[4] Ã¢[10] Ã¢[10] Ã¢[10] âĤ¬[11] Ġ[11] ?"[11] Ċ[4] Ã¢[10] Ã¢[10] Ã¢[11] Ã¢[11] âĤ¬[10] âĤ¬[11] Ċ[7] Ã¢[11] âĤ¬[10] Ã¢[11] âĤ¬[10] Ġ[9] âĤ¬[9] Ċ[4] âĤ¬[9] Ċ[9] âĤ¬[9] Ã¢[9] âĤ¬[7] âĤ¬[8] âĤ¬[9] âĤ¬[9] Ġ[8] Ġ[8] Ċ[3] Ã¢[9] âĤ¬[8] Ã¢[10] âĤ¬[9] âĤ¬[10] âĤ¬[10] Ċ[9] Ċ[10] âĤ¬[9] âĤ¬[10] <|endoftext|>[P]
+11/05/2025 02:04:56 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and Goblin dis heardâ.
+â€Jane my meticulous �â€€â
+
+€€ââ heard shoutedââ€
+â€ findsâ€€€ â
+ââ€Jane I� asked,"â.
+
+
+âââ€Janeoneivoâ€ asked€â€â feels officersâ€â€€âââMomJane officers
+11/05/2025 02:04:56 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] ĠGoblin[12] Ġdis[11] Ġheard[12] Ã¢[11] .[5] Ċ[8] Ã¢[12] âĤ¬[11] Jane[10] Ġmy[12] Ġmeticulous[11] ĠÃ[9] Ã¢[11] âĤ¬[10] âĤ¬[9] Ã¢[11] Ċ[7] Ċ[7] âĤ¬[10] âĤ¬[12] Ã¢[12] Ã¢[12] Ġheard[11] Ġshouted[12] Ã¢[12] Ã¢[12] âĤ¬[11] Ċ[7] Ã¢[11] âĤ¬[12] Ġfinds[9] Ã¢[11] âĤ¬[10] âĤ¬[9] âĤ¬[11] Ġ[9] Ã¢[10] Ċ[7] Ã¢[11] Ã¢[10] âĤ¬[11] Jane[9] ĠI[9] ĵ[10] Ġasked[9] ,"[10] Ã¢[10] .[7] Ċ[7] Ċ[6] Ċ[10] Ã¢[10] Ã¢[11] Ã¢[11] âĤ¬[8] Jane[9] one[10] ivo[11] Ã¢[11] âĤ¬[8] Ġasked[10] âĤ¬[11] Ã¢[11] âĤ¬[6] Ã¢[10] Ġfeels[10] Ġofficers[10] Ã¢[10] âĤ¬[11] Ã¢[10] âĤ¬[7] âĤ¬[7] Ã¢[11] Ã¢[10] Ã¢[9] Mom[9] Jane[9] Ġofficers[9] <|endoftext|>[9] <|endoftext|>[9] ht[9] Ġ[10] <|endoftext|>[P]
+11/05/2025 02:04:56 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to€ââ  
+
+
+€
+ââ€â€€â€€ââ€
+€ââ€€€
+Momââ€€€?"â€€
+
+€€�â?" 
+€ââ€â
+âââââ  âââââ€€ finds€â€
+ââ€€€
+â heardâ
+11/05/2025 02:04:56 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] âĤ¬[6] Ã¢[12] Ã¢[12] Ġ[10] Ġ[10] Ċ[6] Ċ[6] Ċ[6] âĤ¬[9] Ċ[6] Ã¢[12] Ã¢[12] âĤ¬[11] Ã¢[11] âĤ¬[12] âĤ¬[12] Ã¢[12] âĤ¬[9] âĤ¬[10] Ã¢[12] Ã¢[11] âĤ¬[10] Ċ[6] âĤ¬[12] Ã¢[12] Ã¢[11] âĤ¬[8] âĤ¬[10] âĤ¬[12] Ċ[6] Mom[8] Ã¢[11] Ã¢[11] âĤ¬[10] âĤ¬[9] âĤ¬[11] ?"[11] Ã¢[11] âĤ¬[10] âĤ¬[11] Ċ[4] Ċ[4] âĤ¬[10] âĤ¬[11] Å[11] Ã¢[10] ?"[10] Ġ[10] Ċ[4] âĤ¬[10] Ã¢[11] Ã¢[11] âĤ¬[8] Ã¢[11] Ċ[6] Ã¢[11] Ã¢[11] Ã¢[10] Ã¢[11] Ã¢[11] Ġ[10] Ġ[10] Ã¢[11] Ã¢[11] Ã¢[11] Ã¢[9] Ã¢[9] âĤ¬[10] âĤ¬[9] Ġfinds[9] âĤ¬[9] Ã¢[9] âĤ¬[10] Ċ[9] Ã¢[10] Ã¢[10] âĤ¬[10] âĤ¬[10] âĤ¬[8] Ċ[6] Ã¢[9] Ġheard[10] Ã¢[9] Ċ[6] <|endoftext|>[P]
+11/05/2025 02:04:56 - INFO - __main__ - [gen] exit generate_text_samples: step=2000
+11/05/2025 02:05:29 - INFO - __main__ - Step: 2200 Loss_lm: 3.2325 Data (t): 0.0000, 609.40/s/gpu Batch (t): 0.2100 LR: 0.000500
+11/05/2025 02:06:02 - INFO - __main__ - Step: 2400 Loss_lm: 3.2198 Data (t): 0.0000, 626.60/s/gpu Batch (t): 0.2043 LR: 0.000500
+11/05/2025 02:06:34 - INFO - __main__ - Step: 2600 Loss_lm: 2.8222 Data (t): 0.0000, 621.18/s/gpu Batch (t): 0.2061 LR: 0.000500
+11/05/2025 02:07:07 - INFO - __main__ - Step: 2800 Loss_lm: 2.9278 Data (t): 0.0000, 619.17/s/gpu Batch (t): 0.2067 LR: 0.000500
+11/05/2025 02:07:40 - INFO - __main__ - Step: 3000 Loss_lm: 3.0964 Data (t): 0.0000, 626.52/s/gpu Batch (t): 0.2043 LR: 0.000500
+11/05/2025 02:08:13 - INFO - __main__ - Step: 3200 Loss_lm: 2.5846 Data (t): 0.0000, 625.56/s/gpu Batch (t): 0.2046 LR: 0.000500
+11/05/2025 02:08:46 - INFO - __main__ - Step: 3400 Loss_lm: 2.6651 Data (t): 0.0000, 631.40/s/gpu Batch (t): 0.2027 LR: 0.000500
+11/05/2025 02:09:19 - INFO - __main__ - Step: 3600 Loss_lm: 2.3212 Data (t): 0.0000, 601.63/s/gpu Batch (t): 0.2128 LR: 0.000500
+11/05/2025 02:09:52 - INFO - __main__ - Step: 3800 Loss_lm: 2.5948 Data (t): 0.0000, 630.67/s/gpu Batch (t): 0.2030 LR: 0.000500
+11/05/2025 02:10:25 - INFO - __main__ - Step: 4000 Loss_lm: 5.9752 Data (t): 0.0000, 620.18/s/gpu Batch (t): 0.2064 LR: 0.000500
+11/05/2025 02:10:25 - INFO - __main__ - Generating text samples...
+11/05/2025 02:10:25 - INFO - __main__ - [gen] enter generate_text_samples: step=4000, rank=0
+11/05/2025 02:10:25 - INFO - __main__ - [gen] diffusion sampling done in 0.21s for 5 prompts
+11/05/2025 02:10:25 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little girl..â
+
+€â€ said said�,    
+€Momâ,â€
+ Mom. 
+ €IFIED smiled.
+
+â€It said€�It go go.€
+.âM? Manit saidâ car. okay € 
+Mom would saidâ€â€ askedâ 
+MomHerâ€€
+11/05/2025 02:10:25 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] Ġgirl[9] .[9] .[8] Ã¢[11] Ċ[5] Ċ[12] âĤ¬[12] Ã¢[12] âĤ¬[11] Ġsaid[11] Ġsaid[8] ¢[11] ,[11] Ġ[12] Ġ[8] Ġ[8] Ġ[12] Ċ[6] âĤ¬[12] Mom[9] Ã¢[12] ,[12] Ã¢[11] âĤ¬[12] Ċ[7] Ġ[12] Mom[9] .[5] Ġ[8] Ċ[10] Ġ[11] âĤ¬[10] IFIED[10] Ġsmiled[10] .[8] Ċ[6] Ċ[6] Ã¢[11] âĤ¬[10] It[11] Ġsaid[10] âĤ¬[11] ¢[11] It[10] Ġgo[10] Ġgo[11] .[8] âĤ¬[11] Ċ[10] .[9] Ã¢[10] M[11] ?[11] ĠManit[11] Ġsaid[10] Ã¢[10] Ġcar[11] .[9] Ġokay[10] Ġ[7] âĤ¬[10] Ġ[9] Ċ[8] Mom[11] Ġwould[10] Ġsaid[11] Ã¢[11] âĤ¬[10] Ã¢[10] âĤ¬[11] Ġasked[9] Ã¢[9] Ġ[10] Ċ[10] Mom[8] Her[9] Ã¢[10] âĤ¬[9] âĤ¬[10] Ġ[8] <|endoftext|>[P]
+11/05/2025 02:10:25 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named. â€MomIn 
+ Momâ€.â€. â€
+
+€€â€
+
+€ ..
+
+ homeâ€Theâ€
+M �.. saidâ€  
+
+
+â.�€€â€  
+
+TheMomâ€.â€€â€,
+ keptâ€€ wasâ.
+11/05/2025 02:10:25 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] .[6] Ġ[12] Ã¢[11] âĤ¬[12] Mom[11] In[9] Ġ[11] Ċ[12] Ġ[12] Mom[11] Ã¢[12] âĤ¬[11] .[10] Ã¢[12] âĤ¬[11] .[10] Ġ[9] Ã¢[11] âĤ¬[12] Ċ[8] Ċ[9] âĤ¬[11] âĤ¬[12] Ã¢[11] âĤ¬[12] Ċ[6] Ċ[6] âĤ¬[9] Ġ[10] .[5] .[5] Ċ[3] Ċ[12] Ġhome[12] Ã¢[11] âĤ¬[10] The[11] Ã¢[10] âĤ¬[11] Ċ[11] M[11] ĠÃ[10] .[11] .[8] Ġsaid[11] Ã¢[11] âĤ¬[10] Ġ[9] Ġ[8] Ċ[8] Ċ[10] Ċ[11] Ã¢[10] .[6] ¢[11] âĤ¬[10] âĤ¬[10] Ã¢[10] âĤ¬[11] Ġ[11] Ġ[9] Ċ[6] Ċ[6] The[9] Mom[9] Ã¢[9] âĤ¬[10] .[6] Ã¢[9] âĤ¬[10] âĤ¬[10] Ã¢[10] âĤ¬[9] ,[9] Ċ[8] Ġkept[10] Ã¢[10] âĤ¬[9] âĤ¬[10] Ġwas[10] Ã¢[9] .[7] <|endoftext|>[P]
+11/05/2025 02:10:25 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived€€â€
+
+â€Momackle heard go said.â€   
+ That,�â€ go€.
+
+€
+€ voice� said.€.€ � � �â€ 
+Userâ..€
+€��â€  
+
+â€It€â said here. €â
+ â€  �â
+11/05/2025 02:10:25 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] âĤ¬[12] âĤ¬[12] Ã¢[12] âĤ¬[11] Ċ[6] Ċ[12] Ã¢[11] âĤ¬[12] Mom[9] ackle[12] Ġheard[12] Ġgo[9] Ġsaid[9] .[8] Ã¢[11] âĤ¬[12] Ġ[8] Ġ[8] Ġ[10] Ċ[7] Ġ[12] That[12] ,[12] ¢[10] Ã¢[11] âĤ¬[10] Ġgo[11] âĤ¬[11] .[5] Ċ[4] Ċ[5] âĤ¬[9] Ċ[8] âĤ¬[11] Ġvoice[10] ĵ[10] Ġsaid[10] .[7] âĤ¬[10] .[8] âĤ¬[11] ĠÃ[10] Ġ[11] Å[10] ĠÃ[11] Ã¢[11] âĤ¬[10] Ġ[6] Ċ[8] User[11] Ã¢[11] .[9] .[6] âĤ¬[11] Ċ[7] âĤ¬[10] ¢[10] ¢[10] Ã¢[10] âĤ¬[11] Ġ[10] Ġ[7] Ċ[3] Ċ[7] Ã¢[11] âĤ¬[10] It[9] âĤ¬[11] Ã¢[10] Ġsaid[11] Ġhere[11] .[10] Ġ[11] âĤ¬[11] Ã¢[9] Ċ[10] Ġ[9] Ã¢[10] âĤ¬[9] Ġ[10] ĠÃ[9] Ã¢[9] <|endoftext|>[P]
+11/05/2025 02:10:25 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and�..
+
+His Mom  Momâ, Lily.  â€
+€eliaâ€€â ..
+
+L  
+ Mom  tried.
+€ie smiled€It asked.
+
+ 
+ �,ThatTomTom Tom.  
+    
+MomTom hadIn.
+€TomTom go?"â€�.
+11/05/2025 02:10:25 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] ĵ[12] .[8] .[7] Ċ[8] Ċ[9] His[11] Ġ[11] Mom[12] Ġ[12] Ġ[11] Mom[9] Ã¢[12] ,[10] ĠLily[11] .[9] Ġ[8] Ġ[9] Ã¢[12] âĤ¬[11] Ċ[9] âĤ¬[11] elia[11] Ã¢[12] âĤ¬[11] âĤ¬[12] Ã¢[11] Ġ[9] .[6] .[5] Ċ[3] Ċ[6] L[12] Ġ[10] Ġ[8] Ċ[3] Ġ[12] Mom[6] Ġ[12] Ġtried[12] .[5] Ċ[3] âĤ¬[11] ie[10] Ġsmiled[10] âĤ¬[11] It[10] Ġasked[11] .[6] Ċ[7] Ċ[7] Ġ[11] Ċ[10] Ġâĩ[10] ,[11] That[10] Tom[10] Tom[10] ĠTom[11] .[6] Ġ[11] Ġ[10] Ċ[4] Ġ[10] Ġ[9] Ġ[11] Ġ[10] Ċ[6] Mom[7] Tom[8] Ġhad[10] In[10] .[7] Ċ[2] âĤ¬[11] Tom[11] Tom[11] Ġgo[8] ?"[10] Ã¢[10] âĤ¬[11] ¢[10] .[9] <|endoftext|>[P]
+11/05/2025 02:10:25 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to goIt election. .
+
+
+From€Thatâ€â.    â
+€Sâ€,!" moment..
+
+Mom
+â€ fullâ€ 
+€€ wasThat?â€  TheHerâ€ € smiled€â€ €
+
+ 
+  € �â€ 
+â HerHisIt said � �€
+11/05/2025 02:10:25 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġgo[11] It[10] Ġelection[12] .[12] Ġ[8] .[10] Ċ[6] Ċ[10] Ċ[9] From[12] âĤ¬[11] That[8] Ã¢[11] âĤ¬[12] Ã¢[12] .[9] Ġ[12] Ġ[8] Ġ[9] Ġ[10] Ã¢[11] Ċ[9] âĤ¬[11] S[11] Ã¢[11] âĤ¬[12] ,[12] !"[12] Ġmoment[11] .[6] .[5] Ċ[4] Ċ[5] Mom[8] Ċ[8] Ã¢[11] âĤ¬[12] Ġfull[12] Ã¢[11] âĤ¬[10] Ġ[11] Ċ[9] âĤ¬[11] âĤ¬[10] Ġwas[11] That[10] ?[10] Ã¢[11] âĤ¬[10] Ġ[11] Ġ[10] The[10] Her[10] Ã¢[10] âĤ¬[11] Ġ[10] âĤ¬[11] Ġsmiled[10] âĤ¬[11] Ã¢[10] âĤ¬[11] Ġ[10] âĤ¬[11] Ċ[6] Ċ[6] Ġ[11] Ċ[10] Ġ[11] Ġ[10] âĤ¬[9] ĠÃ[9] Ã¢[10] âĤ¬[9] Ġ[10] Ċ[2] Ã¢[9] Ġ[9] Her[9] His[9] It[8] Ġsaid[9] ĠÃ[10] ĠÃ[10] âĤ¬[9] <|endoftext|>[P]
+11/05/2025 02:10:25 - INFO - __main__ - [gen] exit generate_text_samples: step=4000
+11/05/2025 02:10:58 - INFO - __main__ - Step: 4200 Loss_lm: 2.5857 Data (t): 0.0000, 628.74/s/gpu Batch (t): 0.2036 LR: 0.000500
+11/05/2025 02:11:31 - INFO - __main__ - Step: 4400 Loss_lm: 2.4141 Data (t): 0.0000, 628.14/s/gpu Batch (t): 0.2038 LR: 0.000500
+11/05/2025 02:12:04 - INFO - __main__ - Step: 4600 Loss_lm: 2.5787 Data (t): 0.0000, 602.98/s/gpu Batch (t): 0.2123 LR: 0.000500
+11/05/2025 02:12:37 - INFO - __main__ - Step: 4800 Loss_lm: 2.4111 Data (t): 0.0000, 695.42/s/gpu Batch (t): 0.1841 LR: 0.000500
+11/05/2025 02:13:09 - INFO - __main__ - Step: 5000 Loss_lm: 2.4235 Data (t): 0.0000, 624.89/s/gpu Batch (t): 0.2048 LR: 0.000500
+11/05/2025 02:13:42 - INFO - __main__ - Step: 5200 Loss_lm: 2.5820 Data (t): 0.0000, 627.47/s/gpu Batch (t): 0.2040 LR: 0.000500
+11/05/2025 02:14:15 - INFO - __main__ - Step: 5400 Loss_lm: 2.3332 Data (t): 0.0000, 589.28/s/gpu Batch (t): 0.2172 LR: 0.000500
+11/05/2025 02:14:48 - INFO - __main__ - Step: 5600 Loss_lm: 2.6689 Data (t): 0.0000, 606.51/s/gpu Batch (t): 0.2110 LR: 0.000500
+11/05/2025 02:15:21 - INFO - __main__ - Step: 5800 Loss_lm: 2.4625 Data (t): 0.0000, 616.24/s/gpu Batch (t): 0.2077 LR: 0.000500
+11/05/2025 02:15:54 - INFO - __main__ - Step: 6000 Loss_lm: 2.7719 Data (t): 0.0000, 626.05/s/gpu Batch (t): 0.2045 LR: 0.000500
+11/05/2025 02:15:54 - INFO - __main__ - Generating text samples...
+11/05/2025 02:15:54 - INFO - __main__ - [gen] enter generate_text_samples: step=6000, rank=0
+11/05/2025 02:15:54 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 02:15:54 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little.
+
+â
+
+Luâ, arrived y time.
+
+â  warning Poland Tom Max it.
+
+
+engerFromFrom Bahá day,€� Tom.
+
+
+€, looked looked.
+.
+
+
+
+
+It,,, Tom.
+
+
+
+
+
+
+It,, it.
+
+
+,,,ThatbledThatThat
+11/05/2025 02:15:54 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] .[7] Ċ[7] Ċ[8] Ã¢[12] Ċ[8] Ċ[10] Lu[11] Ã¢[11] ,[10] Ġarrived[11] Ġy[11] Ġtime[11] .[7] Ċ[6] Ċ[6] Ã¢[12] Ġ[11] Ġwarning[10] ĠPoland[11] ĠTom[12] ĠMax[12] Ġit[12] .[7] Ċ[6] Ċ[8] Ċ[8] enger[12] From[11] From[11] ĠBahÃ¡[11] Ġday[11] ,[7] âĤ¬[12] ¢[11] ĠTom[10] .[6] Ċ[6] Ċ[5] Ċ[7] âĤ¬[12] ,[11] Ġlooked[10] Ġlooked[11] .[6] Ċ[5] .[5] Ċ[9] Ċ[6] Ċ[7] Ċ[10] Ċ[11] It[11] ,[11] ,[12] ,[10] ĠTom[10] .[8] Ċ[7] Ċ[8] Ċ[5] Ċ[4] Ċ[4] Ċ[5] Ċ[5] It[9] ,[12] ,[10] Ġit[10] .[4] Ċ[3] Ċ[4] Ċ[9] ,[11] ,[10] ,[10] That[11] bled[11] That[10] That[11] Ċ[5] <|endoftext|>[P]
+11/05/2025 02:15:54 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl namedâ 
+ From 
+
+FromIt, thought much€.
+
+Tomâ
+
+It looked openedâ .
+
+Fromââ asked,€ asked€.
+
+
+Itmyâ.
+
+
+
+
+
+
+
+As the,,"S.
+
+
+
+
+
+
+It,, and.
+
+
+
+ââ
+bleds Tim
+11/05/2025 02:15:54 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] Ã¢[12] Ġ[12] Ċ[12] Ġ[8] From[11] Ġ[7] Ċ[8] Ċ[12] From[12] It[11] ,[12] Ġthought[11] Ġmuch[12] âĤ¬[11] .[7] Ċ[7] Ċ[7] Tom[11] Ã¢[12] Ċ[7] Ċ[6] It[9] Ġlooked[11] Ġopened[11] Ã¢[11] Ġ[12] .[5] Ċ[5] Ċ[6] From[12] Ã¢[11] Ã¢[12] Ġasked[10] ,[10] âĤ¬[11] Ġasked[11] âĤ¬[9] .[6] Ċ[5] Ċ[5] Ċ[7] It[10] my[10] Ã¢[10] .[10] Ċ[9] Ċ[9] Ċ[5] Ċ[8] Ċ[6] Ċ[6] Ċ[11] Ċ[10] As[11] Ġthe[11] ,[11] ,"[11] S[10] .[6] Ċ[6] Ċ[7] Ċ[11] Ċ[6] Ċ[4] Ċ[3] Ċ[6] It[9] ,[10] ,[8] Ġand[10] .[7] Ċ[6] Ċ[2] Ċ[2] Ċ[11] Ã¢[11] Ã¢[10] Ċ[10] bled[11] s[10] ĠTim[11] Ċ[5] <|endoftext|>[P]
+11/05/2025 02:15:54 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived.
+
+ 
+
+
+
+SoItâ Tom careful�.
+
+â 
+
+
+That looked.
+
+€ annually 
+
+From
+Itâ looked.
+
+
+€It€ Tom.
+
+
+
+â
+
+
+â,,,â
+
+.
+
+
+
+It,™ started
+
+,,
+,,
+ThatThat man
+11/05/2025 02:15:54 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] .[11] Ċ[10] Ċ[12] Ġ[11] Ċ[7] Ċ[7] Ċ[7] Ċ[9] So[12] It[11] Ã¢[12] ĠTom[11] Ġcareful[11] ¢[11] .[7] Ċ[9] Ċ[8] Ã¢[11] Ġ[8] Ċ[7] Ċ[7] Ċ[10] That[11] Ġlooked[12] .[7] Ċ[6] Ċ[8] âĤ¬[12] Ġannually[11] Ġ[10] Ċ[8] Ċ[9] From[11] Ċ[12] It[12] Ã¢[12] Ġlooked[11] .[6] Ċ[6] Ċ[5] Ċ[9] âĤ¬[12] It[11] âĤ¬[12] ĠTom[10] .[8] Ċ[8] Ċ[6] Ċ[5] Ċ[9] Ã¢[12] Ċ[11] Ċ[11] Ċ[11] Ã¢[10] ,[9] ,[7] ,[8] Ã¢[10] Ċ[11] Ċ[9] .[5] Ċ[4] Ċ[3] Ċ[7] Ċ[6] It[11] ,[11] âĦ¢[10] Ġstarted[10] Ċ[4] Ċ[6] ,[11] ,[7] Ċ[9] ,[10] ,[10] Ċ[9] That[10] That[11] Ġman[11] Ċ[4] <|endoftext|>[P]
+11/05/2025 02:15:54 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and Max.
+
+ 
+  FromInâ™Itâ.
+
+From
+
+It people was Mia.
+
+ â
+
+From but€ looked asked.
+
+
+
+So ran over look.
+
+
+  
+
+
+L Tom, Tom.
+
+.
+
+
+
+â™ Tom and..
+
+
+FromIt annuallyThatThat
+11/05/2025 02:15:54 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] ĠMax[11] .[9] Ċ[9] Ċ[11] Ġ[12] Ċ[7] Ġ[9] Ġ[10] From[11] In[12] Ã¢[11] âĦ¢[12] It[11] Ã¢[11] .[7] Ċ[6] Ċ[7] From[11] Ċ[6] Ċ[8] It[9] Ġpeople[11] Ġwas[12] ĠMia[11] .[9] Ċ[8] Ċ[6] Ġ[12] Ã¢[11] Ċ[8] Ċ[12] From[12] Ġbut[11] âĤ¬[11] Ġlooked[11] Ġasked[11] .[6] Ċ[5] Ċ[5] Ċ[6] Ċ[8] So[11] Ġran[12] Ġover[10] Ġlook[12] .[7] Ċ[6] Ċ[5] Ċ[10] Ġ[12] Ġ[9] Ċ[11] Ċ[5] Ċ[8] L[12] ĠTom[10] ,[10] ĠTom[9] .[9] Ċ[8] Ċ[8] .[6] Ċ[3] Ċ[4] Ċ[5] Ċ[5] Ã¢[10] âĦ¢[11] ĠTom[10] Ġand[11] .[7] .[5] Ċ[5] Ċ[4] Ċ[11] From[7] It[10] Ġannually[11] That[10] That[11] Ċ[2] Ċ[2] <|endoftext|>[P]
+11/05/2025 02:15:54 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to€ Jenny 
+
+
+  
+FromLuItMax Tom Tom not.
+
+Lu 
+
+It springâ.
+
+FromIt 
+
+FromFromSam  said.
+
+
+TimI very said.
+
+
+
+
+
+
+It Tom Tim, Tom.
+
+
+
+
+
+
+anish,, and.
+
+
+.â
+
+ThatThat man
+11/05/2025 02:15:54 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] âĤ¬[11] ĠJenny[12] Ġ[12] Ċ[11] Ċ[11] Ċ[12] Ġ[9] Ġ[8] Ċ[9] From[12] Lu[8] It[11] Max[10] ĠTom[11] ĠTom[11] Ġnot[11] .[7] Ċ[7] Ċ[7] Lu[12] Ġ[12] Ċ[9] Ċ[11] It[12] Ġspring[12] Ã¢[12] .[9] Ċ[8] Ċ[6] From[11] It[12] Ġ[11] Ċ[6] Ċ[8] From[12] From[10] Sam[10] Ġ[11] Ġsaid[10] .[6] Ċ[6] Ċ[6] Ċ[7] Tim[11] I[11] Ġvery[11] Ġsaid[11] .[6] Ċ[5] Ċ[6] Ċ[7] Ċ[5] Ċ[9] Ċ[10] Ċ[11] It[10] ĠTom[11] ĠTim[11] ,[8] ĠTom[11] .[9] Ċ[8] Ċ[7] Ċ[6] Ċ[5] Ċ[5] Ċ[6] Ċ[6] anish[10] ,[10] ,[10] Ġand[10] .[4] Ċ[3] Ċ[5] Ċ[5] .[5] Ã¢[10] Ċ[10] Ċ[11] That[11] That[10] Ġman[11] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:15:54 - INFO - __main__ - [gen] exit generate_text_samples: step=6000
+11/05/2025 02:16:27 - INFO - __main__ - Step: 6200 Loss_lm: 2.7504 Data (t): 0.0000, 629.54/s/gpu Batch (t): 0.2033 LR: 0.000499
+11/05/2025 02:17:00 - INFO - __main__ - Step: 6400 Loss_lm: 2.6081 Data (t): 0.0000, 633.05/s/gpu Batch (t): 0.2022 LR: 0.000499
+11/05/2025 02:17:33 - INFO - __main__ - Step: 6600 Loss_lm: 2.2228 Data (t): 0.0000, 613.12/s/gpu Batch (t): 0.2088 LR: 0.000499
+11/05/2025 02:18:06 - INFO - __main__ - Step: 6800 Loss_lm: 2.4861 Data (t): 0.0000, 630.41/s/gpu Batch (t): 0.2030 LR: 0.000499
+11/05/2025 02:18:38 - INFO - __main__ - Step: 7000 Loss_lm: 2.4087 Data (t): 0.0000, 620.64/s/gpu Batch (t): 0.2062 LR: 0.000499
+11/05/2025 02:19:12 - INFO - __main__ - Step: 7200 Loss_lm: 2.3468 Data (t): 0.0000, 619.55/s/gpu Batch (t): 0.2066 LR: 0.000499
+11/05/2025 02:19:45 - INFO - __main__ - Step: 7400 Loss_lm: 2.3419 Data (t): 0.0000, 607.00/s/gpu Batch (t): 0.2109 LR: 0.000499
+11/05/2025 02:20:18 - INFO - __main__ - Step: 7600 Loss_lm: 2.2811 Data (t): 0.0000, 621.00/s/gpu Batch (t): 0.2061 LR: 0.000499
+11/05/2025 02:20:51 - INFO - __main__ - Step: 7800 Loss_lm: 2.2868 Data (t): 0.0000, 593.74/s/gpu Batch (t): 0.2156 LR: 0.000499
+11/05/2025 02:21:24 - INFO - __main__ - Step: 8000 Loss_lm: 2.3307 Data (t): 0.0000, 608.44/s/gpu Batch (t): 0.2104 LR: 0.000499
+11/05/2025 02:21:24 - INFO - __main__ - Generating text samples...
+11/05/2025 02:21:24 - INFO - __main__ - [gen] enter generate_text_samples: step=8000, rank=0
+11/05/2025 02:21:24 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 02:21:24 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little want swung. 
+
+
+â€€â said€€ 
+ 
+
+ translates€ Tim saw.
+
+ indemn..
+
+Tim a very warm...
+
+Timmy aggregation Tim Timocyte.Tim.
+
+
+ââ Manit mom," so Tim.
+
+
+
+
+€Tim mom,...
+
+
+
+ want, what
+11/05/2025 02:21:24 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] Ġwant[11] Ġswung[12] .[7] Ġ[11] Ċ[6] Ċ[6] Ċ[6] Ã¢[11] âĤ¬[12] âĤ¬[11] Ã¢[12] Ġsaid[12] âĤ¬[11] âĤ¬[12] Ġ[12] Ċ[9] Ġ[11] Ċ[6] Ċ[4] Ġtranslates[11] âĤ¬[12] ĠTim[11] Ġsaw[10] .[8] Ċ[7] Ċ[7] Ġindemn[11] .[4] .[4] Ċ[4] Ċ[10] Tim[10] Ġa[11] Ġvery[11] Ġwarm[12] .[7] .[6] .[4] Ċ[5] Ċ[7] Tim[8] my[9] Ġaggregation[12] ĠTim[11] ĠTim[11] ocyte[11] .[12] Tim[10] .[6] Ċ[7] Ċ[5] Ċ[9] Ã¢[11] Ã¢[11] ĠManit[11] Ġmom[10] ,"[10] Ġso[11] ĠTim[11] .[3] Ċ[11] Ċ[2] Ċ[2] Ċ[8] Ċ[9] âĤ¬[10] Tim[10] Ġmom[10] ,[10] .[8] .[5] .[5] Ċ[5] Ċ[5] Ċ[5] Ċ[10] Ġwant[10] ,[11] Ġwhat[10] Ċ[7] <|endoftext|>[P]
+11/05/2025 02:21:24 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named mom smiled sad having.
+
+
+
+â€ every  
+
+
+  
+
+Justâ wasâ€
+ € €
+That I excited asked much.
+
+
+
+ Manitâ excited Tim Sc rest excited..
+
+. excited excited excited mom Manit€ really.
+
+
+
+
+Yes, together.
+
+â
+.
+
+ special an excited
+11/05/2025 02:21:24 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] Ġmom[11] Ġsmiled[11] Ġsad[11] Ġhaving[12] .[8] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ã¢[12] âĤ¬[11] Ġevery[11] Ġ[11] Ġ[12] Ċ[10] Ċ[9] Ċ[9] Ġ[12] Ġ[12] Ċ[7] Ċ[5] Just[12] Ã¢[12] Ġwas[12] Ã¢[11] âĤ¬[12] Ċ[10] Ġ[10] âĤ¬[10] Ġ[11] âĤ¬[11] Ċ[8] That[11] ĠI[12] Ġexcited[11] Ġasked[12] Ġmuch[10] .[5] Ċ[5] Ċ[4] Ċ[5] Ċ[6] ĠManit[11] Ã¢[10] Ġexcited[10] ĠTim[11] ĠSc[10] Ġrest[11] Ġexcited[11] .[6] .[6] Ċ[6] Ċ[5] .[11] Ġexcited[10] Ġexcited[11] Ġexcited[11] Ġmom[10] ĠManit[9] âĤ¬[10] Ġreally[10] .[4] Ċ[4] Ċ[3] Ċ[4] Ċ[9] Ċ[11] Yes[11] ,[9] Ġtogether[11] .[7] Ċ[5] Ċ[6] Ã¢[10] Ċ[6] .[2] Ċ[6] Ċ[6] Ġspecial[10] Ġan[10] Ġexcited[10] Ċ[9] <|endoftext|>[P]
+11/05/2025 02:21:24 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived, also come wide.
+
+
+
+
+
+Ben, mommy. 
+
+
+
+Stop said fungus said Mum.
+
+  
+
+ back mom excited mom...
+
+Look you do excited it.?". translates€..
+
+ asked you swirling, alsoâ.
+
+
+
+
+
+, � smiled. 
+
+
+
+
+Mom swirling phenomena
+11/05/2025 02:21:24 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] ,[12] Ġalso[10] Ġcome[12] Ġwide[11] .[7] Ċ[6] Ċ[6] Ċ[6] Ċ[7] Ċ[7] Ċ[8] Ben[11] ,[11] Ġmom[12] my[9] .[6] Ġ[12] Ċ[8] Ċ[12] Ċ[6] Ċ[7] Stop[12] Ġsaid[10] Ġfungus[11] Ġsaid[9] ĠMum[11] .[8] Ċ[9] Ċ[11] Ġ[11] Ġ[10] Ċ[7] Ċ[11] Ġback[12] Ġmom[11] Ġexcited[11] Ġmom[12] .[7] .[5] .[5] Ċ[4] Ċ[9] Look[11] Ġyou[11] Ġdo[12] Ġexcited[12] Ġit[8] .[12] ?".[11] Ġtranslates[10] âĤ¬[11] .[4] .[4] Ċ[5] Ċ[6] Ġasked[10] Ġyou[10] Ġswirling[11] ,[11] Ġalso[11] Ã¢[10] .[3] Ċ[5] Ċ[2] Ċ[3] Ċ[8] Ċ[8] Ċ[9] ,[10] ĠÃ[11] Ġsmiled[11] .[5] Ġ[11] Ċ[10] Ċ[4] Ċ[3] Ċ[2] Ċ[9] Mom[11] Ġswirling[10] Ġphenomena[10] Ċ[8] <|endoftext|>[P]
+11/05/2025 02:21:24 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and go also one was.
+
+
+
+âHis is got..
+
+  
+
+ButThat fish family you.
+
+  abolishThat€ put Sc droveâ.
+
+
+.Kin not Sc go "
+ much
+.
+€
+
+Would Tim Manit family, much..
+
+
+
+âMomâ.
+
+
+
+
+
+
+ smiled sadâ
+11/05/2025 02:21:24 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] Ġgo[10] Ġalso[10] Ġone[12] Ġwas[11] .[6] Ċ[10] Ċ[7] Ċ[6] Ċ[6] Ã¢[11] His[11] Ġis[12] Ġgot[12] .[7] .[7] Ċ[6] Ċ[9] Ġ[9] Ġ[11] Ċ[6] Ċ[6] But[12] That[11] Ġfish[12] Ġfamily[11] Ġyou[11] .[8] Ċ[7] Ċ[8] Ġ[12] Ġabolish[12] That[12] âĤ¬[11] Ġput[12] ĠSc[11] Ġdrove[12] Ã¢[11] .[6] Ċ[8] Ċ[5] Ċ[5] .[6] Kin[11] Ġnot[10] ĠSc[12] Ġgo[10] Ġ"[11] Ċ[11] Ġmuch[11] Ċ[11] .[5] Ċ[6] âĤ¬[10] Ċ[3] Ċ[4] Would[11] ĠTim[11] ĠManit[11] Ġfamily[10] ,[10] Ġmuch[11] .[5] .[4] Ċ[4] Ċ[4] Ċ[4] Ċ[8] Ã¢[10] Mom[10] Ã¢[10] .[4] Ċ[11] Ċ[4] Ċ[4] Ċ[5] Ċ[7] Ċ[8] Ċ[10] Ġsmiled[10] Ġsad[10] Ã¢[11] Ċ[8] <|endoftext|>[P]
+11/05/2025 02:21:24 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to ost was go special special pl.
+
+
+
+â tank asked, saw.
+
+  
+
+L smiled�€
+
+
+ .
+
+That everyâ see excited€
+
+
+
+M Tim angry do much with€
+
+
+.
+
+ excited " excitedocyte do Tim.
+
+
+
+â€€â€€
+
+
+
+
+That also said,
+11/05/2025 02:21:24 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġost[11] Ġwas[12] Ġgo[10] Ġspecial[12] Ġspecial[11] Ġpl[12] .[5] Ċ[12] Ċ[5] Ċ[5] Ċ[6] Ã¢[12] Ġtank[11] Ġasked[11] ,[11] Ġsaw[12] .[8] Ċ[8] Ċ[7] Ġ[12] Ġ[12] Ċ[7] Ċ[5] L[11] Ġsmiled[12] ¢[12] âĤ¬[12] Ċ[7] Ċ[6] Ċ[9] Ġ[11] .[5] Ċ[5] Ċ[6] That[10] Ġevery[10] Ã¢[10] Ġsee[10] Ġexcited[11] âĤ¬[10] Ċ[5] Ċ[5] Ċ[6] Ċ[11] M[11] ĠTim[11] Ġangry[11] Ġdo[10] Ġmuch[11] Ġwith[10] âĤ¬[11] Ċ[9] Ċ[11] Ċ[5] .[6] Ċ[5] Ċ[8] Ġexcited[10] Ġ"[10] Ġexcited[10] ocyte[11] Ġdo[10] ĠTim[10] .[7] Ċ[3] Ċ[2] Ċ[3] Ċ[7] Ã¢[10] âĤ¬[11] âĤ¬[11] Ã¢[10] âĤ¬[11] âĤ¬[11] Ċ[7] Ċ[11] Ċ[8] Ċ[4] Ċ[3] That[10] Ġalso[10] Ġsaid[11] ,[10] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:21:24 - INFO - __main__ - [gen] exit generate_text_samples: step=8000
+11/05/2025 02:21:57 - INFO - __main__ - Step: 8200 Loss_lm: 2.0760 Data (t): 0.0000, 623.95/s/gpu Batch (t): 0.2051 LR: 0.000499
+11/05/2025 02:22:28 - INFO - __main__ - Step: 8400 Loss_lm: 2.2646 Data (t): 0.0000, 618.30/s/gpu Batch (t): 0.2070 LR: 0.000499
+11/05/2025 02:23:01 - INFO - __main__ - Step: 8600 Loss_lm: 2.5761 Data (t): 0.0000, 607.87/s/gpu Batch (t): 0.2106 LR: 0.000499
+11/05/2025 02:23:32 - INFO - __main__ - Step: 8800 Loss_lm: 2.3858 Data (t): 0.0000, 628.67/s/gpu Batch (t): 0.2036 LR: 0.000499
+11/05/2025 02:24:03 - INFO - __main__ - Step: 9000 Loss_lm: 3.0170 Data (t): 0.0000, 635.11/s/gpu Batch (t): 0.2015 LR: 0.000499
+11/05/2025 02:24:35 - INFO - __main__ - Step: 9200 Loss_lm: 2.2659 Data (t): 0.0000, 628.71/s/gpu Batch (t): 0.2036 LR: 0.000499
+11/05/2025 02:25:08 - INFO - __main__ - Step: 9400 Loss_lm: 2.3224 Data (t): 0.0000, 622.00/s/gpu Batch (t): 0.2058 LR: 0.000499
+11/05/2025 02:25:41 - INFO - __main__ - Step: 9600 Loss_lm: 2.3138 Data (t): 0.0000, 611.41/s/gpu Batch (t): 0.2094 LR: 0.000499
+11/05/2025 02:26:14 - INFO - __main__ - Step: 9800 Loss_lm: 2.1571 Data (t): 0.0000, 628.26/s/gpu Batch (t): 0.2037 LR: 0.000499
+11/05/2025 02:26:47 - INFO - __main__ - Step: 10000 Loss_lm: 2.2311 Data (t): 0.0000, 617.03/s/gpu Batch (t): 0.2074 LR: 0.000499
+11/05/2025 02:26:48 - INFO - __main__ - Saved state to outputs/tiny_test_autodl/checkpoint-10000
+11/05/2025 02:26:48 - INFO - __main__ - Generating text samples...
+11/05/2025 02:26:48 - INFO - __main__ - [gen] enter generate_text_samples: step=10000, rank=0
+11/05/2025 02:26:48 - INFO - __main__ - [gen] diffusion sampling done in 0.17s for 5 prompts
+11/05/2025 02:26:48 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little excited.
+
+
+
+
+ââ.  
+
+
+€
+
+
+ colors watch€â.
+â€
+
+
+â€ wastade.
+
+â dismy€t it.
+
+That.
+
+
+
+ excitedtt to of href.
+
+
+
+
+âYesmy.
+
+€
+
+
+
+€
+11/05/2025 02:26:48 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] Ġexcited[11] .[10] Ċ[7] Ċ[7] Ċ[6] Ċ[6] Ċ[7] Ã¢[12] Ã¢[12] .[12] Ġ[11] Ġ[12] Ċ[10] Ċ[9] Ċ[6] âĤ¬[12] Ċ[6] Ċ[11] Ċ[11] Ġcolors[11] Ġwatch[11] âĤ¬[12] Ã¢[11] .[11] Ċ[9] Ã¢[11] âĤ¬[12] Ċ[6] Ċ[8] Ċ[11] Ã¢[11] âĤ¬[12] Ġwas[12] t[11] ade[12] .[8] Ċ[6] Ċ[5] Ã¢[10] Ġdis[10] my[11] âĤ¬[10] t[11] Ġit[9] .[9] Ċ[7] Ċ[10] That[11] .[6] Ċ[6] Ċ[5] Ċ[5] Ċ[8] Ġexcited[11] t[10] t[11] Ġto[10] Ġof[10] Ġhref[7] .[4] Ċ[4] Ċ[2] Ċ[3] Ċ[3] Ċ[7] Ã¢[10] Yes[11] my[11] .[11] Ċ[8] Ċ[10] âĤ¬[11] Ċ[5] Ċ[4] Ċ[3] Ċ[4] âĤ¬[10] Ċ[10] Ċ[10] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:26:48 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named mom she said yes.
+
+â€ back,â. 
+
+
+â,my, mommy was mom said.
+
+
+It's,my mom Tom!â€
+
+ annually Lilyâ�
+11/05/2025 02:26:48 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] Ġmom[10] Ġshe[12] Ġsaid[11] Ġyes[12] .[10] Ċ[8] Ċ[9] Ã¢[7] âĤ¬[12] Ġback[12] ,[11] Ã¢[12] .[9] Ġ[12] Ċ[7] Ċ[6] Ċ[7] Ã¢[12] ,[10] my[10] ,[11] Ġmom[11] my[10] Ġwas[11] Ġmom[11] Ġsaid[12] .[7] Ċ[8] Ċ[5] Ċ[5] It[12] 's[10] ,[10] my[10] Ġmom[12] ĠTom[11] ![11] Ã¢[12] âĤ¬[11] Ċ[5] Ċ[5] Ġannually[10] ĠLily[11] Ã¢[11] ¢[11] <|endoftext|>[4] Ċ[9] Ċ[6] Ċ[9] Lu[10] <|endoftext|>[4] Ġsaid[11] Ã¢[11] âĤ¬[10] ?[10] s[11] .[9] .[9] Ċ[9] Tom[11] Ã¢[11] .[8] Ċ[8] Ċ[3] Ċ[3] Ċ[4] Ċ[5] Mom[11] âĤ¬[10] <|endoftext|>[2] Ã¢[10] Ċ[6] Ċ[7] Ċ[4] Ċ[4] Ã¢[10] ,[9] ĠTim[11] my[8] Ã¢[11] âĤ¬[11] .[10] <|endoftext|>[P]
+11/05/2025 02:26:48 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived her Morse..
+
+
+
+M to saidâ€ asked hands�€
+
+
+
+It theLetâ€
+â€€
+
+ Sheep, Tom
+11/05/2025 02:26:48 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] Ġher[12] ĠMorse[12] .[8] .[8] Ċ[7] Ċ[6] Ċ[6] Ċ[12] M[12] Ġto[12] Ġsaid[12] Ã¢[12] âĤ¬[11] Ġasked[11] Ġhands[12] ¢[12] âĤ¬[11] Ċ[11] Ċ[6] Ċ[5] Ċ[10] It[12] Ġthe[12] Let[10] Ã¢[11] âĤ¬[10] Ċ[8] Ã¢[11] âĤ¬[11] âĤ¬[11] Ċ[5] Ċ[8] ĠSheep[11] ,[11] ĠTom[10] <|endoftext|>[10] ĠManit[10] Ċ[6] Ċ[5] my[8] ,[11] Ġto[11] ocyte[10] ĠTim[11] Ġalright[10] Ġgo[11] or[10] .[7] Ã¢[10] âĤ¬[11] âĦ¢[11] Ġso[11] .[11] Ã¢[10] âĤ¬[11] âĤ¬[10] Å[11] âĤ¬[10] .[8] ĠI[10] Ġgo[10] Ċ[6] Ċ[4] Ċ[4] Ċ[4] Ġ[10] <|endoftext|>[4] ,[10] Ġwatch[11] Ġsaid[9] .[9] Ã¢[9] âĤ¬[10] âĤ¬[7] Ċ[6] Ċ[3] Ċ[2] Ċ[3] Ġasked[10] Ã¢[9] âĤ¬[10] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:26:48 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and Cad bad24 
+
+
+
+
+ââdmy.
+
+
+
+
+
+Oneâ€€M 
+
+ 
+
+On€€� Sara out.
+
+He, Tom to her Lily.
+
+€.
+
+
+
+ "  IThat excited fun
+
+
+
+
+
+So, Lily€ 
+
+
+
+
+
+M excited head
+11/05/2025 02:26:48 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] ĠCad[12] Ġbad[11] 24[10] Ġ[11] Ċ[7] Ċ[7] Ċ[6] Ċ[6] Ċ[7] Ã¢[12] Ã¢[12] d[11] my[11] .[10] Ċ[8] Ċ[6] Ċ[6] Ċ[9] Ċ[6] Ċ[12] One[12] Ã¢[12] âĤ¬[11] âĤ¬[12] M[11] Ġ[12] Ċ[7] Ċ[6] Ġ[12] Ċ[5] Ċ[5] On[12] âĤ¬[11] âĤ¬[12] ĵ[10] ĠSara[11] Ġout[10] .[8] Ċ[5] Ċ[5] He[10] ,[11] ĠTom[10] Ġto[10] Ġher[10] ĠLily[10] .[9] Ċ[8] Ċ[10] âĤ¬[11] .[8] Ċ[6] Ċ[5] Ċ[5] Ċ[11] Ġ"[11] Ġ[11] ĠI[9] That[11] Ġexcited[10] Ġfun[11] Ċ[5] Ċ[4] Ċ[4] Ċ[4] Ċ[7] Ċ[8] So[11] ,[10] ĠLily[11] âĤ¬[11] Ġ[11] Ċ[7] Ċ[10] Ċ[9] Ċ[8] Ċ[9] Ċ[3] M[11] Ġexcited[10] Ġhead[11] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:26:48 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to play time and go go be.
+
+
+
+âian, €
+
+â 
+
+
+myâ.â€
+
+ 
+
+M's's mom of..
+
+
+€€Yes Manit Lily.
+
+â.
+
+
+
+ excited said him, go.
+
+
+ warning.â€â €
+
+Fromâ.
+
+It said.
+11/05/2025 02:26:48 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġplay[11] Ġtime[11] Ġand[11] Ġgo[11] Ġgo[11] Ġbe[11] .[8] Ċ[6] Ċ[6] Ċ[6] Ċ[6] Ã¢[11] ian[12] ,[10] Ġ[11] âĤ¬[11] Ċ[7] Ċ[6] Ã¢[12] Ġ[12] Ċ[6] Ċ[7] Ċ[9] my[10] Ã¢[12] .[10] Ã¢[11] âĤ¬[12] Ċ[6] Ċ[7] Ġ[11] Ċ[8] Ċ[10] M[9] 's[11] 's[11] Ġmom[12] Ġof[12] .[7] .[7] Ċ[4] Ċ[5] Ċ[12] âĤ¬[11] âĤ¬[12] Yes[11] ĠManit[11] ĠLily[12] .[8] Ċ[8] Ċ[9] Ã¢[12] .[5] Ċ[5] Ċ[5] Ċ[8] Ċ[9] Ġexcited[11] Ġsaid[10] Ġhim[10] ,[11] Ġgo[10] .[9] Ċ[3] Ċ[3] Ċ[4] Ġwarning[10] .[4] Ã¢[11] âĤ¬[10] Ã¢[10] Ġ[10] âĤ¬[11] Ċ[5] Ċ[5] From[11] Ã¢[10] .[2] Ċ[3] Ċ[4] It[9] Ġsaid[10] .[11] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:26:48 - INFO - __main__ - [gen] exit generate_text_samples: step=10000
+11/05/2025 02:27:21 - INFO - __main__ - Step: 10200 Loss_lm: 2.1572 Data (t): 0.0000, 626.57/s/gpu Batch (t): 0.2043 LR: 0.000499
+11/05/2025 02:27:54 - INFO - __main__ - Step: 10400 Loss_lm: 3.6662 Data (t): 0.0000, 610.03/s/gpu Batch (t): 0.2098 LR: 0.000499
+11/05/2025 02:28:27 - INFO - __main__ - Step: 10600 Loss_lm: 2.2744 Data (t): 0.0000, 627.69/s/gpu Batch (t): 0.2039 LR: 0.000498
+11/05/2025 02:29:00 - INFO - __main__ - Step: 10800 Loss_lm: 2.4329 Data (t): 0.0000, 616.80/s/gpu Batch (t): 0.2075 LR: 0.000498
+11/05/2025 02:29:33 - INFO - __main__ - Step: 11000 Loss_lm: 2.5155 Data (t): 0.0000, 617.64/s/gpu Batch (t): 0.2072 LR: 0.000498
+11/05/2025 02:30:07 - INFO - __main__ - Step: 11200 Loss_lm: 2.7309 Data (t): 0.0000, 609.30/s/gpu Batch (t): 0.2101 LR: 0.000498
+11/05/2025 02:30:40 - INFO - __main__ - Step: 11400 Loss_lm: 2.3189 Data (t): 0.0000, 620.04/s/gpu Batch (t): 0.2064 LR: 0.000498
+11/05/2025 02:31:12 - INFO - __main__ - Step: 11600 Loss_lm: 2.3585 Data (t): 0.0000, 625.51/s/gpu Batch (t): 0.2046 LR: 0.000498
+11/05/2025 02:31:45 - INFO - __main__ - Step: 11800 Loss_lm: 2.1432 Data (t): 0.0000, 610.44/s/gpu Batch (t): 0.2097 LR: 0.000498
+11/05/2025 02:32:18 - INFO - __main__ - Step: 12000 Loss_lm: 2.1663 Data (t): 0.0000, 613.20/s/gpu Batch (t): 0.2087 LR: 0.000498
+11/05/2025 02:32:18 - INFO - __main__ - Generating text samples...
+11/05/2025 02:32:18 - INFO - __main__ - [gen] enter generate_text_samples: step=12000, rank=0
+11/05/2025 02:32:19 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 02:32:19 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little fun€
+
+
+
+
+
+â  greeting€ 
+
+
+
+
+
+ so€ verycy€
+
+
+
+
+ shouted€ Tom�  
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+WhenWhenâ can could..
+
+
+
+
+ pointâ.
+
+
+
+
+
+
+
+ started predomin
+11/05/2025 02:32:19 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] Ġfun[12] âĤ¬[11] Ċ[9] Ċ[9] Ċ[8] Ċ[8] Ċ[8] Ċ[9] Ã¢[11] Ġ[11] Ġgreeting[12] âĤ¬[11] Ġ[11] Ċ[9] Ċ[10] Ċ[10] Ċ[8] Ċ[8] Ċ[8] Ġso[11] âĤ¬[11] Ġvery[11] cy[12] âĤ¬[11] Ċ[8] Ċ[8] Ċ[8] Ċ[7] Ċ[7] Ġshouted[11] âĤ¬[10] ĠTom[12] ¢[12] Ġ[12] Ġ[11] Ċ[8] Ċ[7] Ċ[6] Ċ[6] Ċ[7] Ċ[12] Ċ[11] Ġ[12] Ċ[11] Ċ[11] Ċ[9] Ċ[8] Ċ[7] Ċ[6] Ċ[6] Ċ[6] Ċ[6] Ċ[9] When[10] When[11] Ã¢[11] Ġcan[11] Ġcould[11] .[5] .[5] Ċ[5] Ċ[5] Ċ[3] Ċ[3] Ċ[4] Ġpoint[11] Ã¢[11] .[11] Ċ[10] Ċ[8] Ċ[4] Ċ[4] Ċ[3] Ċ[4] Ċ[5] Ċ[6] Ġstarted[12] Ġpredomin[12] Ċ[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:32:19 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named gave jump24  
+  
+
+
+   said 
+
+â€ �Oâ€�â€ is   
+
+duration€ it! .
+
+
+,â. �â€ââ€
+11/05/2025 02:32:19 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] Ġgave[11] Ġjump[12] 24[12] Ġ[12] Ġ[12] Ċ[11] Ġ[12] Ġ[9] Ċ[7] Ċ[8] Ċ[9] Ġ[10] Ġ[11] Ġsaid[12] Ġ[12] Ċ[7] Ċ[8] Ã¢[12] âĤ¬[11] ĠÃ[12] O[12] Ã¢[12] âĤ¬[11] Å[11] Ã¢[11] âĤ¬[10] Ġis[10] Ġ[10] Ġ[11] Ġ[11] Ċ[11] Ċ[10] duration[11] âĤ¬[10] Ġit[11] ![11] Ġ[10] .[8] Ċ[7] Ċ[6] Ċ[7] ,[6] Ã¢[11] .[11] ĠÃ[11] Ã¢[10] âĤ¬[9] Ã¢[10] Ã¢[10] âĤ¬[10] <|endoftext|>[5] Ċ[6] Ċ[5] Ċ[8] Ġ[11] âĤ¬[10] ,[10] ĠCad[11] Ġit[10] Ã¢[11] Ċ[10] 24[11] Ċ[4] Ċ[4] Ċ[4] Ċ[5] Ċ[6] Ġ[10] Ġ[10] <|endoftext|>[3] Ġ[10] Ċ[7] Ċ[5] Ċ[5] Ċ[4] <|endoftext|>[3] Ċ[4] Ċ[6] 24[10] Ġ[11] Ċ[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:32:19 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there livedâ alsoWhen 
+
+
+
+
+
+ bench€ said €
+  
+
+
+ â shouted bear.
+
+
+
+
+€ thecyocyteâ 
+
+
+
+
+ââWhen
+
+
+
+
+
+
+
+
+
+
+
+
+
+When..
+
+
+
+
+â   
+
+
+
+
+
+
+ couldn
+11/05/2025 02:32:19 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] Ã¢[12] Ġalso[11] When[11] Ġ[12] Ċ[9] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[9] Ġbench[12] âĤ¬[11] Ġsaid[11] Ġ[12] âĤ¬[11] Ċ[10] Ġ[10] Ġ[10] Ċ[8] Ċ[8] Ċ[8] Ġ[12] Ã¢[11] Ġshouted[11] Ġbear[12] .[12] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[7] âĤ¬[11] Ġthe[12] cy[11] ocyte[12] Ã¢[11] Ġ[11] Ċ[11] Ċ[7] Ċ[7] Ċ[7] Ċ[10] Ã¢[11] Ã¢[11] When[11] Ċ[10] Ċ[10] Ċ[9] Ċ[8] Ċ[7] Ċ[7] Ċ[6] Ċ[6] Ċ[6] Ċ[10] Ċ[8] Ċ[5] Ċ[5] Ċ[12] When[11] .[6] .[6] Ċ[5] Ċ[5] Ċ[5] Ċ[5] Ċ[6] Ã¢[11] Ġ[11] Ġ[12] Ġ[10] Ċ[8] Ċ[4] Ċ[4] Ċ[9] Ċ[3] Ċ[4] Ċ[4] Ġcouldn[11] Ċ[3] Ċ[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:32:19 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy andorea, look!
+
+
+
+
+Mom€,� said.
+ 
+
+
+
+Soâââ 
+
+
+
+
+ rh€ Vita �  
+
+
+
+
+ When it'sâ.
+
+
+
+
+
+ bench
+11/05/2025 02:32:19 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] orea[11] ,[11] Ġlook[11] ![12] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Mom[12] âĤ¬[11] ,[11] İ[12] Ġsaid[11] .[12] Ċ[9] Ġ[10] Ċ[10] Ċ[9] Ċ[7] Ċ[7] So[12] Ã¢[11] Ã¢[11] Ã¢[11] Ġ[11] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ġrh[11] âĤ¬[10] ĠVita[11] ĠÃ[11] Ġ[10] Ġ[11] Ċ[9] Ċ[6] Ċ[6] Ċ[6] Ċ[7] Ġ[11] When[10] Ġit[11] 's[11] Ã¢[12] .[9] Ċ[9] Ċ[8] Ċ[6] Ċ[5] Ċ[5] Ċ[5] Ġbench[12] <|endoftext|>[10] âĤ¬[11] Ġno[12] M[11] Ġit[10] .[5] .[5] Ċ[3] Ċ[3] Ċ[3] Ċ[3] Ċ[4] Ã¢[12] Ġand[12] Ġ[11] Ċ[9] Ċ[8] Ċ[8] Ċ[6] Ċ[5] Ċ[5] Ċ[4] Ċ[5] Ã¢[12] .[11] Ċ[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:32:19 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to listen � special shouted shouted 
+
+
+
+
+
+
+âââ 
+
+
+
+
+
+I Joeâ. 
+
+
+
+
+ grassâIocyte â.
+
+
+
+ââ
+
+
+
+
+
+
+
+
+
+
+ shouted come canELY together too
+
+
+
+
+
+â said€
+
+
+
+
+
+
+
+ smiled
+11/05/2025 02:32:19 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġlisten[11] ĠÃ[11] Ġspecial[12] Ġshouted[11] Ġshouted[11] Ġ[10] Ċ[9] Ċ[9] Ċ[9] Ċ[9] Ċ[9] Ċ[9] Ċ[10] Ã¢[12] Ã¢[12] Ã¢[12] Ġ[12] Ċ[8] Ċ[9] Ċ[10] Ċ[8] Ċ[8] Ċ[8] I[11] ĠJoe[11] Ã¢[11] .[10] Ġ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[7] Ċ[6] Ġgrass[11] Ã¢[11] I[11] ocyte[11] Ġ[12] Ã¢[12] .[6] Ċ[6] Ċ[6] Ċ[6] Ċ[8] Ã¢[11] Ã¢[11] Ċ[11] Ċ[10] Ċ[9] Ċ[8] Ċ[7] Ċ[6] Ċ[6] Ċ[5] Ċ[5] Ċ[5] Ċ[10] Ġshouted[11] Ġcome[11] Ġcan[11] ELY[11] Ġtogether[12] Ġtoo[11] Ċ[5] Ċ[5] Ċ[5] Ċ[5] Ċ[6] Ċ[7] Ã¢[12] Ġsaid[12] âĤ¬[11] Ċ[6] Ċ[5] Ċ[4] Ċ[4] Ċ[7] Ċ[3] Ċ[2] Ċ[3] Ġsmiled[12] Ġ[10] Ċ[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:32:19 - INFO - __main__ - [gen] exit generate_text_samples: step=12000
+11/05/2025 02:32:52 - INFO - __main__ - Step: 12200 Loss_lm: 2.2447 Data (t): 0.0000, 617.12/s/gpu Batch (t): 0.2074 LR: 0.000498
+11/05/2025 02:33:25 - INFO - __main__ - Step: 12400 Loss_lm: 2.2683 Data (t): 0.0000, 606.48/s/gpu Batch (t): 0.2111 LR: 0.000498
+11/05/2025 02:33:57 - INFO - __main__ - Step: 12600 Loss_lm: 2.5357 Data (t): 0.0000, 595.45/s/gpu Batch (t): 0.2150 LR: 0.000498
+11/05/2025 02:34:30 - INFO - __main__ - Step: 12800 Loss_lm: 2.0568 Data (t): 0.0000, 604.62/s/gpu Batch (t): 0.2117 LR: 0.000498
+11/05/2025 02:35:03 - INFO - __main__ - Step: 13000 Loss_lm: 2.3388 Data (t): 0.0000, 603.89/s/gpu Batch (t): 0.2120 LR: 0.000498
+11/05/2025 02:35:36 - INFO - __main__ - Step: 13200 Loss_lm: 2.2645 Data (t): 0.0000, 626.70/s/gpu Batch (t): 0.2042 LR: 0.000498
+11/05/2025 02:36:09 - INFO - __main__ - Step: 13400 Loss_lm: 2.7851 Data (t): 0.0000, 618.87/s/gpu Batch (t): 0.2068 LR: 0.000498
+11/05/2025 02:36:42 - INFO - __main__ - Step: 13600 Loss_lm: 2.5898 Data (t): 0.0000, 623.96/s/gpu Batch (t): 0.2051 LR: 0.000498
+11/05/2025 02:37:14 - INFO - __main__ - Step: 13800 Loss_lm: 2.2504 Data (t): 0.0000, 634.47/s/gpu Batch (t): 0.2017 LR: 0.000497
+11/05/2025 02:37:47 - INFO - __main__ - Step: 14000 Loss_lm: 2.5624 Data (t): 0.0000, 610.24/s/gpu Batch (t): 0.2098 LR: 0.000497
+11/05/2025 02:37:47 - INFO - __main__ - Generating text samples...
+11/05/2025 02:37:47 - INFO - __main__ - [gen] enter generate_text_samples: step=14000, rank=0
+11/05/2025 02:37:47 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 02:37:47 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little. 
+
+
+L Timmy Lily saidmy.
+
+
+
+ 
+
+ mommy asked. 
+
+Timmy asked the mommy mom asked Lily.
+
+
+ asked, it
+
+ lots mom asked.
+
+Tim mommy mom mom?"
+11/05/2025 02:37:47 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] .[9] Ġ[8] Ċ[8] Ċ[8] Ċ[7] L[10] ĠTim[10] my[10] ĠLily[11] Ġsaid[12] my[11] .[8] Ċ[9] Ċ[7] Ċ[7] Ċ[6] Ġ[11] Ċ[12] Ċ[11] Ġmom[11] my[10] Ġasked[11] .[9] Ġ[12] Ċ[6] Ċ[6] Tim[12] my[11] Ġasked[12] Ġthe[11] Ġmom[10] my[9] Ġmom[11] Ġasked[11] ĠLily[12] .[6] Ċ[6] Ċ[6] Ċ[7] Ġasked[11] ,[6] Ġit[11] Ċ[12] Ċ[11] Ġlots[12] Ġmom[11] Ġasked[11] .[9] Ċ[9] Ċ[7] Tim[11] Ġmom[9] my[11] Ġmom[11] Ġmom[11] ?"[11] <|endoftext|>[5] Ċ[5] Ċ[7] Ċ[7] Ċ[5] Ċ[5] Ċ[4] "[9] Ġswirling[12] ,[12] ĠMom[10] <|endoftext|>[4] .[9] Ċ[5] Ċ[4] Ċ[4] Ċ[3] Ċ[4] Ċ[4] Ċ[5] Ġ[9] <|endoftext|>[2] <|endoftext|>[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:37:47 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named.
+
+ 
+
+Whenmyage it said, saidmy," the said.
+
+As Lily was.
+
+Soily told Lily, Lily go's so said. One, her mommy said
+11/05/2025 02:37:47 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] .[5] Ċ[11] Ċ[9] Ġ[7] Ċ[5] Ċ[5] When[11] my[11] age[10] Ġit[10] Ġsaid[11] ,[8] Ġsaid[11] my[9] ,"[12] Ġthe[10] Ġsaid[10] .[11] Ċ[7] Ċ[5] As[12] ĠLily[11] Ġwas[11] .[11] Ċ[8] Ċ[5] So[8] ily[10] Ġtold[12] ĠLily[10] ,[10] ĠLily[10] Ġgo[10] 's[12] Ġso[12] Ġsaid[10] .[7] ĠOne[11] ,[11] Ġher[12] Ġmom[10] my[11] Ġsaid[12] <|endoftext|>[5] Ġsaid[11] .[8] .[8] Ċ[10] Ċ[6] Ċ[6] Ã¢[11] t[12] <|endoftext|>[4] Ġalso[12] Ġasked[11] Ġsaid[11] my[11] Ġcan[10] Ġadvocacy[12] âĤ¬[7] ?"[11] Ċ[4] Ċ[3] Ċ[4] When[10] ,[11] Ġlooking[11] <|endoftext|>[3] <|endoftext|>[3] e[9] ,[7] ĠLily[6] Ġmom[12] Ġshouted[10] ![11] Ċ[6] Ċ[6] Ċ[10] <|endoftext|>[2] Ã¢[10] <|endoftext|>[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:37:47 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived a food. 
+
+Whenilymy, his mommy!â€
+
+
+Tom mom shouted.
+
+So, his mom, Tim's mom asked himmy's mom, it you go," have him shouted.
+11/05/2025 02:37:47 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] Ġa[10] Ġfood[11] .[5] Ġ[12] Ċ[5] Ċ[6] When[10] ily[10] my[10] ,[11] Ġhis[11] Ġmom[10] my[8] ![12] Ã¢[12] âĤ¬[9] Ċ[11] Ċ[9] Ċ[8] Tom[10] Ġmom[11] Ġshouted[9] .[8] Ċ[7] Ċ[5] So[8] ,[12] Ġhis[11] Ġmom[6] ,[12] ĠTim[6] 's[12] Ġmom[9] Ġasked[12] Ġhim[11] my[10] 's[12] Ġmom[11] ,[10] Ġit[12] Ġyou[10] Ġgo[9] ,"[11] Ġhave[11] Ġhim[11] Ġshouted[10] .[9] Ġ[12] Ċ[6] Ċ[7] Ġ[11] <|endoftext|>[4] <|endoftext|>[4] Ċ[4] Mom[11] my[11] Ġasked[12] <|endoftext|>[4] .[8] Ġ[11] Ċ[4] Ċ[5] Ċ[4] Ã¢[11] âĤ¬[10] Sure[10] ,[9] <|endoftext|>[3] âĤ¬[10] ĠMom[11] my[10] my[10] Ġy[11] Ġsaid[11] ,[10] Ġher[11] ĠMom[11] my[10] <|endoftext|>[2] <|endoftext|>[2] <|endoftext|>[4] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:37:47 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and smiled lovedTom.
+
+
+â smiled his mom,â.
+
+
+
+
+
+
+€ started
+. 
+
+analysisAs, Tim asked said mommy asked.
+
+
+ pick argue it go tokees.
+11/05/2025 02:37:47 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] Ġsmiled[10] Ġloved[12] Tom[11] .[10] Ċ[8] Ċ[8] Ċ[8] Ã¢[12] Ġsmiled[12] Ġhis[12] Ġmom[11] ,[11] Ã¢[12] .[9] Ċ[9] Ċ[8] Ċ[7] Ċ[7] Ċ[7] Ċ[6] Ċ[6] âĤ¬[11] Ġstarted[12] Ċ[10] .[10] Ġ[11] Ċ[7] Ċ[6] analysis[11] As[11] ,[12] ĠTim[12] Ġasked[12] Ġsaid[10] Ġmom[9] my[11] Ġasked[11] .[6] Ċ[6] Ċ[7] Ċ[8] Ġpick[11] Ġargue[11] Ġit[11] Ġgo[10] Ġto[11] kees[11] .[12] Ċ[9] Ċ[5] Ċ[4] Ċ[4] <|endoftext|>[11] Ġasked[11] ,[11] ,[11] âĸĪâĸĪâĸĪâĸĪâĸĪâĸĪâĸĪâĸĪ[12] âĤ¬[11] Ġit[9] Ċ[10] Ċ[4] Ċ[4] Ċ[3] Ċ[3] Ċ[4] Ġh[10] ********[11] Sure[11] ![10] Ã¢[10] .[7] Ċ[7] Ċ[6] Ċ[6] Ċ[5] Ċ[5] Ċ[4] Ċ[5] Ġ[9] <|endoftext|>[2] <|endoftext|>[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:37:47 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to go as special is Lily 
+
+When€ Mommymy withâ.
+
+
+
+
+
+ h? L the unl.â€
+
+When shouted asked Mom mom said.
+
+
+ mom,"
+
+
+
+
+
+
+
+mymy
+
+
+
+
+Suddenly oneLook 
+
+
+â Lily
+11/05/2025 02:37:47 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġgo[11] Ġas[11] Ġspecial[10] Ġis[11] ĠLily[10] Ġ[11] Ċ[7] Ċ[7] When[9] âĤ¬[10] ĠMom[11] my[10] my[10] Ġwith[11] Ã¢[12] .[10] Ċ[8] Ċ[7] Ċ[7] Ċ[6] Ċ[6] Ċ[6] Ġh[12] ?[11] ĠL[12] Ġthe[10] Ġunl[11] .[12] Ã¢[11] âĤ¬[11] Ċ[11] Ċ[10] When[11] Ġshouted[11] Ġasked[12] ĠMom[11] Ġmom[10] Ġsaid[12] .[9] Ċ[7] Ċ[6] Ċ[7] Ġmom[9] ,"[11] Ċ[9] Ċ[7] Ċ[8] Ċ[7] Ċ[9] Ċ[12] Ċ[7] Ċ[5] my[10] my[11] Ċ[9] Ċ[5] Ċ[5] Ċ[7] Ċ[9] Suddenly[11] Ġone[12] Look[11] Ġ[11] Ċ[6] Ċ[5] Ċ[4] Ã¢[12] ĠLily[12] <|endoftext|>[9] <|endoftext|>[9] Ċ[4] Ġ[11] ![12] Ċ[4] Ċ[2] Ċ[3] Ċ[3] Ċ[4] Ċ[4] Ċ[5] <|endoftext|>[3] .[11] <|endoftext|>[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:37:47 - INFO - __main__ - [gen] exit generate_text_samples: step=14000
+11/05/2025 02:38:20 - INFO - __main__ - Step: 14200 Loss_lm: 2.2728 Data (t): 0.0000, 627.00/s/gpu Batch (t): 0.2041 LR: 0.000497
+11/05/2025 02:38:53 - INFO - __main__ - Step: 14400 Loss_lm: 1.8737 Data (t): 0.0000, 605.42/s/gpu Batch (t): 0.2114 LR: 0.000497
+11/05/2025 02:39:26 - INFO - __main__ - Step: 14600 Loss_lm: 2.2775 Data (t): 0.0000, 623.81/s/gpu Batch (t): 0.2052 LR: 0.000497
+11/05/2025 02:39:59 - INFO - __main__ - Step: 14800 Loss_lm: 2.0577 Data (t): 0.0000, 623.82/s/gpu Batch (t): 0.2052 LR: 0.000497
+11/05/2025 02:40:30 - INFO - __main__ - Step: 15000 Loss_lm: 2.2390 Data (t): 0.0000, 626.69/s/gpu Batch (t): 0.2042 LR: 0.000497
+11/05/2025 02:41:03 - INFO - __main__ - Step: 15200 Loss_lm: 2.0165 Data (t): 0.0000, 625.23/s/gpu Batch (t): 0.2047 LR: 0.000497
+11/05/2025 02:41:35 - INFO - __main__ - Step: 15400 Loss_lm: 2.1603 Data (t): 0.0000, 625.82/s/gpu Batch (t): 0.2045 LR: 0.000497
+11/05/2025 02:42:08 - INFO - __main__ - Step: 15600 Loss_lm: 2.1424 Data (t): 0.0000, 605.44/s/gpu Batch (t): 0.2114 LR: 0.000497
+11/05/2025 02:42:41 - INFO - __main__ - Step: 15800 Loss_lm: 2.4516 Data (t): 0.0000, 620.49/s/gpu Batch (t): 0.2063 LR: 0.000497
+11/05/2025 02:43:14 - INFO - __main__ - Step: 16000 Loss_lm: 2.5663 Data (t): 0.0000, 635.08/s/gpu Batch (t): 0.2015 LR: 0.000497
+11/05/2025 02:43:14 - INFO - __main__ - Generating text samples...
+11/05/2025 02:43:14 - INFO - __main__ - [gen] enter generate_text_samples: step=16000, rank=0
+11/05/2025 02:43:14 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 02:43:14 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little inside inside
+
+
+
+
+
+ Tim smiled Lily.
+
+
+
+
+
+
+ Mom Mom toWhether.
+
+
+
+
+'s mom, cryptocurrency Mom,
+
+
+
+Look, Tim to
+
+
+
+ asked Lily
+
+
+my wanted,Can
+ couldn inside
+
+
+
+
+ Mom you pl's
+
+
+
+
+ asked,
+ asked a.
+11/05/2025 02:43:14 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] Ġinside[11] Ġinside[11] Ċ[9] Ċ[9] Ċ[9] Ċ[8] Ċ[8] Ċ[8] ĠTim[11] Ġsmiled[12] ĠLily[11] .[10] Ċ[9] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[7] ĠMom[11] ĠMom[11] Ġto[11] Whether[11] .[7] Ċ[7] Ċ[7] Ċ[6] Ċ[6] Ċ[6] 's[12] Ġmom[10] ,[11] Ġcryptocurrency[10] ĠMom[11] ,[12] Ċ[7] Ċ[6] Ċ[6] Ċ[5] Look[12] ,[10] ĠTim[12] Ġto[11] Ċ[9] Ċ[8] Ċ[7] Ċ[6] Ġasked[12] ĠLily[12] Ċ[6] Ċ[5] Ċ[5] my[12] Ġwanted[11] ,[10] Can[11] Ċ[4] Ġcouldn[11] Ġinside[11] Ċ[7] Ċ[6] Ċ[5] Ċ[4] Ċ[4] ĠMom[11] Ġyou[10] Ġpl[11] 's[12] Ċ[4] Ċ[2] Ċ[3] Ċ[3] Ċ[4] Ġasked[12] ,[2] Ċ[7] Ġasked[11] Ġa[11] .[3] Ċ[5] <|endoftext|>[P]
+11/05/2025 02:43:14 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named her a a smiles
+
+
+
+
+
+ smiledcy asked.
+
+
+
+
+
+
+cy Mom said what.
+
+
+
+
+ every Precision her she drove asked
+
+
+
+€
+
+
+
+
+
+
+ brown it
+
+
+
+,
+
+
+ wouldn a
+
+
+
+
+my Mom it it.
+
+
+
+
+
+
+ inside inside
+11/05/2025 02:43:14 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] Ġher[11] Ġa[11] Ġa[11] Ġsmiles[11] Ċ[9] Ċ[9] Ċ[9] Ċ[9] Ċ[9] Ċ[9] Ġsmiled[11] cy[12] Ġasked[11] .[10] Ċ[10] Ċ[9] Ċ[9] Ċ[9] Ċ[8] Ċ[8] Ċ[8] cy[11] ĠMom[11] Ġsaid[12] Ġwhat[11] .[11] Ċ[8] Ċ[8] Ċ[7] Ċ[7] Ċ[7] Ġevery[12] ĠPrecision[11] Ġher[12] Ġshe[11] Ġdrove[11] Ġasked[12] Ċ[8] Ċ[7] Ċ[7] Ċ[7] âĤ¬[12] Ċ[8] Ċ[8] Ċ[8] Ċ[9] Ċ[8] Ċ[7] Ċ[6] Ġbrown[12] Ġit[12] Ċ[6] Ċ[5] Ċ[4] Ċ[5] ,[5] Ċ[5] Ċ[5] Ċ[6] Ġwouldn[11] Ġa[12] Ċ[6] Ċ[4] Ċ[4] Ċ[3] Ċ[3] my[10] ĠMom[11] Ġit[9] Ġit[11] .[11] Ċ[5] Ċ[5] Ċ[6] Ċ[7] Ċ[10] Ċ[6] Ċ[5] Ġinside[12] Ġinside[12] Ċ[1] Ċ[2] <|endoftext|>[P]
+11/05/2025 02:43:14 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived fun cryptocurrencykees called
+
+
+
+
+
+ Tim sheousand.
+
+
+
+
+
+
+That wines dad,".
+
+
+
+
+ h man asked asked asked she
+
+
+
+Thanks asked
+kees
+
+
+
+ she
+
+
+
+cykees
+
+
+'s's
+
+
+
+
+ a you Mom puzzle with
+
+
+
+ dro
+
+
+ called.
+11/05/2025 02:43:14 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] Ġfun[11] Ġcryptocurrency[11] kees[12] Ġcalled[11] Ċ[9] Ċ[9] Ċ[9] Ċ[9] Ċ[8] Ċ[8] ĠTim[11] Ġshe[12] ousand[11] .[10] Ċ[9] Ċ[8] Ċ[8] Ċ[7] Ċ[7] Ċ[7] Ċ[7] That[11] Ġwines[12] Ġdad[11] ,"[12] .[10] Ċ[8] Ċ[7] Ċ[7] Ċ[6] Ċ[6] Ġh[12] Ġman[12] Ġasked[11] Ġasked[11] Ġasked[11] Ġshe[10] Ċ[6] Ċ[6] Ċ[5] Ċ[5] Thanks[11] Ġasked[11] Ċ[8] kees[12] Ċ[9] Ċ[8] Ċ[7] Ċ[6] Ġshe[12] Ċ[5] Ċ[5] Ċ[5] Ċ[6] cy[12] kees[12] Ċ[9] Ċ[9] Ċ[8] 's[11] 's[11] Ċ[5] Ċ[4] Ċ[4] Ċ[4] Ċ[3] Ġa[12] Ġyou[10] ĠMom[11] Ġpuzzle[11] Ġwith[11] Ċ[3] Ċ[4] Ċ[4] Ċ[3] Ġdro[11] Ċ[2] Ċ[2] Ċ[1] Ġcalled[11] .[8] Ċ[6] <|endoftext|>[P]
+11/05/2025 02:43:14 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and of Mom a a
+
+
+
+
+
+ ask of Tim.
+
+
+
+
+
+
+ mum a gunshot not.
+
+
+
+
+Tom's, drove a cryptocurrency
+
+
+
+ asked asked
+
+
+
+
+
+ asked
+
+
+
+ Mom's, you you a inside
+
+
+
+
+arios? you
+
+
+
+
+
+
+
+
+ Mom look.
+11/05/2025 02:43:14 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] Ġof[11] ĠMom[12] Ġa[11] Ġa[11] Ċ[9] Ċ[9] Ċ[9] Ċ[8] Ċ[8] Ċ[8] Ġask[11] Ġof[11] ĠTim[11] .[9] Ċ[9] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ġmum[11] Ġa[11] Ġgunshot[11] Ġnot[11] .[11] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Tom[11] 's[12] ,[12] Ġdrove[12] Ġa[12] Ġcryptocurrency[10] Ċ[7] Ċ[7] Ċ[6] Ċ[6] Ġasked[12] Ġasked[11] Ċ[10] Ċ[10] Ċ[9] Ċ[8] Ċ[7] Ċ[6] Ġasked[11] Ċ[5] Ċ[5] Ċ[5] Ċ[5] ĠMom[10] 's[11] ,[5] Ġyou[12] Ġyou[12] Ġa[11] Ġinside[11] Ċ[6] Ċ[5] Ċ[4] Ċ[4] Ċ[4] arios[12] ?[11] Ġyou[11] Ċ[4] Ċ[2] Ċ[2] Ċ[3] Ċ[3] Ċ[4] Ċ[12] Ċ[6] Ċ[6] ĠMom[11] Ġlook[12] .[3] Ċ[2] <|endoftext|>[P]
+11/05/2025 02:43:14 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to Mom for to a cryptocurrency cryptocurrency
+
+
+
+
+
+spring see to cryptocurrency
+
+
+
+
+
+
+OOOO a Mom around.
+
+
+
+
+ askedcy
+
+
+
+
+
+
+
+ Mehran andkees couldn
+
+
+
+ askedanish
+
+
+, notkees,"," called cryptocurrency
+
+
+
+
+'s not to look
+
+
+
+
+
+
+
+
+.
+11/05/2025 02:43:14 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] ĠMom[11] Ġfor[11] Ġto[11] Ġa[11] Ġcryptocurrency[12] Ġcryptocurrency[12] Ċ[10] Ċ[9] Ċ[9] Ċ[9] Ċ[9] Ċ[8] spring[12] Ġsee[11] Ġto[11] Ġcryptocurrency[11] Ċ[9] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] OOOO[11] Ġa[11] ĠMom[11] Ġaround[11] .[10] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ġasked[11] cy[11] Ċ[9] Ċ[8] Ċ[7] Ċ[7] Ċ[7] Ċ[6] Ċ[6] Ċ[6] ĠMehran[11] Ġand[12] kees[12] Ġcouldn[12] Ċ[9] Ċ[8] Ċ[7] Ċ[6] Ġasked[11] anish[12] Ċ[6] Ċ[5] Ċ[5] ,[6] Ġnot[12] kees[12] ,"[12] ,"[12] Ġcalled[11] Ġcryptocurrency[10] Ċ[6] Ċ[5] Ċ[5] Ċ[5] Ċ[4] 's[11] Ġnot[11] Ġto[11] Ġlook[11] Ċ[4] Ċ[3] Ċ[3] Ċ[4] Ċ[5] Ċ[9] Ċ[4] Ċ[4] Ċ[3] .[2] Ċ[1] Ċ[2] <|endoftext|>[P]
+11/05/2025 02:43:14 - INFO - __main__ - [gen] exit generate_text_samples: step=16000
+11/05/2025 02:43:47 - INFO - __main__ - Step: 16200 Loss_lm: 2.4103 Data (t): 0.0000, 611.90/s/gpu Batch (t): 0.2092 LR: 0.000496
+11/05/2025 02:44:20 - INFO - __main__ - Step: 16400 Loss_lm: 2.2353 Data (t): 0.0000, 626.50/s/gpu Batch (t): 0.2043 LR: 0.000496
+11/05/2025 02:44:53 - INFO - __main__ - Step: 16600 Loss_lm: 2.0036 Data (t): 0.0000, 623.81/s/gpu Batch (t): 0.2052 LR: 0.000496
+11/05/2025 02:45:26 - INFO - __main__ - Step: 16800 Loss_lm: 2.3618 Data (t): 0.0000, 621.06/s/gpu Batch (t): 0.2061 LR: 0.000496
+11/05/2025 02:45:59 - INFO - __main__ - Step: 17000 Loss_lm: 2.3875 Data (t): 0.0000, 619.01/s/gpu Batch (t): 0.2068 LR: 0.000496
+11/05/2025 02:46:32 - INFO - __main__ - Step: 17200 Loss_lm: 2.3010 Data (t): 0.0000, 624.07/s/gpu Batch (t): 0.2051 LR: 0.000496
+11/05/2025 02:47:06 - INFO - __main__ - Step: 17400 Loss_lm: 2.0646 Data (t): 0.0000, 661.43/s/gpu Batch (t): 0.1935 LR: 0.000496
+11/05/2025 02:47:38 - INFO - __main__ - Step: 17600 Loss_lm: 2.2536 Data (t): 0.0000, 622.97/s/gpu Batch (t): 0.2055 LR: 0.000496
+11/05/2025 02:48:11 - INFO - __main__ - Step: 17800 Loss_lm: 3.6155 Data (t): 0.0000, 631.58/s/gpu Batch (t): 0.2027 LR: 0.000496
+11/05/2025 02:48:44 - INFO - __main__ - Step: 18000 Loss_lm: 2.0816 Data (t): 0.0000, 608.33/s/gpu Batch (t): 0.2104 LR: 0.000496
+11/05/2025 02:48:44 - INFO - __main__ - Generating text samples...
+11/05/2025 02:48:44 - INFO - __main__ - [gen] enter generate_text_samples: step=18000, rank=0
+11/05/2025 02:48:44 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 02:48:44 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little
+
+
+
+
+
+
+
+phone ask Mom Tom look....
+
+ not a and it down.
+
+
+
+,, to get down.
+
+
+
+ not down to indemn Mom down.
+ shouted them..
+
+ Leonardo singing not down.
+
+
+
+
+
+ day and it not down
+
+
+,,
+
+ smiled it Leonardo
+11/05/2025 02:48:44 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] Ċ[10] Ċ[9] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] phone[12] Ġask[11] ĠMom[12] ĠTom[12] Ġlook[11] .[9] .[8] .[7] .[7] Ċ[7] Ċ[7] Ġnot[11] Ġa[10] Ġand[11] Ġit[10] Ġdown[11] .[6] Ċ[6] Ċ[7] Ċ[8] Ċ[9] ,[11] ,[12] Ġto[11] Ġget[12] Ġdown[12] .[9] Ċ[6] Ċ[6] Ċ[6] Ċ[4] Ġnot[11] Ġdown[11] Ġto[12] Ġindemn[12] ĠMom[11] Ġdown[11] .[4] Ċ[4] Ġshouted[11] Ġthem[12] .[6] .[5] Ċ[5] Ċ[7] ĠLeonardo[11] Ġsinging[11] Ġnot[11] Ġdown[11] .[9] Ċ[7] Ċ[7] Ċ[5] Ċ[5] Ċ[4] Ċ[5] Ġday[12] Ġand[11] Ġit[11] Ġnot[10] Ġdown[10] Ċ[3] Ċ[3] Ċ[4] ,[10] ,[8] Ċ[3] Ċ[3] Ġsmiled[11] Ġit[11] ĠLeonardo[11] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:48:44 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl namedatar," go
+.
+
+,, her,, lawfully to
+.
+
+
+
+ singing, on a balloon ofocamp awful.
+
+BenMe,," to look. He
+
+
+
+ boy nodded down down.. asked.
+
+
+ went want to," scared.
+
+
+cy,
+11/05/2025 02:48:44 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] atar[11] ,"[12] Ġgo[9] Ċ[10] .[7] Ċ[7] Ċ[8] ,[7] ,[12] Ġher[12] ,[11] ,[11] Ġlawfully[10] Ġto[11] Ċ[12] .[6] Ċ[6] Ċ[5] Ċ[6] Ċ[7] Ġsinging[12] ,[12] Ġon[11] Ġa[7] Ġballoon[10] Ġof[11] ocamp[11] Ġawful[11] .[6] Ċ[5] Ċ[4] Ben[12] Me[12] ,[10] ,"[11] Ġto[11] Ġlook[12] .[6] ĠHe[9] Ċ[9] Ċ[7] Ċ[8] Ċ[10] Ġboy[12] Ġnodded[11] Ġdown[12] Ġdown[11] .[6] .[5] Ġasked[11] .[4] Ċ[7] Ċ[5] Ċ[7] Ġwent[10] Ġwant[10] Ġto[11] ,"[11] Ġscared[11] .[6] Ċ[4] Ċ[5] Ċ[5] cy[11] ,[10] <|endoftext|>[4] ,[9] ,"[11] ,[11] Ġgo[10] Ġinside[10] Ċ[10] Ċ[4] Ċ[3] Ċ[3] Ġlook[11] Ġlook[10] Ċ[6] <|endoftext|>[2] Ċ[10] my[11] .[5] <|endoftext|>[P]
+11/05/2025 02:48:44 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived€
+
+
+
+
+,, then,, he down.
+
+
+
+
+
+ greeting down down. Tom.
+
+Jack cool
+
+,, look it.
+
+ bark labelled Tom warranty and Benny scared
+.
+
+ daddy, a not," go shouted down
+.
+.
+
+
+ smiled, help look hole
+
+
+
+
+ brown
+11/05/2025 02:48:44 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] âĤ¬[10] Ċ[9] Ċ[8] Ċ[9] Ċ[6] Ċ[6] ,[7] ,[10] Ġthen[11] ,[9] ,[9] Ġhe[11] Ġdown[11] .[12] Ċ[7] Ċ[6] Ċ[5] Ċ[5] Ċ[5] Ċ[5] Ġgreeting[11] Ġdown[11] Ġdown[12] .[10] ĠTom[11] .[10] Ċ[9] Ċ[9] Jack[11] Ġcool[11] Ċ[8] Ċ[6] ,[11] ,[12] Ġlook[12] Ġit[11] .[7] Ċ[7] Ċ[7] Ġbark[12] Ġlabelled[11] ĠTom[11] Ġwarranty[12] Ġand[10] ĠBenny[11] Ġscared[11] Ċ[8] .[7] Ċ[7] Ċ[8] Ġdaddy[11] ,[11] Ġa[11] Ġnot[11] ,"[12] Ġgo[12] Ġshouted[11] Ġdown[11] Ċ[8] .[8] Ċ[6] .[8] Ċ[4] Ċ[4] Ċ[3] Ġsmiled[12] ,[9] Ġhelp[11] Ġlook[12] Ġhole[12] Ċ[9] Ċ[8] Ċ[5] Ċ[4] Ċ[3] Ġbrown[10] Ċ[6] Ċ[5] <|endoftext|>[2] <|endoftext|>[2] âĤ¬[10] Ċ[7] <|endoftext|>[P]
+11/05/2025 02:48:44 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and then said
+.
+
+
+
+
+
+ smiled dad smiled,
+
+
+
+
+
+
+ inside asked to behind.
+
+
+
+
+ mom smiled she inside something.
+
+
+
+ said it smiled shouted.
+
+
+
+€
+
+
+ Sau money GUN€ out asked
+
+
+
+
+
+ shouted smiled cold dad asked
+
+
+
+
+
+
+€ to€
+11/05/2025 02:48:44 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] Ġthen[11] Ġsaid[12] Ċ[12] .[11] Ċ[9] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ġsmiled[11] Ġdad[12] Ġsmiled[12] ,[11] Ċ[8] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ġinside[12] Ġasked[11] Ġto[12] Ġbehind[12] .[9] Ċ[8] Ċ[8] Ċ[8] Ċ[7] Ċ[7] Ġmom[9] Ġsmiled[12] Ġshe[11] Ġinside[10] Ġsomething[11] .[11] Ċ[5] Ċ[6] Ċ[6] Ċ[6] Ġsaid[12] Ġit[11] Ġsmiled[11] Ġshouted[12] .[11] Ċ[7] Ċ[6] Ċ[5] Ċ[5] âĤ¬[11] Ċ[4] Ċ[3] Ċ[4] ĠSau[11] Ġmoney[12] ĠGUN[10] âĤ¬[11] Ġout[10] Ġasked[11] Ċ[11] Ċ[11] Ċ[3] Ċ[3] Ċ[2] Ċ[3] Ġshouted[10] Ġsmiled[10] Ġcold[11] Ġdad[11] Ġasked[11] Ċ[7] Ċ[6] Ċ[5] Ċ[5] Ċ[4] Ċ[5] Ċ[4] âĤ¬[10] Ġto[10] âĤ¬[11] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:48:44 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to then couldn€ asked the down
+
+
+
+
+
+ smiled gave askedmy
+
+
+
+
+
+
+ smiledrats and scared.
+
+
+
+
+ smiled not Nietzsche not Shopping.
+
+
+
+ud predomin to..
+
+
+ Seb down
+
+
+ two,", they inside
+
+ look
+
+
+
+ he not smiled down.
+
+
+ asked asked
+
+€ look
+11/05/2025 02:48:44 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġthen[12] Ġcouldn[12] âĤ¬[12] Ġasked[11] Ġthe[9] Ġdown[11] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[7] Ġsmiled[11] Ġgave[12] Ġasked[12] my[11] Ċ[8] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ġsmiled[12] rats[11] Ġand[11] Ġscared[11] .[10] Ċ[7] Ċ[6] Ċ[7] Ċ[6] Ċ[6] Ġsmiled[11] Ġnot[12] ĠNietzsche[11] Ġnot[11] ĠShopping[11] .[9] Ċ[6] Ċ[6] Ċ[5] Ċ[5] ud[12] Ġpredomin[11] Ġto[12] .[9] .[10] Ċ[6] Ċ[5] Ċ[4] ĠSeb[11] Ġdown[11] Ċ[6] Ċ[5] Ċ[5] Ġtwo[12] ,"[12] ,[10] Ġthey[11] Ġinside[11] Ċ[11] Ċ[11] Ġlook[10] Ċ[4] Ċ[3] Ċ[2] Ċ[3] Ġhe[11] Ġnot[11] Ġsmiled[11] Ġdown[10] .[11] Ċ[5] Ċ[5] Ċ[5] Ġasked[10] Ġasked[10] Ċ[4] Ċ[3] âĤ¬[10] Ġlook[10] Ċ[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:48:44 - INFO - __main__ - [gen] exit generate_text_samples: step=18000
+11/05/2025 02:49:17 - INFO - __main__ - Step: 18200 Loss_lm: 2.2696 Data (t): 0.0000, 623.66/s/gpu Batch (t): 0.2052 LR: 0.000496
+11/05/2025 02:49:49 - INFO - __main__ - Step: 18400 Loss_lm: 2.0542 Data (t): 0.0000, 627.30/s/gpu Batch (t): 0.2040 LR: 0.000495
+11/05/2025 02:50:21 - INFO - __main__ - Step: 18600 Loss_lm: 2.0747 Data (t): 0.0000, 607.74/s/gpu Batch (t): 0.2106 LR: 0.000495
+11/05/2025 02:50:54 - INFO - __main__ - Step: 18800 Loss_lm: 7.1228 Data (t): 0.0000, 641.51/s/gpu Batch (t): 0.1995 LR: 0.000495
+11/05/2025 02:51:27 - INFO - __main__ - Step: 19000 Loss_lm: 2.0808 Data (t): 0.0000, 624.24/s/gpu Batch (t): 0.2050 LR: 0.000495
+11/05/2025 02:52:00 - INFO - __main__ - Step: 19200 Loss_lm: 1.7424 Data (t): 0.0000, 601.54/s/gpu Batch (t): 0.2128 LR: 0.000495
+11/05/2025 02:52:33 - INFO - __main__ - Step: 19400 Loss_lm: 2.3216 Data (t): 0.0000, 630.97/s/gpu Batch (t): 0.2029 LR: 0.000495
+11/05/2025 02:53:06 - INFO - __main__ - Step: 19600 Loss_lm: 2.9990 Data (t): 0.0000, 620.18/s/gpu Batch (t): 0.2064 LR: 0.000495
+11/05/2025 02:53:39 - INFO - __main__ - Step: 19800 Loss_lm: 2.5178 Data (t): 0.0000, 643.04/s/gpu Batch (t): 0.1991 LR: 0.000495
+11/05/2025 02:54:12 - INFO - __main__ - Step: 20000 Loss_lm: 1.9896 Data (t): 0.0000, 626.22/s/gpu Batch (t): 0.2044 LR: 0.000495
+11/05/2025 02:54:12 - INFO - __main__ - Saved state to outputs/tiny_test_autodl/checkpoint-20000
+11/05/2025 02:54:12 - INFO - __main__ - Generating text samples...
+11/05/2025 02:54:12 - INFO - __main__ - [gen] enter generate_text_samples: step=20000, rank=0
+11/05/2025 02:54:13 - INFO - __main__ - [gen] diffusion sampling done in 0.17s for 5 prompts
+11/05/2025 02:54:13 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little, excited, didn walking on the garden, but she said, "Yes, ran to to to the ball, but he68 broke. 
+
+One day,, turbine
+11/05/2025 02:54:13 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] ,[9] Ġexcited[10] ,[9] Ġdidn[11] Ġwalking[12] Ġon[10] Ġthe[9] Ġgarden[11] ,[7] Ġbut[12] Ġshe[11] Ġsaid[9] ,[8] Ġ"[12] Yes[12] ,[10] Ġran[12] Ġto[11] Ġto[11] Ġto[11] Ġthe[9] Ġball[11] ,[8] Ġbut[12] Ġhe[11] 68[11] Ġbroke[11] .[7] Ġ[11] Ċ[6] Ċ[6] One[8] Ġday[12] ,[7] ,[7] Ġturbine[11] <|endoftext|>[6] e[11] Ġbig[8] ,[7] Ġthe[12] Official[11] ,[8] ĠTom[11] .[7] <|endoftext|>[5] <|endoftext|>[5] <|endoftext|>[5] <|endoftext|>[5] <|endoftext|>[4] Ġin[10] <|endoftext|>[4] <|endoftext|>[4] <|endoftext|>[4] Ġreally[11] Ġgrass[12] Ġgirl[12] Ġexcited[11] Ċ[10] .[6] Ċ[7] <|endoftext|>[5] <|endoftext|>[5] <|endoftext|>[3] Ġin[10] Ġthe[11] Ġshe[11] Ġand[9] Ġhad[11] ,"[10] .[9] Ċ[3] Ġelection[11] Ċ[2] Ċ[1] Ċ[2] Ċ[5] Ċ[6] Ċ[7] ,[6] <|endoftext|>[P]
+11/05/2025 02:54:13 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named she watch friend said.
+
+One day, Lily, a said, Lily asked.
+
+Tim, scared, the special. She ran too, she heard and hole. She,.. Then, she in long,, and watch
+11/05/2025 02:54:13 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] Ġshe[10] Ġwatch[12] Ġfriend[11] Ġsaid[11] .[7] Ċ[5] Ċ[5] One[7] Ġday[8] ,[9] ĠLily[12] ,[11] Ġa[11] Ġsaid[9] ,[5] ĠLily[9] Ġasked[11] .[7] Ċ[6] Ċ[6] Tim[9] ,[10] Ġscared[12] ,[9] Ġthe[12] Ġspecial[12] .[7] ĠShe[8] Ġran[11] Ġtoo[12] ,[4] Ġshe[10] Ġheard[11] Ġand[11] Ġhole[11] .[6] ĠShe[11] ,[11] .[11] .[8] ĠThen[11] ,[8] Ġshe[12] Ġin[11] Ġlong[11] ,[8] ,[10] Ġand[9] Ġwatch[12] <|endoftext|>[4] .[7] Ġswirling[11] ,[4] Ġshouted[11] Ġthem[8] Ġcalled[11] Ġof[12] .[9] Ċ[7] Ċ[9] Later[12] <|endoftext|>[4] Ċ[6] Ġday[10] ,[6] Ġlivestock[11] ,[7] .[9] ,"[10] Ġthem[11] Ġshe[12] Ġsaid[11] ,[5] Ċ[7] Ċ[5] Ċ[5] Ċ[6] Ċ[6] <|endoftext|>[3] <|endoftext|>[2] <|endoftext|>[2] <|endoftext|>[1] <|endoftext|>[P]
+11/05/2025 02:54:13 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived, excited excited.
+
+One day,, the Flood saw a old fairy.
+
+
+It asked the time,, shiny, and, colorful at the hill. He day, shouted, she ran there, She swirling,
+11/05/2025 02:54:13 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] ,[9] Ġexcited[10] Ġexcited[11] .[7] Ċ[7] Ċ[8] One[8] Ġday[9] ,[8] ,[8] Ġthe[11] ĠFlood[11] Ġsaw[11] Ġa[12] Ġold[12] Ġfairy[11] .[7] Ċ[6] Ċ[6] Ċ[5] It[9] Ġasked[12] Ġthe[8] Ġtime[11] ,[7] ,[7] Ġshiny[12] ,[7] Ġand[10] ,[10] Ġcolorful[11] Ġat[11] Ġthe[9] Ġhill[12] .[8] ĠHe[11] Ġday[11] ,[9] Ġshouted[11] ,[7] Ġshe[11] Ġran[10] Ġthere[12] ,[9] ĠShe[12] Ġswirling[11] ,[7] <|endoftext|>[5] <|endoftext|>[5] ĠReprodu[12] Ġoutset[12] Ġto[11] ,[6] Ġvenom[11] ,[9] ,[9] Ġbig[10] ,[6] <|endoftext|>[5] <|endoftext|>[6] <|endoftext|>[5] <|endoftext|>[5] <|endoftext|>[4] <|endoftext|>[4] <|endoftext|>[4] s[11] ,[9] Ġs[12] Ġin[11] Ġher[12] Ġbig[10] ,[4] Ã¢[11] Ġbrown[11] <|endoftext|>[6] Ċ[3] Ċ[3] Ċ[5] <|endoftext|>[3] <|endoftext|>[4] <|endoftext|>[2] <|endoftext|>[1] <|endoftext|>[P]
+11/05/2025 02:54:13 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and said, the special?..
+
+
+,, shouted,
+
+
+..
+
+68 asked with for.
+
+
+
+
+Tommy Tim Tim!" said
+
+
+
+"l there,,, yououbtedly? look
+
+
+my, said asked
+
+
+ascus
+
+
+
+ feet to Mia'-.
+
+
+,
+
+
+
+ascus,.
+11/05/2025 02:54:13 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] Ġsaid[12] ,[12] Ġthe[10] Ġspecial[11] ?[12] .[7] .[7] Ċ[7] Ċ[7] Ċ[9] ,[7] ,[7] Ġshouted[12] ,[8] Ċ[8] Ċ[8] Ċ[9] .[7] .[7] Ċ[7] Ċ[7] 68[11] Ġasked[11] Ġwith[11] Ġfor[12] .[10] Ċ[6] Ċ[5] Ċ[6] Ċ[5] Ċ[5] Tom[11] my[11] ĠTim[11] ĠTim[11] !"[11] Ġsaid[10] Ċ[6] Ċ[5] Ċ[5] Ċ[3] "[11] l[12] Ġthere[11] ,[8] ,[8] ,[10] Ġyou[12] oubtedly[11] ?[12] Ġlook[11] Ċ[5] Ċ[4] Ċ[4] my[11] ,[8] Ġsaid[12] Ġasked[11] Ċ[12] Ċ[9] Ċ[9] ascus[11] Ċ[4] Ċ[4] Ċ[4] Ċ[8] Ġfeet[11] Ġto[11] ĠMia[11] '-[11] .[5] Ċ[3] Ċ[2] Ċ[1] ,[10] Ċ[8] Ċ[8] Ċ[5] Ċ[8] ascus[11] ,[12] .[10] <|endoftext|>[P]
+11/05/2025 02:54:13 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to get sweeps L the
+, she..
+
+
+ day,â
+
+
+
+â..
+ I around on with
+
+
+.
+
+
+
+. around the shouted
+
+
+
+ day inside asked
+.
+
+
+oubtedly said..
+
+Tim,, said,,
+.,.. ss fun Sc
+
+
+
+
+,,,
+ asked
+11/05/2025 02:54:13 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġget[11] Ġsweeps[12] ĠL[12] Ġthe[9] Ċ[11] ,[9] Ġshe[11] .[7] .[7] Ċ[8] Ċ[8] Ċ[7] Ġday[12] ,[7] Ã¢[11] Ċ[11] Ċ[8] Ċ[9] Ċ[10] Ã¢[11] .[7] .[6] Ċ[9] ĠI[11] Ġaround[11] Ġon[12] Ġwith[12] Ċ[7] Ċ[5] Ċ[6] .[5] Ċ[5] Ċ[5] Ċ[5] Ċ[9] .[9] Ġaround[12] Ġthe[11] Ġshouted[12] Ċ[6] Ċ[5] Ċ[6] Ċ[7] Ġday[11] Ġinside[11] Ġasked[11] Ċ[9] .[7] Ċ[5] Ċ[5] Ċ[4] oubtedly[11] Ġsaid[12] .[6] .[6] Ċ[6] Ċ[9] Tim[12] ,[9] ,[9] Ġsaid[11] ,[10] ,[12] Ċ[10] .[8] ,[11] .[8] .[6] Ġss[12] Ġfun[11] ĠSc[11] Ċ[5] Ċ[4] Ċ[3] Ċ[4] Ċ[3] ,[10] ,[11] ,[8] Ċ[10] Ġasked[11] Ċ[2] Ċ[2] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:54:13 - INFO - __main__ - [gen] exit generate_text_samples: step=20000
+11/05/2025 02:54:45 - INFO - __main__ - Step: 20200 Loss_lm: 2.1474 Data (t): 0.0000, 599.60/s/gpu Batch (t): 0.2135 LR: 0.000494
+11/05/2025 02:55:18 - INFO - __main__ - Step: 20400 Loss_lm: 2.0395 Data (t): 0.0000, 604.21/s/gpu Batch (t): 0.2118 LR: 0.000494
+11/05/2025 02:55:51 - INFO - __main__ - Step: 20600 Loss_lm: 1.9820 Data (t): 0.0000, 592.16/s/gpu Batch (t): 0.2162 LR: 0.000494
+11/05/2025 02:56:24 - INFO - __main__ - Step: 20800 Loss_lm: 1.9364 Data (t): 0.0000, 599.05/s/gpu Batch (t): 0.2137 LR: 0.000494
+11/05/2025 02:56:57 - INFO - __main__ - Step: 21000 Loss_lm: 4.0862 Data (t): 0.0000, 663.58/s/gpu Batch (t): 0.1929 LR: 0.000494
+11/05/2025 02:57:29 - INFO - __main__ - Step: 21200 Loss_lm: 2.4227 Data (t): 0.0000, 627.75/s/gpu Batch (t): 0.2039 LR: 0.000494
+11/05/2025 02:58:02 - INFO - __main__ - Step: 21400 Loss_lm: 1.9854 Data (t): 0.0000, 621.79/s/gpu Batch (t): 0.2059 LR: 0.000494
+11/05/2025 02:58:35 - INFO - __main__ - Step: 21600 Loss_lm: 2.4815 Data (t): 0.0000, 626.36/s/gpu Batch (t): 0.2044 LR: 0.000494
+11/05/2025 02:59:08 - INFO - __main__ - Step: 21800 Loss_lm: 2.1768 Data (t): 0.0000, 627.53/s/gpu Batch (t): 0.2040 LR: 0.000494
+11/05/2025 02:59:41 - INFO - __main__ - Step: 22000 Loss_lm: 2.3712 Data (t): 0.0000, 623.65/s/gpu Batch (t): 0.2052 LR: 0.000493
+11/05/2025 02:59:41 - INFO - __main__ - Generating text samples...
+11/05/2025 02:59:41 - INFO - __main__ - [gen] enter generate_text_samples: step=22000, rank=0
+11/05/2025 02:59:41 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 02:59:41 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little
+ picked it of it down inside what saidmort. But is said said
+ asked. what asked momNo.€
+
+€
+
+€ GUN picked " the dog food..€ was is few.. dog was is warranty excited.
+
+ANCE. Sag called him bottle outt....t of said would€
+," said," y ending.€ I with him
+11/05/2025 02:59:41 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] Ċ[3] Ġpicked[12] Ġit[11] Ġof[9] Ġit[11] Ġdown[12] Ġinside[11] Ġwhat[11] Ġsaid[11] mort[12] .[3] ĠBut[8] Ġis[11] Ġsaid[11] Ġsaid[12] Ċ[10] Ġasked[11] .[2] Ġwhat[12] Ġasked[12] Ġmom[11] No[11] .[7] âĤ¬[11] Ċ[7] Ċ[6] âĤ¬[12] Ċ[5] Ċ[5] âĤ¬[9] ĠGUN[11] Ġpicked[11] Ġ"[11] Ġthe[6] Ġdog[10] Ġfood[11] .[3] .[11] âĤ¬[12] Ġwas[12] Ġis[12] Ġfew[10] .[5] .[4] Ġdog[9] Ġwas[10] Ġis[11] Ġwarranty[11] Ġexcited[10] .[5] Ċ[8] Ċ[11] ANCE[10] .[4] ĠSag[11] Ġcalled[11] Ġhim[9] Ġbottle[10] Ġout[10] t[9] .[10] .[8] .[8] .[10] t[9] Ġof[10] Ġsaid[9] Ġwould[10] âĤ¬[10] Ċ[10] ,"[10] Ġsaid[10] ,"[10] Ġy[10] Ġending[10] .[4] âĤ¬[10] ĠI[8] Ġwith[10] Ġhim[9] <|endoftext|>[P]
+11/05/2025 02:59:41 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named,
+
+
+
+
+Krist," mom Ben Lucy..
+
+€ asked..
+
+P.
+
+One day big Symb mom she asked€ of house. park.
+. 
+ 42 was cold," she asked. Tom asked..€ said ofurated.. said mom, mom.€ said€
+11/05/2025 02:59:41 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] ,[4] Ċ[6] Ċ[5] Ċ[5] Ċ[5] Ċ[5] Krist[10] ,"[12] Ġmom[12] ĠBen[11] ĠLucy[12] .[5] .[5] Ċ[6] Ċ[7] âĤ¬[12] Ġasked[11] .[9] .[6] Ċ[10] Ċ[9] P[11] .[7] Ċ[10] Ċ[8] One[9] Ġday[11] Ġbig[10] ĠSymb[12] Ġmom[11] Ġshe[10] Ġasked[12] âĤ¬[8] Ġof[10] Ġhouse[10] .[4] Ġpark[9] .[4] Ċ[7] .[4] Ġ[12] Ċ[11] Ġ42[12] Ġwas[12] Ġcold[12] ,"[12] Ġshe[9] Ġasked[11] .[4] ĠTom[9] Ġasked[11] .[4] .[11] âĤ¬[10] Ġsaid[10] Ġof[10] urated[11] .[8] .[7] Ġsaid[11] Ġmom[9] ,[11] Ġmom[10] .[11] âĤ¬[10] Ġsaid[11] âĤ¬[10] <|endoftext|>[2] <|endoftext|>[2] .[3] Ġasked[10] Ċ[11] ,[11] Ċ[11] Ċ[11] Ċ[10] Ċ[10] âĤ¬[10] ,[11] âĤ¬[11] âĤ¬[9] Ġdown[11] <|endoftext|>[P]
+11/05/2025 02:59:41 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived
+
+
+
+
+Next, �," afraid said€.€�€â€,,€.
+
+Tim was was together.€€ loved mom said with their hands special out. His mom is the go of over. y€€. said and "�€
+.€€€€€
+11/05/2025 02:59:41 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] Ċ[5] Ċ[5] Ċ[4] Ċ[5] Ċ[7] Next[12] ,[11] ĠÃ[12] ,"[12] Ġafraid[12] Ġsaid[8] âĤ¬[11] .[6] âĤ¬[9] Å[11] âĤ¬[6] Ã¢[12] âĤ¬[10] ,[9] ,[6] âĤ¬[7] .[11] Ċ[10] Ċ[8] Tim[10] Ġwas[11] Ġwas[11] Ġtogether[11] .[9] âĤ¬[11] âĤ¬[11] Ġloved[11] Ġmom[11] Ġsaid[12] Ġwith[11] Ġtheir[12] Ġhands[11] Ġspecial[10] Ġout[10] .[7] ĠHis[12] Ġmom[12] Ġis[11] Ġthe[10] Ġgo[10] Ġof[12] Ġover[12] .[10] Ġy[11] âĤ¬[10] âĤ¬[11] .[10] Ġsaid[11] Ġand[10] Ġ"[10] ¢[10] âĤ¬[10] Ċ[10] .[8] âĤ¬[11] âĤ¬[10] âĤ¬[9] âĤ¬[9] âĤ¬[8] <|endoftext|>[3] <|endoftext|>[3] <|endoftext|>[2] <|endoftext|>[2] <|endoftext|>[1] âĤ¬[11] Ġbig[9] Ġdog[10] Ġby[10] Ġlived[10] .[6] âĤ¬[11] âĤ¬[8] Ċ[6] Ċ[6] Tom[11] Ġasked[10] Ġand[10] <|endoftext|>[P]
+11/05/2025 02:59:41 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and it inside dad€ it.
+€ called thought said looking was adjacent," it cold.
+
+
+ asked his mom said asked. tried€€John excited shouted along asked what said hurt.
+
+ h, Ben,,.
+
+A.
+
+
+ mom Shopping dad Shopping home for was rock
+
+
+
+estic awful Shopping her.
+
+
+€
+
+
+€ mom.
+11/05/2025 02:59:41 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] Ġit[12] Ġinside[12] Ġdad[11] âĤ¬[12] Ġit[12] .[12] Ċ[11] âĤ¬[12] Ġcalled[12] Ġthought[12] Ġsaid[12] Ġlooking[12] Ġwas[11] Ġadjacent[12] ,"[10] Ġit[10] Ġcold[10] .[7] Ċ[7] Ċ[6] Ċ[6] Ġasked[11] Ġhis[10] Ġmom[9] Ġsaid[11] Ġasked[11] .[7] Ġtried[10] âĤ¬[11] âĤ¬[10] John[11] Ġexcited[10] Ġshouted[11] Ġalong[11] Ġasked[10] Ġwhat[10] Ġsaid[11] Ġhurt[10] .[6] Ċ[6] Ċ[5] Ġh[10] ,[5] ĠBen[11] ,[8] ,[9] .[5] Ċ[4] Ċ[3] A[11] .[10] Ċ[6] Ċ[4] Ċ[5] Ġmom[11] ĠShopping[11] Ġdad[10] ĠShopping[10] Ġhome[10] Ġfor[11] Ġwas[10] Ġrock[10] Ċ[4] Ċ[4] Ċ[4] Ċ[5] estic[10] Ġawful[10] ĠShopping[11] Ġher[11] .[7] Ċ[4] Ċ[4] Ċ[4] âĤ¬[11] Ċ[10] Ċ[9] Ċ[5] âĤ¬[9] Ġmom[11] .[11] Ċ[1] <|endoftext|>[P]
+11/05/2025 02:59:41 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to see you," dad down it it it.
+
+
+Fe momNo mom
+ go down. But
+ warming mom held Ben? something him excited.
+
+ mom€
+ smiled.€ inside
+
+
+€ lead,, l asked
+
+
+€
+
+
+ go asked the.
+When€€
+
+
+
+Mom€
+ asked.
+
+
+€ mom
+
+ hypers€.
+11/05/2025 02:59:41 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġsee[12] Ġyou[11] ,"[11] Ġdad[12] Ġdown[11] Ġit[11] Ġit[11] Ġit[11] .[11] Ċ[7] Ċ[7] Ċ[7] Fe[12] Ġmom[12] No[12] Ġmom[12] Ċ[12] Ġgo[9] Ġdown[12] .[7] ĠBut[11] Ċ[11] Ġwarming[12] Ġmom[11] Ġheld[12] ĠBen[12] ?[11] Ġsomething[10] Ġhim[11] Ġexcited[10] .[8] Ċ[8] Ċ[7] Ġmom[10] âĤ¬[9] Ċ[8] Ġsmiled[10] .[6] âĤ¬[11] Ġinside[10] Ċ[6] Ċ[6] Ċ[6] âĤ¬[10] Ġlead[11] ,[4] ,[4] Ġl[10] Ġasked[11] Ċ[5] Ċ[4] Ċ[4] âĤ¬[10] Ċ[4] Ċ[5] Ċ[5] Ġgo[10] Ġasked[11] Ġthe[10] .[10] Ċ[3] When[10] âĤ¬[10] âĤ¬[11] Ċ[6] Ċ[6] Ċ[5] Ċ[5] Mom[11] âĤ¬[10] Ċ[1] Ġasked[11] .[8] Ċ[6] Ċ[5] Ċ[5] âĤ¬[11] Ġmom[11] Ċ[10] Ċ[5] Ġhypers[10] âĤ¬[11] .[9] Ċ[2] <|endoftext|>[P]
+11/05/2025 02:59:41 - INFO - __main__ - [gen] exit generate_text_samples: step=22000
+11/05/2025 03:00:14 - INFO - __main__ - Step: 22200 Loss_lm: 2.0282 Data (t): 0.0000, 609.34/s/gpu Batch (t): 0.2101 LR: 0.000493
+11/05/2025 03:00:47 - INFO - __main__ - Step: 22400 Loss_lm: 1.9720 Data (t): 0.0000, 631.26/s/gpu Batch (t): 0.2028 LR: 0.000493
+11/05/2025 03:01:20 - INFO - __main__ - Step: 22600 Loss_lm: 2.0830 Data (t): 0.0000, 630.50/s/gpu Batch (t): 0.2030 LR: 0.000493
+11/05/2025 03:01:53 - INFO - __main__ - Step: 22800 Loss_lm: 1.9915 Data (t): 0.0000, 631.66/s/gpu Batch (t): 0.2026 LR: 0.000493
+11/05/2025 03:02:26 - INFO - __main__ - Step: 23000 Loss_lm: 2.0708 Data (t): 0.0000, 609.71/s/gpu Batch (t): 0.2099 LR: 0.000493
+11/05/2025 03:02:59 - INFO - __main__ - Step: 23200 Loss_lm: 1.9530 Data (t): 0.0000, 620.39/s/gpu Batch (t): 0.2063 LR: 0.000493
+11/05/2025 03:03:32 - INFO - __main__ - Step: 23400 Loss_lm: 4.5069 Data (t): 0.0000, 592.12/s/gpu Batch (t): 0.2162 LR: 0.000493
+11/05/2025 03:04:05 - INFO - __main__ - Step: 23600 Loss_lm: 1.9659 Data (t): 0.0000, 615.80/s/gpu Batch (t): 0.2079 LR: 0.000492
+11/05/2025 03:04:38 - INFO - __main__ - Step: 23800 Loss_lm: 2.3941 Data (t): 0.0000, 610.53/s/gpu Batch (t): 0.2097 LR: 0.000492
+11/05/2025 03:05:11 - INFO - __main__ - Step: 24000 Loss_lm: 2.1314 Data (t): 0.0000, 648.18/s/gpu Batch (t): 0.1975 LR: 0.000492
+11/05/2025 03:05:11 - INFO - __main__ - Generating text samples...
+11/05/2025 03:05:11 - INFO - __main__ - [gen] enter generate_text_samples: step=24000, rank=0
+11/05/2025 03:05:12 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 03:05:12 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little Myroubtedly. asked Sara.
+
+
+Tim. He Tom Tomoved..
+
+Tim sorry, Tim he wanted Tom one.
+
+ Leonardo Tom saw the dog. Tom. Tom wanted. I€ aascus dog is Tom hole.
+
+ Cost park,, by, Tom.
+
+
+
+ adjacent€activated Tom.
+
+
+
+,
+
+€, Mia you
+11/05/2025 03:05:12 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] ĠMyr[11] oubtedly[11] .[11] Ġasked[12] ĠSara[11] .[12] Ċ[10] Ċ[12] Ċ[10] Tim[12] .[6] ĠHe[7] ĠTom[12] ĠTom[12] oved[11] .[9] .[5] Ċ[5] Ċ[4] Tim[11] Ġsorry[12] ,[7] ĠTim[12] Ġhe[12] Ġwanted[11] ĠTom[11] Ġone[11] .[5] Ċ[5] Ċ[6] ĠLeonardo[12] ĠTom[9] Ġsaw[10] Ġthe[8] Ġdog[10] .[4] ĠTom[11] .[5] ĠTom[10] Ġwanted[11] .[9] ĠI[10] âĤ¬[10] Ġa[10] ascus[11] Ġdog[11] Ġis[10] ĠTom[11] Ġhole[10] .[6] Ċ[5] Ċ[6] ĠCost[11] Ġpark[10] ,[11] ,[11] Ġby[10] ,[8] ĠTom[10] .[5] Ċ[4] Ċ[4] Ċ[2] Ċ[3] Ġadjacent[11] âĤ¬[10] activated[10] ĠTom[10] .[9] Ċ[8] Ċ[7] Ċ[6] Ċ[7] ,[2] Ċ[2] Ċ[3] âĤ¬[9] ,[11] ĠMia[11] Ġyou[11] <|endoftext|>[P]
+11/05/2025 03:05:12 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named. Tom
+Sam around. He Tom Tom. One day, Tom dog Tom Lily. He. He asked sorry Tom Tom degraded€.
+
+
+cy Tom and saw. hole. He looked red her format. and- like like to. park.
+
+Anna like by..
+
+
+
+
+
+
+Bens ball..
+
+
+
+€,
+€, what at
+11/05/2025 03:05:12 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] .[7] ĠTom[12] Ċ[11] Sam[12] Ġaround[12] .[7] ĠHe[10] ĠTom[12] ĠTom[11] .[8] ĠOne[9] Ġday[12] ,[7] ĠTom[11] Ġdog[12] ĠTom[11] ĠLily[12] .[5] ĠHe[11] .[5] ĠHe[8] Ġasked[11] Ġsorry[12] ĠTom[11] ĠTom[12] Ġdegraded[11] âĤ¬[12] .[6] Ċ[6] Ċ[5] Ċ[5] cy[10] ĠTom[10] Ġand[8] Ġsaw[11] .[12] Ġhole[10] .[4] ĠHe[8] Ġlooked[11] Ġred[11] Ġher[11] Ġformat[10] .[10] Ġand[11] -[10] Ġlike[11] Ġlike[11] Ġto[10] .[6] Ġpark[11] .[6] Ċ[8] Ċ[7] Anna[10] Ġlike[9] Ġby[11] .[6] .[6] Ċ[4] Ċ[4] Ċ[4] Ċ[3] Ċ[3] Ċ[2] Ċ[3] Ben[11] s[10] Ġball[10] .[7] .[5] Ċ[5] Ċ[5] Ċ[5] Ċ[6] âĤ¬[11] ,[8] Ċ[9] âĤ¬[10] ,[9] Ġwhat[11] Ġat[11] <|endoftext|>[P]
+11/05/2025 03:05:12 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived't dog. He 
+
+Tim cars. Sue. He is sad..
+
+He Max a big it slide on themast.
+
+
+ next day, Tom! He wanted to sweeps with them the hole with.
+
+From day Tom big big friends to eat what
+11/05/2025 03:05:12 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] 't[11] Ġdog[11] .[6] ĠHe[9] Ġ[11] Ċ[6] Ċ[6] Tim[11] Ġcars[12] .[11] ĠSue[12] .[7] ĠHe[8] Ġis[12] Ġsad[12] .[6] .[6] Ċ[6] Ċ[7] He[8] ĠMax[12] Ġa[11] Ġbig[11] Ġit[11] Ġslide[11] Ġon[12] Ġthe[9] mast[11] .[7] Ċ[7] Ċ[6] Ċ[7] Ġnext[11] Ġday[12] ,[7] ĠTom[8] ![11] ĠHe[11] Ġwanted[12] Ġto[11] Ġsweeps[11] Ġwith[10] Ġthem[12] Ġthe[10] Ġhole[8] Ġwith[11] .[8] Ċ[8] Ċ[7] From[11] Ġday[12] ĠTom[12] Ġbig[10] Ġbig[10] Ġfriends[11] Ġto[10] Ġeat[11] Ġwhat[11] <|endoftext|>[4] .[7] Ġneurotrans[10] âĤ¬[10] Ċ[5] Ċ[4] Ċ[4] <|endoftext|>[5] âĤ¬[7] Ġa[10] Ġgo[10] Ġdog[10] .[7] Ċ[5] Ċ[5] Ċ[4] Ċ[4] Ċ[3] Ċ[1] Ċ[2] So[11] ,[9] Ã¢[9] âĤ¬[5] <|endoftext|>[P]
+11/05/2025 03:05:12 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and Tom Tom wanted them populated.
+
+
+
+€ Tom with215 people.
+
+
+
+
+It heard a warranty Tom very sad.
+
+
+ Leonardo
+ambo down.
+
+
+. asked to see Tom and says.
+€.
+
+
+Ben, saw saw Tom is Ultr.
+€
+
+But€ Ben..
+
+
+
+Stop Tim
+Soatech.
+11/05/2025 03:05:12 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] ĠTom[11] ĠTom[12] Ġwanted[12] Ġthem[12] Ġpopulated[11] .[8] Ċ[5] Ċ[5] Ċ[5] Ċ[6] âĤ¬[12] ĠTom[11] Ġwith[11] 215[12] Ġpeople[11] .[9] Ċ[6] Ċ[6] Ċ[6] Ċ[7] Ċ[6] It[11] Ġheard[11] Ġa[10] Ġwarranty[12] ĠTom[12] Ġvery[11] Ġsad[12] .[6] Ċ[6] Ċ[6] Ċ[7] ĠLeonardo[12] Ċ[6] ambo[11] Ġdown[11] .[8] Ċ[7] Ċ[6] Ċ[7] .[8] Ġasked[12] Ġto[11] Ġsee[12] ĠTom[11] Ġand[10] Ġsays[11] .[11] Ċ[6] âĤ¬[11] .[9] Ċ[6] Ċ[6] Ċ[6] Ben[11] ,[10] Ġsaw[10] Ġsaw[11] ĠTom[10] Ġis[11] ĠUltr[11] .[7] Ċ[7] âĤ¬[5] Ċ[7] Ċ[6] But[10] âĤ¬[9] ĠBen[10] .[10] .[8] Ċ[8] Ċ[7] Ċ[7] Ċ[8] Stop[11] ĠTim[10] Ċ[6] So[11] atech[10] .[6] Ċ[6] <|endoftext|>[P]
+11/05/2025 03:05:12 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to eat park. He
+ Max. Tom He Tom is okayy Van. He says. Ben. Tom. He is Ben, red Tom copying..
+
+
+ Tom down Tom inside Tom.ons. is a pretty Tom. hole and Tom inside. I
+" Tom consciously. Tom
+ Ben Tom Tom, Tom. He
+Ben Sara Tom..
+
+
+
+
+Stop€ Ben sad. I
+11/05/2025 03:05:12 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġeat[11] Ġpark[9] .[7] ĠHe[11] Ċ[11] ĠMax[12] .[10] ĠTom[12] ĠHe[12] ĠTom[11] Ġis[12] Ġokay[11] y[11] ĠVan[12] .[9] ĠHe[9] Ġsays[11] .[5] ĠBen[10] .[5] ĠTom[11] .[5] ĠHe[12] Ġis[12] ĠBen[10] ,[12] Ġred[12] ĠTom[11] Ġcopying[12] .[3] .[3] Ċ[4] Ċ[3] Ċ[4] ĠTom[7] Ġdown[12] ĠTom[10] Ġinside[10] ĠTom[11] .[9] ons[10] .[3] Ġis[10] Ġa[9] Ġpretty[10] ĠTom[11] .[10] Ġhole[9] Ġand[10] ĠTom[10] Ġinside[11] .[7] ĠI[11] Ċ[11] "[10] ĠTom[11] Ġconsciously[11] .[10] ĠTom[11] Ċ[11] ĠBen[11] ĠTom[11] ĠTom[10] ,[10] ĠTom[10] .[6] ĠHe[7] Ċ[10] Ben[11] ĠSara[11] ĠTom[10] .[6] .[4] Ċ[4] Ċ[3] Ċ[4] Ċ[5] Ċ[9] Stop[10] âĤ¬[9] ĠBen[10] Ġsad[10] .[2] ĠI[9] <|endoftext|>[P]
+11/05/2025 03:05:12 - INFO - __main__ - [gen] exit generate_text_samples: step=24000
+11/05/2025 03:05:45 - INFO - __main__ - Step: 24200 Loss_lm: 1.8328 Data (t): 0.0000, 629.74/s/gpu Batch (t): 0.2033 LR: 0.000492
+11/05/2025 03:06:17 - INFO - __main__ - Step: 24400 Loss_lm: 1.7932 Data (t): 0.0000, 586.86/s/gpu Batch (t): 0.2181 LR: 0.000492
+11/05/2025 03:06:50 - INFO - __main__ - Step: 24600 Loss_lm: 2.2701 Data (t): 0.0000, 623.76/s/gpu Batch (t): 0.2052 LR: 0.000492
+11/05/2025 03:07:23 - INFO - __main__ - Step: 24800 Loss_lm: 2.0392 Data (t): 0.0000, 627.37/s/gpu Batch (t): 0.2040 LR: 0.000492
+11/05/2025 03:07:56 - INFO - __main__ - Step: 25000 Loss_lm: 2.8239 Data (t): 0.0000, 636.31/s/gpu Batch (t): 0.2012 LR: 0.000492
+11/05/2025 03:08:29 - INFO - __main__ - Step: 25200 Loss_lm: 1.8919 Data (t): 0.0000, 604.80/s/gpu Batch (t): 0.2116 LR: 0.000491
+11/05/2025 03:09:03 - INFO - __main__ - Step: 25400 Loss_lm: 2.2921 Data (t): 0.0000, 617.86/s/gpu Batch (t): 0.2072 LR: 0.000491
+11/05/2025 03:09:35 - INFO - __main__ - Step: 25600 Loss_lm: 2.0608 Data (t): 0.0000, 609.63/s/gpu Batch (t): 0.2100 LR: 0.000491
+11/05/2025 03:10:08 - INFO - __main__ - Step: 25800 Loss_lm: 2.0916 Data (t): 0.0000, 606.54/s/gpu Batch (t): 0.2110 LR: 0.000491
+11/05/2025 03:10:42 - INFO - __main__ - Step: 26000 Loss_lm: 2.1550 Data (t): 0.0000, 626.69/s/gpu Batch (t): 0.2042 LR: 0.000491
+11/05/2025 03:10:42 - INFO - __main__ - Generating text samples...
+11/05/2025 03:10:42 - INFO - __main__ - [gen] enter generate_text_samples: step=26000, rank=0
+11/05/2025 03:10:42 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 03:10:42 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little mum
+
+
+
+
+
+
+€€
+
+€
+
+
+
+
+
+
+It excited Cind€
+
+
+
+
+
+ also
+ excited started special
+
+
+
+ Manit was near excited argue careful
+
+ L festivals
+
+
+041 � never surprised€
+
+
+
+
+
+
+ Lily down an t€
+
+
+ excited mom.
+€€€€
+11/05/2025 03:10:42 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] Ġmum[11] Ċ[9] Ċ[11] Ċ[9] Ċ[8] Ċ[8] Ċ[8] Ċ[8] âĤ¬[12] âĤ¬[9] Ċ[8] Ċ[8] âĤ¬[9] Ċ[9] Ċ[9] Ċ[8] Ċ[8] Ċ[7] Ċ[7] Ċ[7] It[11] Ġexcited[11] ĠCind[12] âĤ¬[12] Ċ[7] Ċ[6] Ċ[6] Ċ[7] Ċ[6] Ċ[7] Ġalso[11] Ċ[9] Ġexcited[11] Ġstarted[11] Ġspecial[10] Ċ[7] Ċ[5] Ċ[5] Ċ[5] ĠManit[9] Ġwas[11] Ġnear[11] Ġexcited[11] Ġargue[10] Ġcareful[11] Ċ[11] Ċ[10] ĠL[11] Ġfestivals[12] Ċ[7] Ċ[6] Ċ[5] 041[12] ĠÃ[12] Ġnever[11] Ġsurprised[11] âĤ¬[12] Ċ[4] Ċ[4] Ċ[4] Ċ[4] Ċ[4] Ċ[3] Ċ[5] ĠLily[11] Ġdown[12] Ġan[11] Ġt[11] âĤ¬[11] Ċ[3] Ċ[2] Ċ[2] Ġexcited[11] Ġmom[11] .[12] Ċ[6] âĤ¬[10] âĤ¬[12] âĤ¬[10] âĤ¬[9] <|endoftext|>[P]
+11/05/2025 03:10:42 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl namedâ€€€€
+
+
+
+When excited!
+ b your beers.
+
+
+
+ itKrist about happened.
+
+
+
+
+
+ now scared Manit special.
+
+
+
+The baby cater down head€€
+11/05/2025 03:10:42 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] Ã¢[11] âĤ¬[10] âĤ¬[10] âĤ¬[11] âĤ¬[11] Ċ[9] Ċ[8] Ċ[8] Ċ[8] When[11] Ġexcited[11] ![12] Ċ[8] Ġb[10] Ġyour[11] Ġbeers[11] .[9] Ċ[8] Ċ[8] Ċ[8] Ċ[7] Ġit[12] Krist[12] Ġabout[12] Ġhappened[11] .[10] Ċ[8] Ċ[7] Ċ[7] Ċ[6] Ċ[6] Ċ[7] Ġnow[11] Ġscared[11] ĠManit[11] Ġspecial[12] .[8] Ċ[7] Ċ[6] Ċ[6] Ċ[6] The[7] Ġbaby[12] Ġcater[12] Ġdown[11] Ġhead[12] âĤ¬[11] âĤ¬[10] <|endoftext|>[6] Ġb[12] .[10] Ċ[8] Ċ[7] Ġwanted[11] Ġheard[11] Ġbrown[11] Ġit[11] Ġgo[12] .[9] Ċ[5] Ċ[5] Ċ[5] Ċ[5] Ċ[4] Ċ[4] Ċ[5] Ġwanted[11] Ġit[10] .[10] Ã¢[12] âĤ¬[9] Ċ[4] Ċ[4] Ċ[3] Ċ[3] Ċ[2] Ċ[4] Ċ[3] âĤ¬[6] âĤ¬[11] Ġb[11] âĤ¬[11] <|endoftext|>[P]
+11/05/2025 03:10:42 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived
+
+€
+
+
+
+
+
+
+
+€
+
+€
+
+
+
+
+
+
+€ excited crying.
+
+
+
+
+
+ excited
+ excited  special
+
+
+
+€ excited couldn argue go scared
+
+ excited festivals
+
+
+ Sc sweeps Ben also also
+
+
+
+
+
+
+ inside it started do do
+
+
+
+
+
+
+€ said€€
+11/05/2025 03:10:42 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] Ċ[9] Ċ[9] âĤ¬[9] Ċ[9] Ċ[11] Ċ[9] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[10] âĤ¬[8] Ċ[9] Ċ[9] âĤ¬[8] Ċ[8] Ċ[8] Ċ[7] Ċ[7] Ċ[7] Ċ[7] Ċ[7] âĤ¬[12] Ġexcited[10] Ġcrying[11] .[10] Ċ[8] Ċ[7] Ċ[7] Ċ[7] Ċ[6] Ċ[7] Ġexcited[11] Ċ[9] Ġexcited[12] Ġ[12] Ġspecial[11] Ċ[7] Ċ[6] Ċ[5] Ċ[5] âĤ¬[11] Ġexcited[11] Ġcouldn[11] Ġargue[11] Ġgo[11] Ġscared[12] Ċ[11] Ċ[5] Ġexcited[12] Ġfestivals[12] Ċ[6] Ċ[6] Ċ[6] ĠSc[11] Ġsweeps[12] ĠBen[11] Ġalso[11] Ġalso[10] Ċ[5] Ċ[10] Ċ[5] Ċ[4] Ċ[4] Ċ[4] Ċ[6] Ġinside[11] Ġit[12] Ġstarted[12] Ġdo[12] Ġdo[11] Ċ[4] Ċ[3] Ċ[3] Ċ[11] Ċ[2] Ċ[2] Ċ[3] âĤ¬[11] Ġsaid[12] âĤ¬[11] âĤ¬[9] <|endoftext|>[P]
+11/05/2025 03:10:42 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and Tom
+€€
+
+
+
+ Ben excited Bethesda Bethesda go€ Shopping
+
+
+â.
+
+€ do mean go
+
+
+
+
+
+ grabbed.vir excited Manit
+
+
+
+ the Protective argue excited excited excited proofs
+ go started
+
+
+ excited go warranty and Tom is.
+
+
+
+
+ excited excited Tom up.
+
+
+ proofs goorea
+€. see you
+11/05/2025 03:10:42 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] ĠTom[11] Ċ[10] âĤ¬[7] âĤ¬[11] Ċ[7] Ċ[7] Ċ[7] Ċ[8] ĠBen[12] Ġexcited[12] ĠBethesda[12] ĠBethesda[11] Ġgo[11] âĤ¬[11] ĠShopping[12] Ċ[10] Ċ[9] Ċ[10] Ã¢[12] .[7] Ċ[7] Ċ[8] âĤ¬[11] Ġdo[12] Ġmean[11] Ġgo[12] Ċ[8] Ċ[6] Ċ[6] Ċ[5] Ċ[5] Ċ[6] Ġgrabbed[12] .[8] vir[11] Ġexcited[12] ĠManit[12] Ċ[5] Ċ[4] Ċ[4] Ċ[4] Ġthe[8] ĠProtective[11] Ġargue[12] Ġexcited[11] Ġexcited[11] Ġexcited[11] Ġproofs[11] Ċ[8] Ġgo[10] Ġstarted[10] Ċ[5] Ċ[5] Ċ[5] Ġexcited[10] Ġgo[11] Ġwarranty[11] Ġand[10] ĠTom[10] Ġis[11] .[8] Ċ[7] Ċ[3] Ċ[5] Ċ[4] Ċ[5] Ġexcited[10] Ġexcited[10] ĠTom[10] Ġup[10] .[6] Ċ[4] Ċ[3] Ċ[3] Ġproofs[9] Ġgo[11] orea[11] Ċ[6] âĤ¬[11] .[11] Ġsee[11] Ġyou[10] <|endoftext|>[P]
+11/05/2025 03:10:42 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to try.
+
+€
+
+
+
+
+
+
+
+
+
+
+€
+
+
+
+
+
+
+ not excited home 
+
+
+
+
+
+ also
+ excited..
+
+
+
+ work greeting excited argue excited really
+
+ also also
+
+
+€€ never alsoone Sc also
+
+
+
+
+ smiled them Tom tsp€
+
+
+€ also nice
+€€€€
+11/05/2025 03:10:42 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġtry[11] .[10] Ċ[9] Ċ[9] âĤ¬[10] Ċ[9] Ċ[11] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[8] âĤ¬[8] Ċ[8] Ċ[8] Ċ[8] Ċ[7] Ċ[8] Ċ[7] Ċ[8] Ġnot[12] Ġexcited[10] Ġhome[11] Ġ[11] Ċ[7] Ċ[6] Ċ[6] Ċ[6] Ċ[6] Ċ[7] Ġalso[11] Ċ[9] Ġexcited[12] .[12] .[10] Ċ[7] Ċ[6] Ċ[5] Ċ[5] Ġwork[11] Ġgreeting[11] Ġexcited[11] Ġargue[11] Ġexcited[11] Ġreally[11] Ċ[11] Ċ[8] Ġalso[10] Ġalso[10] Ċ[7] Ċ[7] Ċ[7] âĤ¬[11] âĤ¬[12] Ġnever[12] Ġalso[12] one[12] ĠSc[11] Ġalso[10] Ċ[5] Ċ[5] Ċ[4] Ċ[4] Ċ[6] Ġsmiled[12] Ġthem[11] ĠTom[11] Ġtsp[12] âĤ¬[11] Ċ[4] Ċ[3] Ċ[3] âĤ¬[12] Ġalso[11] Ġnice[11] Ċ[9] âĤ¬[11] âĤ¬[11] âĤ¬[12] âĤ¬[11] <|endoftext|>[P]
+11/05/2025 03:10:42 - INFO - __main__ - [gen] exit generate_text_samples: step=26000
+11/05/2025 03:11:15 - INFO - __main__ - Step: 26200 Loss_lm: 1.9771 Data (t): 0.0000, 606.14/s/gpu Batch (t): 0.2112 LR: 0.000491
+11/05/2025 03:11:48 - INFO - __main__ - Step: 26400 Loss_lm: 2.0004 Data (t): 0.0000, 618.02/s/gpu Batch (t): 0.2071 LR: 0.000491
+11/05/2025 03:12:21 - INFO - __main__ - Step: 26600 Loss_lm: 2.3047 Data (t): 0.0000, 619.39/s/gpu Batch (t): 0.2067 LR: 0.000490
+11/05/2025 03:12:53 - INFO - __main__ - Step: 26800 Loss_lm: 2.1140 Data (t): 0.0000, 619.13/s/gpu Batch (t): 0.2067 LR: 0.000490
+11/05/2025 03:13:26 - INFO - __main__ - Step: 27000 Loss_lm: 2.0737 Data (t): 0.0000, 615.48/s/gpu Batch (t): 0.2080 LR: 0.000490
+11/05/2025 03:13:59 - INFO - __main__ - Step: 27200 Loss_lm: 1.9081 Data (t): 0.0000, 625.90/s/gpu Batch (t): 0.2045 LR: 0.000490
+11/05/2025 03:14:32 - INFO - __main__ - Step: 27400 Loss_lm: 2.1492 Data (t): 0.0000, 619.98/s/gpu Batch (t): 0.2065 LR: 0.000490
+11/05/2025 03:15:05 - INFO - __main__ - Step: 27600 Loss_lm: 2.0575 Data (t): 0.0000, 637.92/s/gpu Batch (t): 0.2007 LR: 0.000490
+11/05/2025 03:15:38 - INFO - __main__ - Step: 27800 Loss_lm: 2.1224 Data (t): 0.0000, 607.60/s/gpu Batch (t): 0.2107 LR: 0.000490
+11/05/2025 03:16:10 - INFO - __main__ - Step: 28000 Loss_lm: 2.2477 Data (t): 0.0000, 609.58/s/gpu Batch (t): 0.2100 LR: 0.000489
+11/05/2025 03:16:10 - INFO - __main__ - Generating text samples...
+11/05/2025 03:16:10 - INFO - __main__ - [gen] enter generate_text_samples: step=28000, rank=0
+11/05/2025 03:16:11 - INFO - __main__ - [gen] diffusion sampling done in 0.20s for 5 prompts
+11/05/2025 03:16:11 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little time.
+
+
+
+
+
+But bad said, a a game of box. He inside a Sc.
+
+
+
+
+ h Manit Manit not was********.
+
+
+
+He mom didn not a Sc pot
+11/05/2025 03:16:11 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] Ġtime[11] .[6] Ċ[7] Ċ[6] Ċ[6] Ċ[6] Ċ[7] Ċ[8] But[12] Ġbad[11] Ġsaid[12] ,[11] Ġa[8] Ġa[11] Ġgame[12] Ġof[12] Ġbox[11] .[9] ĠHe[11] Ġinside[11] Ġa[6] ĠSc[11] .[9] Ċ[6] Ċ[7] Ċ[7] Ċ[8] Ċ[7] Ġh[12] ĠManit[11] ĠManit[4] Ġnot[11] Ġwas[10] ********[11] .[8] Ċ[3] Ċ[3] Ċ[4] Ċ[4] He[12] Ġmom[11] Ġdidn[11] Ġnot[11] Ġa[12] ĠSc[12] Ġpot[12] Ċ[7] Ċ[9] <|endoftext|>[11] Ċ[5] Ċ[5] Ċ[6] âĤ¬[12] Ġinside[10] Ġchopped[11] Effects[11] Ġalso[10] Effects[11] Ġgreeting[10] Ġpot[11] Ġpot[10] ĠLet[10] Ċ[5] Ċ[5] <|endoftext|>[11] Ġpl[10] Ġpl[9] <|endoftext|>[3] <|endoftext|>[6] Ċ[9] Ċ[8] Ċ[8] Ġnear[10] Ġhaving[11] Ġy[10] Ġnot[10] ĠManit[10] Ġpl[10] Effects[10] Ċ[1] <|endoftext|>[P]
+11/05/2025 03:16:11 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl namediflower theocyte.
+
+
+
+cy about that water Ben, L Sc. Then it's a big fun.
+
+
+
+ smiled. This until Manit2424 ycy
+
+
+ hostile mum24 didn aabc alsoEffects pot pot Manit
+ notreports excited Manit transistor phenomena happyvir pot pot nowhere
+
+ also
+11/05/2025 03:16:11 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] iflower[11] Ġthe[12] ocyte[12] .[9] Ċ[9] Ċ[7] Ċ[6] Ċ[6] cy[11] Ġabout[11] Ġthat[11] Ġwater[11] ĠBen[12] ,[12] ĠL[11] ĠSc[12] .[8] ĠThen[11] Ġit[12] 's[12] Ġa[6] Ġbig[12] Ġfun[12] .[8] Ċ[6] Ċ[6] Ċ[8] Ċ[8] Ġsmiled[12] .[10] ĠThis[12] Ġuntil[10] ĠManit[5] 24[10] 24[10] Ġy[10] cy[11] Ċ[6] Ċ[6] Ċ[5] Ġhostile[10] Ġmum[11] 24[10] Ġdidn[11] Ġa[11] abc[10] Ġalso[10] Effects[10] Ġpot[11] Ġpot[10] ĠManit[11] Ċ[7] Ġnot[10] reports[11] Ġexcited[10] ĠManit[9] Ġtransistor[10] Ġphenomena[10] Ġhappy[11] vir[10] Ġpot[10] Ġpot[10] Ġnowhere[11] Ċ[7] Ċ[6] Ġalso[11] Ċ[3] <|endoftext|>[4] <|endoftext|>[4] Ċ[3] Ċ[3] Ċ[4] abc[9] abc[11] <|endoftext|>[10] Ċ[3] Ġpot[11] Ġpot[10] Ġvery[11] ĠMia[11] <|endoftext|>[2] Ċ[7] <|endoftext|>[P]
+11/05/2025 03:16:11 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived a game a.
+
+He sunlight a a loop.
+
+When a nice car. I had a big butterfly.
+
+
+
+Suddenly, can see a ball. hole not go unl. She was having a only the taxation
+11/05/2025 03:16:11 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] Ġa[6] Ġgame[11] Ġa[6] .[11] Ċ[10] Ċ[9] He[10] Ġsunlight[11] Ġa[6] Ġa[6] Ġloop[11] .[8] Ċ[7] Ċ[6] When[7] Ġa[8] Ġnice[12] Ġcar[11] .[12] ĠI[9] Ġhad[12] Ġa[7] Ġbig[10] Ġbutterfly[11] .[6] Ċ[4] Ċ[5] Ċ[6] Ċ[6] Suddenly[10] ,[7] Ġcan[10] Ġsee[11] Ġa[8] Ġball[10] .[12] Ġhole[11] Ġnot[12] Ġgo[12] Ġunl[11] .[7] ĠShe[11] Ġwas[12] Ġhaving[12] Ġa[10] Ġonly[11] Ġthe[9] Ġtaxation[11] <|endoftext|>[9] !"[12] <|endoftext|>[7] Ċ[5] apter[11] Ġit[10] Ġby[12] Ġa[9] <|endoftext|>[4] <|endoftext|>[5] Ġpot[11] y[11] Ġlike[11] Ġa[9] <|endoftext|>[5] <|endoftext|>[5] <|endoftext|>[5] Ġpl[10] Ġlike[10] Ġa[8] Ġdays[12] <|endoftext|>[3] s[11] Ġa[6] Ġinside[10] Ġbe[11] idences[11] <|endoftext|>[5] s[10] Ġa[8] ¢[11] apter[11] <|endoftext|>[3] Ċ[1] <|endoftext|>[P]
+11/05/2025 03:16:11 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and
+ bad day.
+
+
+
+
+
+Would you need
+ 
+
+
+
+
+
+ That24
+
+
+
+
+
+ ost, it inside a very few.
+
+
+
+ greeting sad b24 having also Manit
+
+ not
+
+
+ not inside transistor
+11/05/2025 03:16:11 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] Ċ[9] Ġbad[12] Ġday[11] .[11] Ċ[9] Ċ[9] Ċ[7] Ċ[8] Ċ[10] Ċ[10] Would[11] Ġyou[10] Ġneed[11] Ċ[7] Ġ[11] Ċ[8] Ċ[7] Ċ[7] Ċ[7] Ċ[8] Ċ[8] ĠThat[11] 24[11] Ċ[9] Ċ[7] Ċ[6] Ċ[6] Ċ[7] Ċ[8] Ġost[11] ,[12] Ġit[11] Ġinside[12] Ġa[12] Ġvery[11] Ġfew[11] .[10] Ċ[5] Ċ[5] Ċ[5] Ċ[4] Ġgreeting[12] Ġsad[11] Ġb[12] 24[12] Ġhaving[11] Ġalso[10] ĠManit[12] Ċ[2] Ċ[3] Ġnot[12] Ċ[4] Ċ[5] Ċ[5] Ġnot[11] Ġinside[12] Ġtransistor[11] <|endoftext|>[11] Ġpot[12] ĠManit[11] Ġpot[11] ![10] Ċ[6] Ċ[6] Ċ[5] Ċ[5] <|endoftext|>[11] <|endoftext|>[8] Ġpot[11] <|endoftext|>[9] Ġinside[10] Ċ[4] Ċ[3] Ċ[3] Ġpl[10] Ġalso[10] Ġpl[10] Ċ[6] Ġgreeting[10] !"[11] <|endoftext|>[7] Ċ[1] <|endoftext|>[P]
+11/05/2025 03:16:11 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to take aeous penet pot.
+
+
+
+
+
+ inside sorry.
+€
+
+
+
+
+
+
+ a a fence
+
+
+
+
+
+ it pot. Manit Manit you
+
+
+
+M big didn puzzle a greeting greeting
+
+ pot
+
+
+ not inside not Manit pot not greeting pot
+
+
+
+ not
+
+ warming
+11/05/2025 03:16:11 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġtake[12] Ġa[10] eous[11] Ġpenet[12] Ġpot[11] .[10] Ċ[10] Ċ[8] Ċ[8] Ċ[8] Ċ[8] Ċ[7] Ġinside[11] Ġsorry[11] .[10] Ċ[6] âĤ¬[11] Ċ[6] Ċ[6] Ċ[7] Ċ[8] Ċ[7] Ċ[7] Ċ[6] Ġa[12] Ġa[12] Ġfence[11] Ċ[6] Ċ[7] Ċ[8] Ċ[8] Ċ[9] Ċ[9] Ġit[11] Ġpot[11] .[12] ĠManit[10] ĠManit[11] Ġyou[11] Ċ[4] Ċ[4] Ċ[5] Ċ[5] M[11] Ġbig[12] Ġdidn[11] Ġpuzzle[11] Ġa[10] Ġgreeting[11] Ġgreeting[11] Ċ[4] Ċ[5] Ġpot[12] Ċ[5] Ċ[6] Ċ[7] Ġnot[11] Ġinside[12] Ġnot[11] ĠManit[11] Ġpot[12] Ġnot[12] Ġgreeting[12] Ġpot[10] Ċ[5] Ċ[5] Ċ[6] Ċ[6] Ġnot[11] Ċ[2] Ċ[3] Ġwarming[10] <|endoftext|>[9] Ċ[7] Ċ[6] Ċ[5] Ġfestivals[11] âĤ¬[10] Ġpot[10] Ċ[7] Ġgreeting[10] Effects[11] Ġpot[11] Ċ[1] <|endoftext|>[P]
+11/05/2025 03:16:11 - INFO - __main__ - [gen] exit generate_text_samples: step=28000
+11/05/2025 03:16:44 - INFO - __main__ - Step: 28200 Loss_lm: 2.0451 Data (t): 0.0000, 611.36/s/gpu Batch (t): 0.2094 LR: 0.000489
+11/05/2025 03:17:17 - INFO - __main__ - Step: 28400 Loss_lm: 2.1914 Data (t): 0.0000, 627.11/s/gpu Batch (t): 0.2041 LR: 0.000489
+11/05/2025 03:17:49 - INFO - __main__ - Step: 28600 Loss_lm: 2.0392 Data (t): 0.0000, 612.34/s/gpu Batch (t): 0.2090 LR: 0.000489
+11/05/2025 03:18:22 - INFO - __main__ - Step: 28800 Loss_lm: 2.2317 Data (t): 0.0000, 632.29/s/gpu Batch (t): 0.2024 LR: 0.000489
+11/05/2025 03:18:55 - INFO - __main__ - Step: 29000 Loss_lm: 2.2900 Data (t): 0.0000, 628.56/s/gpu Batch (t): 0.2036 LR: 0.000489
+11/05/2025 03:19:28 - INFO - __main__ - Step: 29200 Loss_lm: 1.7209 Data (t): 0.0000, 616.55/s/gpu Batch (t): 0.2076 LR: 0.000488
+11/05/2025 03:20:00 - INFO - __main__ - Step: 29400 Loss_lm: 1.8280 Data (t): 0.0000, 627.11/s/gpu Batch (t): 0.2041 LR: 0.000488
+11/05/2025 03:20:33 - INFO - __main__ - Step: 29600 Loss_lm: 2.3212 Data (t): 0.0000, 626.11/s/gpu Batch (t): 0.2044 LR: 0.000488
+11/05/2025 03:21:06 - INFO - __main__ - Step: 29800 Loss_lm: 2.0152 Data (t): 0.0000, 626.78/s/gpu Batch (t): 0.2042 LR: 0.000488
+11/05/2025 03:21:39 - INFO - __main__ - Step: 30000 Loss_lm: 1.9692 Data (t): 0.0000, 593.86/s/gpu Batch (t): 0.2155 LR: 0.000488
+11/05/2025 03:21:40 - INFO - __main__ - Saved state to outputs/tiny_test_autodl/checkpoint-30000
+11/05/2025 03:21:40 - INFO - __main__ - Generating text samples...
+11/05/2025 03:21:40 - INFO - __main__ - [gen] enter generate_text_samples: step=30000, rank=0
+11/05/2025 03:21:40 - INFO - __main__ - [gen] diffusion sampling done in 0.17s for 5 prompts
+11/05/2025 03:21:40 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little hij.. all inside go go., andEat it.
+
+
+
+
+
+ down not a Zach
+ b fun all with Max,"
+ started lot away.€
+
+ the steak.€ambo so much wanted special not go not go go..
+
+
+ go Detail special
+..
+ Detail special fun€€
+
+
+â€ should. boxEffectsEffects special
+11/05/2025 03:21:40 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] Ġhij[12] .[11] .[11] Ġall[10] Ġinside[11] Ġgo[11] Ġgo[11] .[11] ,[11] Ġand[12] Eat[11] Ġit[11] .[7] Ċ[5] Ċ[5] Ċ[6] Ċ[6] Ċ[7] Ċ[8] Ġdown[12] Ġnot[11] Ġa[11] ĠZach[12] Ċ[11] Ġb[11] Ġfun[11] Ġall[12] Ġwith[10] ĠMax[11] ,"[12] Ċ[7] Ġstarted[11] Ġlot[12] Ġaway[12] .[8] âĤ¬[11] Ċ[7] Ċ[6] Ġthe[12] Ġsteak[12] .[3] âĤ¬[10] ambo[11] Ġso[8] Ġmuch[11] Ġwanted[10] Ġspecial[10] Ġnot[9] Ġgo[10] Ġnot[11] Ġgo[11] Ġgo[9] .[7] .[10] Ċ[9] Ċ[9] Ċ[10] Ġgo[10] ĠDetail[10] Ġspecial[10] Ċ[7] .[5] .[4] Ċ[6] ĠDetail[10] Ġspecial[10] Ġfun[10] âĤ¬[9] âĤ¬[7] Ċ[5] Ċ[4] Ċ[4] Ã¢[10] âĤ¬[7] Ġshould[10] .[10] Ġbox[10] Effects[10] Effects[10] Ġspecial[10] <|endoftext|>[P]
+11/05/2025 03:21:40 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named
+11/05/2025 03:21:40 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] <|endoftext|>[11] s[12] Ġspecial[11] Ġdifficult[12] âĤ¬[12] Ċ[6] Ċ[6] Ċ[6] Ġdown[11] Ġwhat[11] Ġto[12] Ġgo[11] .[9] Ġ[11] Ċ[6] Ċ[6] Ċ[6] Ċ[5] Ċ[5] Ċ[4] Ċ[4] Ċ[11] Ġgo[11] Ġdown[11] .[9] Ċ[5] âĤ¬[11] Ċ[6] Ċ[7] Ċ[5] Ġevaluate[12] Ġdown[12] Ġa[12] my[12] 's[12] Ġmom[11] Ġbox[11] .[7] Ċ[6] Ċ[7] Ċ[10] Ġdark[12] Ġfuse[12] Ġamazed[11] Ġgo[10] 's[10] Ġdark[11] ĠManit[10] ĠHe[11] Ġit[9] Ġit[9] .[8] Ċ[5] Ġgo[11] oubtedly[10] Ġit[11] Ġto[11] ?[11] vir[10] Ġbox[10] Ġanalys[10] .[9] Ċ[4] Ċ[3] Ċ[3] Ċ[3] Ġon[10] Ġon[10] Ġeviction[11] Ġgreeting[10] .[10] Ċ[7] Ċ[9] "[10] He[10] âĤ¬[9] âĤ¬[9] Ċ[5] He[11] Ġpot[10] <|endoftext|>[2] <|endoftext|>[1] <|endoftext|>[P]
+11/05/2025 03:21:40 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived€
+ a lot cat.
+
+
+
+Luckily, "€?"
+
+ I
+
+
+,24.
+
+
+ the the box and go adjacent go andables bugs and go.
+Mom's, all a box hole.â€.
+
+
+€ hug€ to?"ocratic Leah
+11/05/2025 03:21:40 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] âĤ¬[11] Ċ[7] Ġa[6] Ġlot[11] Ġcat[12] .[7] Ċ[6] Ċ[6] Ċ[6] Ċ[8] Luckily[12] ,[7] Ġ"[9] âĤ¬[9] ?"[12] Ċ[6] Ċ[5] ĠI[12] Ċ[5] Ċ[7] Ċ[4] ,[11] 24[12] .[9] Ċ[4] Ċ[4] Ċ[4] Ġthe[10] Ġthe[10] Ġbox[12] Ġand[12] Ġgo[12] Ġadjacent[12] Ġgo[10] Ġand[11] ables[11] Ġbugs[12] Ġand[11] Ġgo[8] .[5] Ċ[5] Mom[12] 's[11] ,[11] Ġall[11] Ġa[8] Ġbox[11] Ġhole[10] .[7] Ã¢[10] âĤ¬[9] .[10] Ċ[8] Ċ[5] Ċ[8] âĤ¬[8] Ġhug[11] âĤ¬[8] Ġto[11] ?"[11] ocratic[11] ĠLeah[11] <|endoftext|>[3] Ċ[3] Ċ[3] Ċ[4] ĠI[11] Ġgo[10] Ġto[11] âĤ¬[11] Ġout[10] Ġfun[11] Ġnice[10] .[8] Ã¢[11] âĤ¬[9] <|endoftext|>[2] Ċ[5] So[9] Ġjuicy[11] ĠSara[10] âĤ¬[10] <|endoftext|>[P]
+11/05/2025 03:21:40 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and
+
+
+He eviction€ them go go go do until.
+ 
+
+
+
+
+
+ down go downS.
+
+
+
+
+ it a said heard and work.
+
+ steak.€ didn Myr it greeting red good to24.
+
+Max taxation eclipse as a box friend.
+
+
+
+€Effects special041€
+
+
+ arm Ben.
+certain chestEffectsEffects
+11/05/2025 03:21:40 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] Ċ[7] Ċ[7] Ċ[7] He[10] Ġeviction[12] âĤ¬[11] Ġthem[11] Ġgo[11] Ġgo[11] Ġgo[12] Ġdo[12] Ġuntil[12] .[11] Ċ[5] Ġ[12] Ċ[5] Ċ[5] Ċ[6] Ċ[6] Ċ[7] Ċ[8] Ġdown[12] Ġgo[11] Ġdown[12] S[11] .[7] Ċ[4] Ċ[5] Ċ[6] Ċ[6] Ċ[4] Ġit[12] Ġa[12] Ġsaid[12] Ġheard[11] Ġand[11] Ġwork[11] .[8] Ċ[6] Ċ[7] Ġsteak[12] .[4] âĤ¬[10] Ġdidn[10] ĠMyr[10] Ġit[11] Ġgreeting[11] Ġred[11] Ġgood[11] Ġto[10] 24[10] .[9] Ċ[5] Ċ[5] Max[11] Ġtaxation[11] Ġeclipse[10] Ġas[11] Ġa[10] Ġbox[11] Ġfriend[10] .[6] Ċ[3] Ċ[2] Ċ[2] Ċ[1] âĤ¬[9] Effects[10] Ġspecial[10] 041[11] âĤ¬[7] Ċ[6] Ċ[5] Ċ[5] Ġarm[10] ĠBen[11] .[8] Ċ[8] certain[11] Ġchest[10] Effects[10] Effects[10] <|endoftext|>[P]
+11/05/2025 03:21:40 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to see!
+
+ opioid gunshot?"
+
+
+
+
+Mom is Ben it.
+
+
+
+
+
+ go them a to go.
+
+
+
+ wanted festivals, warranty. Sara.
+
+
+ their mom and down Tom.
+
+ not anything24
+
+ proofs and debates Tom Tom y good
+
+
+
+
+ festivals
+
+ not€
+
+
+ €€
+ babyEffectsEffectsEffects
+11/05/2025 03:21:40 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] Ġsee[11] ![12] Ċ[8] Ċ[9] Ġopioid[11] Ġgunshot[12] ?"[11] Ċ[7] Ċ[7] Ċ[6] Ċ[6] Ċ[7] Mom[10] Ġis[11] ĠBen[10] Ġit[11] .[9] Ċ[6] Ċ[6] Ċ[6] Ċ[7] Ċ[7] Ċ[7] Ġgo[12] Ġthem[12] Ġa[11] Ġto[11] Ġgo[11] .[8] Ċ[5] Ċ[5] Ċ[5] Ċ[6] Ġwanted[12] Ġfestivals[11] ,[11] Ġwarranty[11] .[7] ĠSara[12] .[9] Ċ[5] Ċ[5] Ċ[5] Ġtheir[11] Ġmom[12] Ġand[8] Ġdown[11] ĠTom[9] .[12] Ċ[9] Ċ[5] Ġnot[10] Ġanything[12] 24[12] Ċ[6] Ċ[6] Ġproofs[12] Ġand[10] Ġdebates[10] ĠTom[11] ĠTom[10] Ġy[10] Ġgood[11] Ċ[4] Ċ[4] Ċ[4] Ċ[4] Ċ[3] Ġfestivals[10] Ċ[11] Ċ[2] Ġnot[11] âĤ¬[9] Ċ[3] Ċ[2] Ċ[3] Ġ[11] âĤ¬[10] âĤ¬[10] Ċ[8] Ġbaby[11] Effects[11] Effects[11] Effects[11] <|endoftext|>[P]
+11/05/2025 03:21:40 - INFO - __main__ - [gen] exit generate_text_samples: step=30000
+11/05/2025 03:22:13 - INFO - __main__ - Step: 30200 Loss_lm: 2.0861 Data (t): 0.0000, 631.46/s/gpu Batch (t): 0.2027 LR: 0.000488
