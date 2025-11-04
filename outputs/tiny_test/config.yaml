@@ -1,7 +1,7 @@
 wandb:
   entity: null
   resume: auto
-  run_id: a1l7gwb2
+  run_id: xybklr4k
 experiment:
   project: llada-tiny-test
   name: llada-tiny-test
