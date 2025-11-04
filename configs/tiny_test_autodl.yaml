@@ -12,8 +12,8 @@ experiment:
   log_every: 200
   log_grad_norm_every: 200
   checkpoints_total_limit: 3
-  resume_from_checkpoint: "autodl-tmp/LLADA_pretraining/outputs/tiny_test_autodl/checkpoint-30000"
-  # reset_optimizer: false
+  resume_from_checkpoint: "outputs/tiny_test_autodl/checkpoint-30000/"
+  reset_optimizer: false
 
 model:
   pretrained_model_path: "gpt2"
@@ -68,8 +68,8 @@ lr_scheduler:
     min_lr_scale: 0.1
 
 training:
-  gradient_accumulation_steps: 2
-  batch_size: 64
+  gradient_accumulation_steps: 1
+  batch_size: 96
   mixed_precision: "bf16"
   enable_tf32: true
   seed: 42
