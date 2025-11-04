@@ -12,7 +12,8 @@ experiment:
     log_every: 25
     log_grad_norm_every: 100
     checkpoints_total_limit: 3
-    resume_from_checkpoint: "outputs/tiny_test/checkpoint-45000"
+    # resume_from_checkpoint: "outputs/tiny_test/checkpoint-102500"
+    # reset_optimizer: true
 
 model:
     # Using a tiny GPT-2 as base tokenizer only, model initialized from scratch
@@ -59,7 +60,7 @@ dataset:
 optimizer:
     name: adamw
     params:
-        learning_rate: 1e-4        # Lower LR for stability
+        learning_rate: 5e-4
         scale_lr: false
         beta1: 0.9
         beta2: 0.95                # Lower beta2 for better stability
@@ -74,6 +75,7 @@ lr_scheduler:
         min_lr_scale: 0.1
 
 training:
+    ignore_eos_in_masking: true # strategy for TinyStories dataset
     gradient_accumulation_steps: 8
     batch_size: 2  # Small batch size for 8GB GPU
     mixed_precision: "bf16"

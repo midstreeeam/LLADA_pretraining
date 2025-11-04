@@ -186,6 +186,8 @@ def main():
     model.config.embedding_size = model.config.new_vocab_size
     model.config.mask_token_id = mask_token_id
 
+    reset_optimizer = experiment_cfg.get("reset_optimizer", False)
+
     if resume_checkpoint:
         model_state_path = resume_checkpoint / "unwrapped_model" / "pytorch_model.bin"
         if model_state_path.exists():
@@ -303,7 +305,7 @@ def main():
     logger.info("Preparing model, optimizer and dataloaders")
     model, optimizer, lr_scheduler = accelerator.prepare(model, optimizer, lr_scheduler)
 
-    if resume_checkpoint:
+    if resume_checkpoint and not reset_optimizer:
         optimizer_state = resume_checkpoint / "optimizer.pt"
         if optimizer_state.exists():
             logger.info(f"Loading optimizer state from {optimizer_state}")
@@ -312,6 +314,8 @@ def main():
         if scheduler_state.exists():
             logger.info(f"Loading lr scheduler state from {scheduler_state}")
             lr_scheduler.load_state_dict(torch.load(scheduler_state, map_location="cpu"))
+    elif resume_checkpoint and reset_optimizer:
+        logger.info("Resetting optimizer and scheduler state as requested.")
 
     ##################################
     #             Training          #
@@ -336,9 +340,25 @@ def main():
         p_mask = (1 - eps) * t + eps
         p_mask = p_mask[:, None].repeat(1, l)
 
-        masked_indices = torch.rand((b, l), device=input_ids_lm.device) < p_mask
+        valid_positions = labels_lm != -100
+        if config.training.get("ignore_eos_in_masking", False):
+            valid_positions = valid_positions & (labels_lm != tokenizer.eos_token_id)
+
+        mask_sampler = torch.rand((b, l), device=input_ids_lm.device)
+        masked_indices = (mask_sampler < p_mask) & valid_positions
+
+        # ensure at least one token is masked for each sequence
+        needs_mask = masked_indices.sum(dim=1) == 0
+        if needs_mask.any():
+            for idx in torch.nonzero(needs_mask, as_tuple=False).view(-1):
+                valid_idx = torch.nonzero(valid_positions[idx], as_tuple=False).view(-1)
+                if valid_idx.numel() == 0:
+                    continue
+                chosen = valid_idx[torch.randint(0, valid_idx.numel(), (1,))]
+                masked_indices[idx, chosen] = True
+
         noisy_batch = torch.where(masked_indices, mask_id, input_ids_lm)
-        masked_indices = noisy_batch == mask_id
+        masked_indices = masked_indices
 
         return noisy_batch, labels_lm, p_mask
 

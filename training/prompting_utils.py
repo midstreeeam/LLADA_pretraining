@@ -195,6 +195,9 @@ class UniversalPrompting():
             temp_ids = torch.tensor(temp_ids)
             temp_masks = torch.tensor(temp_masks)
             temp_labels_ids = torch.tensor(temp_labels_ids)
+            true_len = min(len(text_ids[i]) + 1, max_seq_len)
+            if true_len < max_seq_len:
+                temp_labels_ids[true_len:] = -100
             sequence_ids.append(temp_ids.unsqueeze(0))
             attention_masks.append(temp_masks.unsqueeze(0))
             label_ids.append(temp_labels_ids.unsqueeze(0))
