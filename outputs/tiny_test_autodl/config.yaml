@@ -1,7 +1,7 @@
 wandb:
   entity: null
   resume: auto
-  run_id: 4mr92oc3
+  run_id: 3afnfqqq
 experiment:
   project: llada-tiny-autodl
   name: llada-tiny-autodl
@@ -12,6 +12,8 @@ experiment:
   log_every: 200
   log_grad_norm_every: 200
   checkpoints_total_limit: 3
+  resume_from_checkpoint: outputs/tiny_test_autodl/checkpoint-240000/
+  reset_optimizer: false
   logging_dir: outputs/tiny_test_autodl/logs
 model:
   pretrained_model_path: gpt2
@@ -62,8 +64,8 @@ lr_scheduler:
     warmup_steps: 100
     min_lr_scale: 0.1
 training:
-  gradient_accumulation_steps: 2
-  batch_size: 64
+  gradient_accumulation_steps: 1
+  batch_size: 96
   mixed_precision: bf16
   enable_tf32: true
   seed: 42
@@ -71,4 +73,23 @@ training:
   max_grad_norm: 1.0
   lm_coeff: 1.0
   ignore_eos_in_masking: true
+generation:
+  max_new_tokens: 64
+  num_steps: 64
+  temperature: 0.7
+  top_k: 50
+  top_p: 0.95
+  mask_schedule: cosine
+  seed: 42
+  strategy: ratio
+  selection_scope: all
+  tokens_per_step: null
+  block_length: null
+  remasking: low_confidence
+  cfg_scale: 0.0
+  logits_eos_inf: false
+  confidence_eos_eot_inf: false
+  mask_token_id: null
+  forbid_logits_token_ids: null
+  forbid_confidence_token_ids: null
 config: configs/tiny_test_autodl.yaml
