@@ -89,7 +89,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--num-steps",
         type=int,
-        default=128,
+        default=16,
         help="Number of diffusion steps for the official sampler.",
     )
     parser.add_argument(

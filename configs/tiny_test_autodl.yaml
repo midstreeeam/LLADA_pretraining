@@ -3,17 +3,17 @@ wandb:
   resume: 'auto'
 
 experiment:
-  project: "llada-tiny-autodl"
-  name: "llada-tiny-autodl"
-  output_dir: "outputs/tiny_test_autodl"
+  project: "llada-t2"
+  name: "llada-t2"
+  output_dir: "outputs/tiny_test_2"
   save_every: 10000
   eval_every: 2000
-  generate_every: 5000
+  generate_every: 2000
   log_every: 100
   log_grad_norm_every: 100
   checkpoints_total_limit: 3
-  resume_from_checkpoint: "outputs/tiny_test_autodl/checkpoint-630000/"
-  reset_optimizer: false
+  # resume_from_checkpoint: "outputs/tiny_test_autodl/checkpoint-650000/"
+  # reset_optimizer: true
 
 model:
   pretrained_model_path: "gpt2"
@@ -24,7 +24,7 @@ model:
     n_layers: 12
     n_kv_heads: 12
     mlp_ratio: 4
-    max_sequence_length: 512
+    max_sequence_length: 128
     vocab_size: 50257
     new_vocab_size: 50304
     rope: true
@@ -43,8 +43,8 @@ model:
 dataset:
   params:
     train_shards_path_or_url: "data/tinystories_train.jsonl"
-    shuffle_buffer_size: 500
-    num_workers: 2
+    shuffle_buffer_size: 1000
+    num_workers: 4
     pin_memory: true
     persistent_workers: false
   preprocessing:
@@ -53,10 +53,10 @@ dataset:
 optimizer:
   name: adamw
   params:
-    learning_rate: 5e-4
+    learning_rate: 1e-3
     scale_lr: false
     beta1: 0.9
-    beta2: 0.95
+    beta2: 0.9
     weight_decay: 0.01
     epsilon: 1e-8
 
@@ -64,19 +64,19 @@ lr_scheduler:
   scheduler: "cosine"
   params:
     learning_rate: ${optimizer.params.learning_rate}
-    warmup_steps: 100
+    warmup_steps: 500
     min_lr_scale: 0.1
 
 training:
   gradient_accumulation_steps: 1
-  batch_size: 96
+  batch_size: 16
   mixed_precision: "bf16"
   enable_tf32: true
   seed: 42
-  max_train_steps: 2000000
+  max_train_steps: 100000
   max_grad_norm: 1.0
   lm_coeff: 1.0
-  ignore_eos_in_masking: true
+  ignore_eos_in_masking: false
 
 # generation:
 #   max_new_tokens: 64
@@ -101,7 +101,7 @@ training:
 generation:
   strategy: "official"
   max_new_tokens: 64
-  num_steps: 64
+  num_steps: 16
   temperature: 0.0
   block_length: null
   remasking: "low_confidence"
