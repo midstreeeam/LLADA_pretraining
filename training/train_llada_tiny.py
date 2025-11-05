@@ -621,6 +621,27 @@ def generate_text_samples(model, tokenizer, accelerator, config, global_step):
     top_p = float(get_generation_param("top_p", 0.9))
     mask_schedule = get_generation_param("mask_schedule", "cosine")
     seed = get_generation_param("seed", None)
+    strategy = str(get_generation_param("strategy", "ratio"))
+    selection_scope = str(get_generation_param("selection_scope", "all"))
+    tokens_per_step = get_generation_param("tokens_per_step", None)
+    if tokens_per_step is not None:
+        tokens_per_step = int(tokens_per_step)
+    block_length = get_generation_param("block_length", None)
+    if block_length is not None:
+        block_length = int(block_length)
+    remasking = str(get_generation_param("remasking", "low_confidence"))
+    cfg_scale = float(get_generation_param("cfg_scale", 0.0))
+    logits_eos_inf = bool(get_generation_param("logits_eos_inf", False))
+    confidence_eos_eot_inf = bool(get_generation_param("confidence_eos_eot_inf", False))
+    mask_token_override = get_generation_param("mask_token_id", None)
+    if mask_token_override is not None:
+        mask_token_override = int(mask_token_override)
+    forbid_logits_ids = get_generation_param("forbid_logits_token_ids", None)
+    if forbid_logits_ids is not None and not isinstance(forbid_logits_ids, (list, tuple)):
+        forbid_logits_ids = [forbid_logits_ids]
+    forbid_confidence_ids = get_generation_param("forbid_confidence_token_ids", None)
+    if forbid_confidence_ids is not None and not isinstance(forbid_confidence_ids, (list, tuple)):
+        forbid_confidence_ids = [forbid_confidence_ids]
 
     with torch.autocast("cuda", dtype=weight_dtype, enabled=accelerator.mixed_precision != "no"):
         t0 = time.time()
@@ -638,6 +659,17 @@ def generate_text_samples(model, tokenizer, accelerator, config, global_step):
             schedule=mask_schedule,
             seed=seed,
             return_debug=True,
+             strategy=strategy,
+             selection_scope=selection_scope,
+             tokens_per_step=tokens_per_step,
+             block_length=block_length,
+             remasking=remasking,
+             cfg_scale=cfg_scale,
+             logits_eos_inf=logits_eos_inf,
+             confidence_eos_eot_inf=confidence_eos_eot_inf,
+             mask_token_override=mask_token_override,
+             forbid_logits_token_ids=forbid_logits_ids,
+             forbid_confidence_token_ids=forbid_confidence_ids,
         )
         if isinstance(generation_output, tuple):
             generated_texts, debug_annotations = generation_output
