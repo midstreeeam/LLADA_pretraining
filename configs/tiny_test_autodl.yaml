@@ -7,7 +7,7 @@ experiment:
   name: "llada-tiny-autodl"
   output_dir: "outputs/tiny_test_autodl"
   save_every: 10000
-  eval_every: 2500
+  eval_every: 200 # test
   generate_every: 2500
   log_every: 100
   log_grad_norm_every: 100
@@ -103,7 +103,7 @@ generation:
   max_new_tokens: 64
   num_steps: 64
   temperature: 0.0
-  block_length: 32
+  block_length: null
   remasking: "low_confidence"
   cfg_scale: 0.0
   logits_eos_inf: false

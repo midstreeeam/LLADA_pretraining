@@ -496,7 +496,7 @@ def _official_generate(
                 confidence = torch.where(mask_index, x0_p, torch.full_like(x0_p, float("-inf")))
 
                 k = int(num_transfer_tokens[0, inner_step].item())
-                available = torch.nonzero(mask_index & block_range_mask, as_tuple=False).view(-1)
+                available = torch.nonzero(mask_index & block_range_mask, as_tuple=False).flatten()
                 if available.numel() == 0 or k <= 0:
                     continue
                 k = min(k, available.numel())
