@@ -1,18 +1,18 @@
 wandb:
   entity: null
   resume: auto
-  run_id: 3afnfqqq
+  run_id: k2oflksa
 experiment:
   project: llada-tiny-autodl
   name: llada-tiny-autodl
   output_dir: outputs/tiny_test_autodl
   save_every: 10000
-  eval_every: 2000
-  generate_every: 2000
-  log_every: 200
-  log_grad_norm_every: 200
+  eval_every: 2500
+  generate_every: 2500
+  log_every: 100
+  log_grad_norm_every: 100
   checkpoints_total_limit: 3
-  resume_from_checkpoint: outputs/tiny_test_autodl/checkpoint-240000/
+  resume_from_checkpoint: outputs/tiny_test_autodl/checkpoint-250000/
   reset_optimizer: false
   logging_dir: outputs/tiny_test_autodl/logs
 model:
@@ -69,7 +69,7 @@ training:
   mixed_precision: bf16
   enable_tf32: true
   seed: 42
-  max_train_steps: 300000
+  max_train_steps: 1000000
   max_grad_norm: 1.0
   lm_coeff: 1.0
   ignore_eos_in_masking: true
