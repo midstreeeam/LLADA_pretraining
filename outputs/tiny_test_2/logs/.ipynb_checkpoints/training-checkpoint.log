@@ -1,0 +1,247 @@
+11/06/2025 01:34:10 - INFO - __main__ - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: bf16
+
+11/06/2025 01:34:10 - INFO - root - Saving config to outputs/tiny_test_2/config.yaml
+11/06/2025 01:34:10 - INFO - __main__ - Loading tokenizer and model
+11/06/2025 01:34:11 - INFO - __main__ - Initializing model from scratch with custom tiny architecture
+11/06/2025 01:34:12 - INFO - __main__ - Model initialized from scratch
+11/06/2025 01:34:12 - INFO - __main__ - Total parameters: 109,396,992 (109.40M)
+11/06/2025 01:34:12 - INFO - __main__ - Trainable parameters: 109,396,992 (109.40M)
+11/06/2025 01:34:12 - INFO - __main__ - Creating dataloaders and lr_scheduler
+11/06/2025 01:34:12 - INFO - __main__ - Preparing model, optimizer and dataloaders
+11/06/2025 01:34:12 - INFO - __main__ - ***** Running LLaDA pretraining *****
+11/06/2025 01:34:12 - INFO - __main__ -   Num training steps = 100000
+11/06/2025 01:34:12 - INFO - __main__ -   Instantaneous batch size per device = 16
+11/06/2025 01:34:12 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 16
+11/06/2025 01:34:12 - INFO - __main__ -   Gradient Accumulation steps = 1
+11/06/2025 01:34:12 - INFO - __main__ -   Num Steps = 100000
+11/06/2025 01:34:12 - INFO - __main__ -   Num Epochs = 16
+11/06/2025 01:34:12 - INFO - __main__ - Input ids: tensor([[50257, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50257, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50257, 50257,  1030,  ..., 50256, 50256, 50256],
+        ...,
+        [50257,  3521,   470,  ..., 50256, 50256, 50256],
+        [50256, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50256, 50257, 50257,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/06/2025 01:34:12 - INFO - __main__ - Labels: tensor([[50256,   283,    13,  ...,  -100,  -100,  -100],
+        [50256, 12810,   257,  ...,  -100,  -100,  -100],
+        [50256,    81,  1030,  ...,  -100,  -100,  -100],
+        ...,
+        [50256,  3521,   470,  ...,  -100,  -100,  -100],
+        [50256,  7554,  1965,  ...,  -100,  -100,  -100],
+        [50256,    83,   340,  ...,  -100,  -100,  -100]], device='cuda:0')
+11/06/2025 01:34:13 - INFO - __main__ - Generating text samples...
+11/06/2025 01:34:13 - INFO - __main__ - [gen] enter generate_text_samples: step=1, rank=0
+11/06/2025 01:34:13 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmp22xwo5t_/test.c -o /tmp/tmp22xwo5t_/test.o
+11/06/2025 01:34:13 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmp22xwo5t_/test.o -laio -o /tmp/tmp22xwo5t_/a.out
+11/06/2025 01:34:14 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmpcuh7iryl/test.c -o /tmp/tmpcuh7iryl/test.o
+11/06/2025 01:34:14 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmpcuh7iryl/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpcuh7iryl/a.out
+11/06/2025 01:34:15 - INFO - __main__ - [gen] diffusion sampling done in 0.81s for 5 prompts
+11/06/2025 01:34:15 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little
+11/06/2025 01:34:15 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:34:15 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named
+11/06/2025 01:34:15 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:34:15 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived
+11/06/2025 01:34:15 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:34:15 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and
+11/06/2025 01:34:15 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:34:15 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to
+11/06/2025 01:34:15 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:34:15 - INFO - __main__ - [gen] exit generate_text_samples: step=1
+11/06/2025 01:34:22 - INFO - __main__ - Step: 100 Loss_lm: 18.6428 Data (t): 0.0000, 140.07/s/gpu Batch (t): 0.1142 LR: 0.000200
+11/06/2025 01:34:30 - INFO - __main__ - Step: 200 Loss_lm: 10.2455 Data (t): 0.0000, 144.69/s/gpu Batch (t): 0.1106 LR: 0.000400
+11/06/2025 01:34:37 - INFO - __main__ - Step: 300 Loss_lm: 8.3676 Data (t): 0.0000, 139.89/s/gpu Batch (t): 0.1144 LR: 0.000600
+11/06/2025 01:34:45 - INFO - __main__ - Step: 400 Loss_lm: 8.3341 Data (t): 0.0000, 138.01/s/gpu Batch (t): 0.1159 LR: 0.000800
+11/06/2025 01:34:52 - INFO - __main__ - Step: 500 Loss_lm: 6.2873 Data (t): 0.0000, 137.28/s/gpu Batch (t): 0.1165 LR: 0.001000
+11/06/2025 01:35:37 - INFO - __main__ - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: bf16
+
+11/06/2025 01:35:38 - INFO - root - Saving config to outputs/tiny_test_2/config.yaml
+11/06/2025 01:35:38 - INFO - __main__ - Loading tokenizer and model
+11/06/2025 01:35:38 - INFO - __main__ - Initializing model from scratch with custom tiny architecture
+11/06/2025 01:35:39 - INFO - __main__ - Model initialized from scratch
+11/06/2025 01:35:39 - INFO - __main__ - Total parameters: 109,396,992 (109.40M)
+11/06/2025 01:35:39 - INFO - __main__ - Trainable parameters: 109,396,992 (109.40M)
+11/06/2025 01:35:39 - INFO - __main__ - Creating dataloaders and lr_scheduler
+11/06/2025 01:35:39 - INFO - __main__ - Preparing model, optimizer and dataloaders
+11/06/2025 01:35:39 - INFO - __main__ - ***** Running LLaDA pretraining *****
+11/06/2025 01:35:39 - INFO - __main__ -   Num training steps = 100000
+11/06/2025 01:35:39 - INFO - __main__ -   Instantaneous batch size per device = 16
+11/06/2025 01:35:39 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 16
+11/06/2025 01:35:39 - INFO - __main__ -   Gradient Accumulation steps = 1
+11/06/2025 01:35:39 - INFO - __main__ -   Num Steps = 100000
+11/06/2025 01:35:39 - INFO - __main__ -   Num Epochs = 16
+11/06/2025 01:35:39 - INFO - __main__ - Input ids: tensor([[50257, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50257, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50257, 50257,  1030,  ..., 50256, 50256, 50256],
+        ...,
+        [50257,  3521,   470,  ..., 50256, 50256, 50256],
+        [50256, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50256, 50257, 50257,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/06/2025 01:35:39 - INFO - __main__ - Labels: tensor([[50256,   283,    13,  ...,  -100,  -100,  -100],
+        [50256, 12810,   257,  ...,  -100,  -100,  -100],
+        [50256,    81,  1030,  ...,  -100,  -100,  -100],
+        ...,
+        [50256,  3521,   470,  ...,  -100,  -100,  -100],
+        [50256,  7554,  1965,  ...,  -100,  -100,  -100],
+        [50256,    83,   340,  ...,  -100,  -100,  -100]], device='cuda:0')
+11/06/2025 01:35:40 - INFO - __main__ - Generating text samples...
+11/06/2025 01:35:40 - INFO - __main__ - [gen] enter generate_text_samples: step=1, rank=0
+11/06/2025 01:35:40 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmppjx2na4e/test.c -o /tmp/tmppjx2na4e/test.o
+11/06/2025 01:35:40 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmppjx2na4e/test.o -laio -o /tmp/tmppjx2na4e/a.out
+11/06/2025 01:35:41 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmp5q23e4w6/test.c -o /tmp/tmp5q23e4w6/test.o
+11/06/2025 01:35:41 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmp5q23e4w6/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmp5q23e4w6/a.out
+11/06/2025 01:35:42 - INFO - __main__ - [gen] diffusion sampling done in 0.74s for 5 prompts
+11/06/2025 01:35:42 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little
+11/06/2025 01:35:42 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:35:42 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named
+11/06/2025 01:35:42 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:35:42 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived
+11/06/2025 01:35:42 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:35:42 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and
+11/06/2025 01:35:42 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:35:42 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to
+11/06/2025 01:35:42 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:35:42 - INFO - __main__ - [gen] exit generate_text_samples: step=1
+11/06/2025 01:35:50 - INFO - __main__ - Step: 100 Loss_lm: 20.9541 Data (t): 0.0000, 143.57/s/gpu Batch (t): 0.1114 LR: 0.000200
+11/06/2025 01:35:57 - INFO - __main__ - Step: 200 Loss_lm: 29.4699 Data (t): 0.0000, 139.74/s/gpu Batch (t): 0.1145 LR: 0.000400
+11/06/2025 01:36:05 - INFO - __main__ - Step: 300 Loss_lm: 8.5374 Data (t): 0.0000, 137.65/s/gpu Batch (t): 0.1162 LR: 0.000600
+11/06/2025 01:36:12 - INFO - __main__ - Step: 400 Loss_lm: 9.4163 Data (t): 0.0000, 143.17/s/gpu Batch (t): 0.1118 LR: 0.000800
+11/06/2025 01:36:20 - INFO - __main__ - Step: 500 Loss_lm: 6.9200 Data (t): 0.0000, 132.49/s/gpu Batch (t): 0.1208 LR: 0.001000
+11/06/2025 01:36:27 - INFO - __main__ - Step: 600 Loss_lm: 6.1603 Data (t): 0.0000, 141.11/s/gpu Batch (t): 0.1134 LR: 0.001000
+11/06/2025 01:36:35 - INFO - __main__ - Step: 700 Loss_lm: 5.7822 Data (t): 0.0000, 140.25/s/gpu Batch (t): 0.1141 LR: 0.001000
+11/06/2025 01:36:42 - INFO - __main__ - Step: 800 Loss_lm: 7.6677 Data (t): 0.0000, 143.35/s/gpu Batch (t): 0.1116 LR: 0.001000
+11/06/2025 01:36:50 - INFO - __main__ - Step: 900 Loss_lm: 5.1538 Data (t): 0.0000, 134.83/s/gpu Batch (t): 0.1187 LR: 0.001000
+11/06/2025 01:36:57 - INFO - __main__ - Step: 1000 Loss_lm: 2.9986 Data (t): 0.0000, 141.33/s/gpu Batch (t): 0.1132 LR: 0.001000
+11/06/2025 01:37:05 - INFO - __main__ - Step: 1100 Loss_lm: 3.2247 Data (t): 0.0000, 144.79/s/gpu Batch (t): 0.1105 LR: 0.001000
+11/06/2025 01:37:12 - INFO - __main__ - Step: 1200 Loss_lm: 4.3649 Data (t): 0.0000, 137.01/s/gpu Batch (t): 0.1168 LR: 0.001000
+11/06/2025 01:37:19 - INFO - __main__ - Step: 1300 Loss_lm: 4.5577 Data (t): 0.0000, 197.60/s/gpu Batch (t): 0.0810 LR: 0.001000
+11/06/2025 01:37:27 - INFO - __main__ - Step: 1400 Loss_lm: 2.9347 Data (t): 0.0000, 137.38/s/gpu Batch (t): 0.1165 LR: 0.001000
+11/06/2025 01:38:02 - INFO - __main__ - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: bf16
+
+11/06/2025 01:38:02 - INFO - root - Saving config to outputs/tiny_test_2/config.yaml
+11/06/2025 01:38:02 - INFO - __main__ - Loading tokenizer and model
+11/06/2025 01:38:03 - INFO - __main__ - Initializing model from scratch with custom tiny architecture
+11/06/2025 01:38:04 - INFO - __main__ - Model initialized from scratch
+11/06/2025 01:38:04 - INFO - __main__ - Total parameters: 109,396,992 (109.40M)
+11/06/2025 01:38:04 - INFO - __main__ - Trainable parameters: 109,396,992 (109.40M)
+11/06/2025 01:38:04 - INFO - __main__ - Creating dataloaders and lr_scheduler
+11/06/2025 01:38:04 - INFO - __main__ - Preparing model, optimizer and dataloaders
+11/06/2025 01:38:04 - INFO - __main__ - ***** Running LLaDA pretraining *****
+11/06/2025 01:38:04 - INFO - __main__ -   Num training steps = 100000
+11/06/2025 01:38:04 - INFO - __main__ -   Instantaneous batch size per device = 16
+11/06/2025 01:38:04 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 16
+11/06/2025 01:38:04 - INFO - __main__ -   Gradient Accumulation steps = 1
+11/06/2025 01:38:04 - INFO - __main__ -   Num Steps = 100000
+11/06/2025 01:38:04 - INFO - __main__ -   Num Epochs = 16
+11/06/2025 01:38:04 - INFO - __main__ - Input ids: tensor([[50257, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50257, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50257, 50257,  1030,  ..., 50256, 50256, 50256],
+        ...,
+        [50257,  3521,   470,  ..., 50256, 50256, 50256],
+        [50256, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50256, 50257, 50257,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/06/2025 01:38:04 - INFO - __main__ - Labels: tensor([[50256,   283,    13,  ...,  -100,  -100,  -100],
+        [50256, 12810,   257,  ...,  -100,  -100,  -100],
+        [50256,    81,  1030,  ...,  -100,  -100,  -100],
+        ...,
+        [50256,  3521,   470,  ...,  -100,  -100,  -100],
+        [50256,  7554,  1965,  ...,  -100,  -100,  -100],
+        [50256,    83,   340,  ...,  -100,  -100,  -100]], device='cuda:0')
+11/06/2025 01:38:05 - INFO - __main__ - Generating text samples...
+11/06/2025 01:38:05 - INFO - __main__ - [gen] enter generate_text_samples: step=1, rank=0
+11/06/2025 01:38:05 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmp68efnbt2/test.c -o /tmp/tmp68efnbt2/test.o
+11/06/2025 01:38:05 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmp68efnbt2/test.o -laio -o /tmp/tmp68efnbt2/a.out
+11/06/2025 01:38:06 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmpg7gi_sgl/test.c -o /tmp/tmpg7gi_sgl/test.o
+11/06/2025 01:38:06 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmpg7gi_sgl/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmpg7gi_sgl/a.out
+11/06/2025 01:38:07 - INFO - __main__ - [gen] diffusion sampling done in 0.74s for 5 prompts
+11/06/2025 01:38:07 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little
+11/06/2025 01:38:07 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:38:07 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named
+11/06/2025 01:38:07 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:38:07 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived
+11/06/2025 01:38:07 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:38:07 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and
+11/06/2025 01:38:07 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:38:07 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to
+11/06/2025 01:38:07 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:38:07 - INFO - __main__ - [gen] exit generate_text_samples: step=1
+11/06/2025 01:38:14 - INFO - __main__ - Step: 100 Loss_lm: 21.4080 Data (t): 0.0000, 150.12/s/gpu Batch (t): 0.1066 LR: 0.000200
+11/06/2025 01:38:21 - INFO - __main__ - Step: 200 Loss_lm: 21.7615 Data (t): 0.0000, 140.01/s/gpu Batch (t): 0.1143 LR: 0.000400
+11/06/2025 01:38:28 - INFO - __main__ - Step: 300 Loss_lm: 9.3447 Data (t): 0.0000, 144.98/s/gpu Batch (t): 0.1104 LR: 0.000600
+11/06/2025 01:38:36 - INFO - __main__ - Step: 400 Loss_lm: 11.0456 Data (t): 0.0000, 148.94/s/gpu Batch (t): 0.1074 LR: 0.000800
+11/06/2025 01:40:26 - INFO - __main__ - Distributed environment: DistributedType.NO
+Num processes: 1
+Process index: 0
+Local process index: 0
+Device: cuda
+
+Mixed precision type: bf16
+
+11/06/2025 01:40:27 - INFO - root - Saving config to outputs/tiny_test_2/config.yaml
+11/06/2025 01:40:27 - INFO - __main__ - Loading tokenizer and model
+11/06/2025 01:40:28 - INFO - __main__ - Initializing model from scratch with custom tiny architecture
+11/06/2025 01:40:29 - INFO - __main__ - Model initialized from scratch
+11/06/2025 01:40:29 - INFO - __main__ - Total parameters: 109,396,992 (109.40M)
+11/06/2025 01:40:29 - INFO - __main__ - Trainable parameters: 109,396,992 (109.40M)
+11/06/2025 01:40:29 - INFO - __main__ - Creating dataloaders and lr_scheduler
+11/06/2025 01:40:29 - INFO - __main__ - Preparing model, optimizer and dataloaders
+11/06/2025 01:40:29 - INFO - __main__ - ***** Running LLaDA pretraining *****
+11/06/2025 01:40:29 - INFO - __main__ -   Num training steps = 100000
+11/06/2025 01:40:29 - INFO - __main__ -   Instantaneous batch size per device = 32
+11/06/2025 01:40:29 - INFO - __main__ -   Total train batch size (w. parallel, distributed & accumulation) = 32
+11/06/2025 01:40:29 - INFO - __main__ -   Gradient Accumulation steps = 1
+11/06/2025 01:40:29 - INFO - __main__ -   Num Steps = 100000
+11/06/2025 01:40:29 - INFO - __main__ -   Num Epochs = 32
+11/06/2025 01:40:29 - INFO - __main__ - Input ids: tensor([[50257, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50257, 50257, 50257,  ..., 50256, 50256, 50256],
+        [50257,    81,  1030,  ..., 50256, 50256, 50256],
+        ...,
+        [50256,   392,  5203,  ..., 50256, 50256, 50256],
+        [50256,   258,  6473,  ..., 50256, 50256, 50256],
+        [50257, 50257, 50257,  ..., 50256, 50256, 50256]], device='cuda:0')
+11/06/2025 01:40:29 - INFO - __main__ - Labels: tensor([[50256,   283,    13,  ...,  -100,  -100,  -100],
+        [50256, 12810,   257,  ...,  -100,  -100,  -100],
+        [50256,    81,  1030,  ...,  -100,  -100,  -100],
+        ...,
+        [50256,   392,  5203,  ...,  -100,  -100,  -100],
+        [50256,   258,  6473,  ...,  -100,  -100,  -100],
+        [50256,   358,  1464,  ...,  -100,  -100,  -100]], device='cuda:0')
+11/06/2025 01:40:30 - INFO - __main__ - Generating text samples...
+11/06/2025 01:40:30 - INFO - __main__ - [gen] enter generate_text_samples: step=1, rank=0
+11/06/2025 01:40:30 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmp6vsyck_p/test.c -o /tmp/tmp6vsyck_p/test.o
+11/06/2025 01:40:30 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmp6vsyck_p/test.o -laio -o /tmp/tmp6vsyck_p/a.out
+11/06/2025 01:40:30 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat -fno-strict-overflow -DNDEBUG -O2 -Wall -fPIC -O2 -isystem /root/miniconda3/include -fPIC -O2 -isystem /root/miniconda3/include -fPIC -c /tmp/tmp47deqkiz/test.c -o /tmp/tmp47deqkiz/test.o
+11/06/2025 01:40:30 - INFO - root - gcc -pthread -B /root/miniconda3/compiler_compat /tmp/tmp47deqkiz/test.o -L/usr/local/cuda -L/usr/local/cuda/lib64 -lcufile -o /tmp/tmp47deqkiz/a.out
+11/06/2025 01:40:32 - INFO - __main__ - [gen] diffusion sampling done in 0.76s for 5 prompts
+11/06/2025 01:40:32 - INFO - __main__ - [gen] prompt[0] Generated: Once upon a time, there was a little
+11/06/2025 01:40:32 - INFO - __main__ - [gen] prompt[0] tokens: <|endoftext|>[P] Once[P] Ġupon[P] Ġa[P] Ġtime[P] ,[P] Ġthere[P] Ġwas[P] Ġa[P] Ġlittle[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:40:32 - INFO - __main__ - [gen] prompt[1] Generated: One day, a brave girl named
+11/06/2025 01:40:32 - INFO - __main__ - [gen] prompt[1] tokens: <|endoftext|>[P] One[P] Ġday[P] ,[P] Ġa[P] Ġbrave[P] Ġgirl[P] Ġnamed[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:40:32 - INFO - __main__ - [gen] prompt[2] Generated: In a magical forest, there lived
+11/06/2025 01:40:32 - INFO - __main__ - [gen] prompt[2] tokens: <|endoftext|>[P] In[P] Ġa[P] Ġmagical[P] Ġforest[P] ,[P] Ġthere[P] Ġlived[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:40:32 - INFO - __main__ - [gen] prompt[3] Generated: A small boy found a toy and
+11/06/2025 01:40:32 - INFO - __main__ - [gen] prompt[3] tokens: <|endoftext|>[P] A[P] Ġsmall[P] Ġboy[P] Ġfound[P] Ġa[P] Ġtoy[P] Ġand[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:40:32 - INFO - __main__ - [gen] prompt[4] Generated: The happy cat wanted to
+11/06/2025 01:40:32 - INFO - __main__ - [gen] prompt[4] tokens: <|endoftext|>[P] The[P] Ġhappy[P] Ġcat[P] Ġwanted[P] Ġto[P] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[16] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?] <|mask|>[?]
+11/06/2025 01:40:32 - INFO - __main__ - [gen] exit generate_text_samples: step=1
+11/06/2025 01:40:39 - INFO - __main__ - Step: 100 Loss_lm: 16.5202 Data (t): 0.0000, 282.27/s/gpu Batch (t): 0.1134 LR: 0.000200
+11/06/2025 01:40:47 - INFO - __main__ - Step: 200 Loss_lm: 19.3223 Data (t): 0.0000, 326.52/s/gpu Batch (t): 0.0980 LR: 0.000400
+11/06/2025 01:40:55 - INFO - __main__ - Step: 300 Loss_lm: 9.3785 Data (t): 0.0000, 259.45/s/gpu Batch (t): 0.1233 LR: 0.000600
+11/06/2025 01:41:03 - INFO - __main__ - Step: 400 Loss_lm: 6.6666 Data (t): 0.0000, 294.18/s/gpu Batch (t): 0.1088 LR: 0.000800

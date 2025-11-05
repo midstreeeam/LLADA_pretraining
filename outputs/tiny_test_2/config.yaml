@@ -1,0 +1,88 @@
+wandb:
+  entity: null
+  resume: auto
+  run_id: galyhqbz
+experiment:
+  project: llada-t2
+  name: llada-t2
+  output_dir: outputs/tiny_test_2
+  save_every: 10000
+  eval_every: 2000
+  generate_every: 2000
+  log_every: 100
+  log_grad_norm_every: 100
+  checkpoints_total_limit: 3
+  logging_dir: outputs/tiny_test_2/logs
+model:
+  pretrained_model_path: gpt2
+  llada_config:
+    gradient_checkpointing: false
+    d_model: 768
+    n_heads: 12
+    n_layers: 12
+    n_kv_heads: 12
+    mlp_ratio: 4
+    max_sequence_length: 128
+    vocab_size: 50257
+    new_vocab_size: 50304
+    rope: true
+    rope_theta: 10000.0
+    flash_attention: false
+    attention_dropout: 0.0
+    residual_dropout: 0.0
+    embedding_dropout: 0.0
+    layer_norm_type: rms
+    activation_type: swiglu
+    init_fn: normal
+    init_std: 0.02
+    weight_tying: true
+    include_bias: false
+dataset:
+  params:
+    train_shards_path_or_url: data/tinystories_train.jsonl
+    shuffle_buffer_size: 5000
+    num_workers: 32
+    pin_memory: true
+    persistent_workers: true
+  preprocessing:
+    max_seq_length: 128
+optimizer:
+  name: adamw
+  params:
+    learning_rate: 0.001
+    scale_lr: false
+    beta1: 0.9
+    beta2: 0.9
+    weight_decay: 0.01
+    epsilon: 1.0e-08
+lr_scheduler:
+  scheduler: cosine
+  params:
+    learning_rate: ${optimizer.params.learning_rate}
+    warmup_steps: 500
+    min_lr_scale: 0.1
+training:
+  gradient_accumulation_steps: 1
+  batch_size: 64
+  mixed_precision: bf16
+  enable_tf32: true
+  seed: 42
+  max_train_steps: 100000
+  max_grad_norm: 1.0
+  lm_coeff: 1.0
+  ignore_eos_in_masking: false
+generation:
+  strategy: official
+  max_new_tokens: 64
+  num_steps: 16
+  temperature: 0.0
+  block_length: null
+  remasking: low_confidence
+  cfg_scale: 0.0
+  logits_eos_inf: false
+  confidence_eos_eot_inf: false
+  top_k: 0
+  top_p: 1.0
+  mask_schedule: linear
+  seed: 42
+config: configs/tiny_test_autodl.yaml
