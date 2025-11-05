@@ -12,7 +12,7 @@ experiment:
   log_every: 100
   log_grad_norm_every: 100
   checkpoints_total_limit: 3
-  resume_from_checkpoint: "outputs/tiny_test_autodl/checkpoint-250000/"
+  resume_from_checkpoint: "outputs/tiny_test_autodl/checkpoint-630000/"
   reset_optimizer: false
 
 model:
