@@ -73,27 +73,42 @@ training:
   mixed_precision: "bf16"
   enable_tf32: true
   seed: 42
-  max_train_steps: 1000000
+  max_train_steps: 2000000
   max_grad_norm: 1.0
   lm_coeff: 1.0
   ignore_eos_in_masking: true
 
+# generation:
+#   max_new_tokens: 64
+#   num_steps: 64
+#   temperature: 0.7
+#   top_k: 50
+#   top_p: 0.95
+#   mask_schedule: "cosine"
+#   seed: 42
+#   strategy: "ratio"                 # options: ratio, fixed_tokens, official
+#   selection_scope: "all"            # ratio strategy: all or masked_only
+#   tokens_per_step: null             # fixed_tokens strategy: integer tokens per step
+#   block_length: null                # official strategy: must divide max_new_tokens if set
+#   remasking: "low_confidence"       # official strategy: low_confidence or random
+#   cfg_scale: 0.0                    # classifier-free guidance scale (official)
+#   logits_eos_inf: false             # official: set EOS logits to -inf
+#   confidence_eos_eot_inf: false     # official: suppress EOS/EOT confidences
+#   mask_token_id: null               # override mask token id (optional)
+#   forbid_logits_token_ids: null     # list of token ids to suppress in logits (official)
+#   forbid_confidence_token_ids: null # list of token ids to suppress in confidence (official)
+
 generation:
+  strategy: "official"
   max_new_tokens: 64
   num_steps: 64
-  temperature: 0.7
-  top_k: 50
-  top_p: 0.95
-  mask_schedule: "cosine"
+  temperature: 0.0
+  block_length: 32
+  remasking: "low_confidence"
+  cfg_scale: 0.0
+  logits_eos_inf: false
+  confidence_eos_eot_inf: false
+  top_k: 0
+  top_p: 1.0
+  mask_schedule: "linear"
   seed: 42
-  strategy: "ratio"                 # options: ratio, fixed_tokens, official
-  selection_scope: "all"            # ratio strategy: all or masked_only
-  tokens_per_step: null             # fixed_tokens strategy: integer tokens per step
-  block_length: null                # official strategy: must divide max_new_tokens if set
-  remasking: "low_confidence"       # official strategy: low_confidence or random
-  cfg_scale: 0.0                    # classifier-free guidance scale (official)
-  logits_eos_inf: false             # official: set EOS logits to -inf
-  confidence_eos_eot_inf: false     # official: suppress EOS/EOT confidences
-  mask_token_id: null               # override mask token id (optional)
-  forbid_logits_token_ids: null     # list of token ids to suppress in logits (official)
-  forbid_confidence_token_ids: null # list of token ids to suppress in confidence (official)
