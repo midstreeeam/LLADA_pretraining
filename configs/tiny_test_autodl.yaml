@@ -7,8 +7,8 @@ experiment:
   name: "llada-tiny-autodl"
   output_dir: "outputs/tiny_test_autodl"
   save_every: 10000
-  eval_every: 200 # test
-  generate_every: 2500
+  eval_every: 2000
+  generate_every: 200
   log_every: 100
   log_grad_norm_every: 100
   checkpoints_total_limit: 3
